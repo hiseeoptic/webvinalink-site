@@ -7,6 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import ProductModal from "@/components/ProductModal";
 import Cart from "@/components/Cart";
 import ChatBot from "@/components/ChatBot";
+import RoleGate, { UserRole, TVVInfo } from "@/components/RoleGate";
 import {
   Product,
   MembershipTier,
@@ -19,6 +20,16 @@ import {
 } from "@/lib/products";
 
 export default function Home() {
+  return (
+    <RoleGate>
+      {(role, tvvInfo, onLogout) => (
+        <HomeContent role={role} tvvInfo={tvvInfo} onLogout={onLogout} />
+      )}
+    </RoleGate>
+  );
+}
+
+function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVVInfo | null; onLogout: () => void }) {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -106,6 +117,28 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header cartCount={cartCount} onCartClick={() => setCartOpen(true)} />
+
+      {/* TVV Welcome Bar */}
+      {role === "tvv" && tvvInfo && (
+        <div className="bg-amber-50 border-b border-amber-200 px-4 py-2">
+          <div className="max-w-7xl mx-auto flex items-center justify-between text-sm">
+            <div className="flex items-center gap-2">
+              <span className="bg-[var(--primary)] text-white text-xs px-2 py-0.5 rounded-full font-medium">TVV</span>
+              <span className="text-gray-700">Xin chao, <strong>{tvvInfo.hoTen}</strong> (Ma so: {tvvInfo.maSo})</span>
+              {tvvInfo.capBac && <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded-full">{tvvInfo.capBac}</span>}
+            </div>
+            <button onClick={onLogout} className="text-gray-500 hover:text-red-500 text-xs transition">Dang xuat</button>
+          </div>
+        </div>
+      )}
+      {role === "customer" && (
+        <div className="bg-blue-50 border-b border-blue-200 px-4 py-2">
+          <div className="max-w-7xl mx-auto flex items-center justify-between text-sm">
+            <span className="text-gray-600">Ban dang xem voi tu cach <strong>khach hang</strong> (gia ban le)</span>
+            <button onClick={onLogout} className="text-[var(--primary)] hover:underline text-xs transition">Doi vai tro</button>
+          </div>
+        </div>
+      )}
 
       {/* Hero Banner */}
       <section className="bg-gradient-to-r from-[var(--primary-dark)] via-[var(--primary)] to-[var(--primary-light)] text-white py-12 px-4">
@@ -209,6 +242,7 @@ export default function Home() {
                 key={product.id}
                 product={product}
                 onClick={() => setSelectedProduct(product)}
+                userRole={role}
               />
             ))}
           </div>
@@ -261,6 +295,7 @@ export default function Home() {
           product={selectedProduct}
           onClose={() => setSelectedProduct(null)}
           onAddToCart={handleAddToCart}
+          userRole={role}
         />
       )}
 

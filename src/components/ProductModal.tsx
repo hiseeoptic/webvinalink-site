@@ -16,16 +16,21 @@ const CHEVRON = (
   </svg>
 );
 
+type UserRole = "guest" | "customer" | "tvv";
+
 export default function ProductModal({
   product,
   onClose,
   onAddToCart,
+  userRole = "customer",
 }: {
   product: Product;
   onClose: () => void;
   onAddToCart: (product: Product, tier: MembershipTier) => void;
+  userRole?: UserRole;
 }) {
-  const tiers: MembershipTier[] = ["normal", "silver", "gold", "super_gold"];
+  const allTiers: MembershipTier[] = ["normal", "silver", "gold", "super_gold"];
+  const tiers = userRole === "tvv" ? allTiers : (["normal"] as MembershipTier[]);
   const tierColors: Record<MembershipTier, string> = {
     normal: "bg-gray-100 hover:bg-gray-200 text-gray-800",
     silver: "bg-slate-200 hover:bg-slate-300 text-slate-800",
@@ -132,6 +137,12 @@ export default function ProductModal({
                 </button>
               ))}
             </div>
+            {userRole === "customer" && (
+              <div className="mt-3 bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-blue-800">
+                <p className="font-medium">Ban muon mua voi muc gia thap hon?</p>
+                <p className="text-xs mt-1 text-blue-600">Vui long lien he nguoi gioi thieu hoac dang ky lam Tu van vien de duoc huong gia uu dai Bac / Vang / Sieu Vang.</p>
+              </div>
+            )}
           </div>
 
           {/* Expandable sections */}
