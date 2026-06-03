@@ -93,7 +93,7 @@ async function callGemini(messages: { role: string; content: string }[], systemP
   const lastMessage = messages[messages.length - 1].content;
 
   const chat = ai.chats.create({
-    model: "gemini-2.0-flash",
+    model: "gemini-2.5-flash",
     history,
     config: {
       systemInstruction: systemPrompt,
