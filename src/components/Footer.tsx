@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 mt-auto">
@@ -7,9 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-[var(--primary)] rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">VL</span>
-              </div>
+              <Image src="/images/logo.png" alt="Vinalink Group" width={40} height={40} className="rounded" />
               <div>
                 <h3 className="text-white font-bold text-lg">Vinalink</h3>
                 <p className="text-xs text-gray-400">Nguyen Duc Hoa</p>

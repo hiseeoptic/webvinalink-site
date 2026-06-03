@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header({
   cartCount,
@@ -16,9 +17,13 @@ export default function Header({
     <header className="bg-[var(--primary)] text-white sticky top-0 z-40 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <span className="text-[var(--primary)] font-bold text-lg">VL</span>
-          </div>
+          <Image
+            src="/images/logo.png"
+            alt="Vinalink Group"
+            width={40}
+            height={40}
+            className="rounded"
+          />
           <div>
             <h1 className="text-xl font-bold leading-tight">Vinalink</h1>
             <p className="text-xs text-green-200">Nguyen Duc Hoa</p>

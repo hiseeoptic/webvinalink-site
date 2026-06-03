@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 export type UserRole = "guest" | "customer" | "tvv";
 
@@ -93,10 +94,17 @@ export default function RoleGate({ children }: RoleGateProps) {
       <div className="max-w-md w-full">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-            <span className="text-[var(--primary)] font-bold text-3xl">VL</span>
+          <div className="bg-white rounded-2xl p-4 inline-block mx-auto mb-4 shadow-lg">
+            <Image
+              src="/images/logo.png"
+              alt="Vinalink Group"
+              width={120}
+              height={120}
+              className="mx-auto"
+              priority
+            />
           </div>
-          <h1 className="text-3xl font-bold text-white mb-2">Vinalink</h1>
+          <h1 className="text-3xl font-bold text-white mb-2">Vinalink Group</h1>
           <p className="text-green-200">Nguyen Duc Hoa - San pham suc khoe & lam dep</p>
         </div>
 
