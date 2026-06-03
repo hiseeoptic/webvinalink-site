@@ -1,5 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// Admin/owner account - not in the sheet because they own the network
+const ADMIN_TVV = {
+  maSo: "295947",
+  hoTen: "NGUYỄN ĐỨC HÒA",
+  capBac: "ADMIN",
+  danhHieu: "Nguoi sang lap",
+  nhom: "",
+};
+
 interface TVVRecord {
   stt: string;
   maSo: string;
@@ -50,6 +59,15 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Check admin account first
+    if (maSo.trim() === ADMIN_TVV.maSo) {
+      return NextResponse.json({
+        valid: true,
+        isAdmin: true,
+        tvv: ADMIN_TVV,
+      });
+    }
+
     const sheetId = "1kbfpwUgdBesilJcoyl7K3HCMMOeVXiRvlOI-0nvZ-80";
     const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv`;
 
@@ -98,14 +116,17 @@ export async function POST(req: NextRequest) {
         };
 
         // Check if TVV is still active (TG ND Con Lai)
-        const tgConLai = record.tgNDConLai.trim();
-        const isExpired =
-          tgConLai.includes("-") && !tgConLai.startsWith("0");
+        // Format: "-3 Tháng" = expired, "1 tháng" = active
+        const tgConLai = record.tgNDConLai.trim().toLowerCase();
+        const isExpired = tgConLai.startsWith("-");
+        const monthMatch = tgConLai.match(/-(\d+)/);
+        const expiredMonths = monthMatch ? parseInt(monthMatch[1]) : 0;
 
-        if (isExpired) {
+        // If expired more than 6 months, block completely
+        if (isExpired && expiredMonths >= 6) {
           return NextResponse.json({
             valid: false,
-            error: `Ma so ${maSo} (${record.hoTen}) da het han hoat dong. Vui long lien he de gia han.`,
+            error: `Ma so ${maSo} (${record.hoTen}) da bi cat do het han qua 6 thang. Vui long lien he de gia han.`,
           });
         }
 
@@ -117,6 +138,8 @@ export async function POST(req: NextRequest) {
             capBac: record.capBac,
             danhHieu: record.danhHieu,
             nhom: record.nhom,
+            tgConLai: record.tgNDConLai.trim(),
+            isExpired,
           },
         });
       }
