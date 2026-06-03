@@ -8,6 +8,7 @@ import {
   MEMBERSHIP_LABELS,
   formatPrice,
 } from "@/lib/products";
+import { getHerbsForProduct } from "@/lib/herbs";
 
 const ADMIN_PASS = "02081995";
 const CHEVRON = (
@@ -31,6 +32,7 @@ export default function ProductModal({
 }) {
   const allTiers: MembershipTier[] = ["normal", "silver", "gold", "super_gold"];
   const tiers = userRole === "tvv" ? allTiers : (["normal"] as MembershipTier[]);
+  const herbs = getHerbsForProduct(product.slug);
   const tierColors: Record<MembershipTier, string> = {
     normal: "bg-gray-100 hover:bg-gray-200 text-gray-800",
     silver: "bg-slate-200 hover:bg-slate-300 text-slate-800",
@@ -170,6 +172,41 @@ export default function ProductModal({
               </summary>
               <p className="text-gray-600 mt-2 px-3 leading-relaxed">{product.benefits}</p>
             </details>
+
+            {/* Thao duoc trong san pham */}
+            {herbs.length > 0 && (
+              <details className="group" open>
+                <summary className="font-semibold text-gray-800 cursor-pointer flex items-center justify-between p-3 bg-emerald-50 rounded-lg hover:bg-emerald-100 transition">
+                  <span className="flex items-center gap-2">
+                    <span>🌿</span> Thảo dược trong sản phẩm
+                  </span>
+                  {CHEVRON}
+                </summary>
+                <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 px-1">
+                  {herbs.map((herb) => (
+                    <div
+                      key={herb.key}
+                      className="bg-white border border-emerald-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition"
+                    >
+                      <div className="relative w-full h-32 bg-gray-50">
+                        <Image
+                          src={herb.image}
+                          alt={herb.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, 50vw"
+                        />
+                      </div>
+                      <div className="p-3">
+                        <h4 className="font-bold text-gray-800 text-sm">{herb.name}</h4>
+                        <p className="text-xs text-emerald-600 italic mb-1">{herb.scientificName}</p>
+                        <p className="text-xs text-gray-600 leading-relaxed">{herb.benefit}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </details>
+            )}
 
             {/* Xuat xu */}
             <details className="group">
