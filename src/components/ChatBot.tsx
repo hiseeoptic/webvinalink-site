@@ -11,17 +11,17 @@ interface Message {
 }
 
 const CUSTOMER_SUGGESTIONS = [
-  "San pham nao tot cho gan?",
-  "Tu van combo cham soc da",
-  "San pham nao cho tre em?",
-  "Tim san pham duoi 500.000 VND",
+  "Sản phẩm nào tốt cho gan?",
+  "Tư vấn combo chăm sóc da",
+  "Sản phẩm nào cho trẻ em?",
+  "Tìm sản phẩm dưới 500.000 VND",
 ];
 
 const TVV_SUGGESTIONS = [
-  "Huong dan xu ly tu choi 'dat qua'",
-  "Cach tuyen dung hieu qua",
-  "Combo goi y cho nguoi gia",
-  "Cac buoc bat dau kinh doanh",
+  "Hướng dẫn xử lý từ chối 'đắt quá'",
+  "Cách tuyển dụng hiệu quả",
+  "Combo gợi ý cho người già",
+  "Các bước bắt đầu kinh doanh",
 ];
 
 const ADMIN_PASS = "02081995";
@@ -170,7 +170,7 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
               onClick={() => { setIsOpen(true); setShowBubble(false); }}
             >
               <p className="text-sm text-gray-800 font-medium">
-                {isTVV ? "Can ho tro ban hang hay tuyen dung? 💬" : "Xin chao! Can tu van san pham? 💬"}
+                {isTVV ? "Cần hỗ trợ bán hàng hay tuyển dụng? 💬" : "Xin chào! Cần tư vấn sản phẩm? 💬"}
               </p>
               <button
                 onClick={(e) => { e.stopPropagation(); setShowBubble(false); }}
@@ -205,13 +205,13 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
                 </svg>
               </div>
               <div>
-                <h3 className="font-bold text-sm">Tu Van Vinalink</h3>
+                <h3 className="font-bold text-sm">Tư Vấn Vinalink</h3>
                 {/* Hidden admin trigger: double-click the status text */}
                 <p
                   className="text-xs text-green-200 cursor-default select-none"
                   onClick={handleStatusClick}
                 >
-                  Truc tuyen
+                  Trực tuyến
                 </p>
               </div>
             </div>
@@ -239,7 +239,7 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
                     value={passInput}
                     onChange={(e) => setPassInput(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handlePassSubmit()}
-                    placeholder="Mat khau..."
+                    placeholder="Mật khẩu..."
                     className={`flex-1 bg-gray-800 border rounded px-2 py-1 text-xs focus:outline-none ${
                       passError ? "border-red-500" : "border-gray-600"
                     }`}
@@ -349,7 +349,7 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSend()}
-                placeholder="Nhap cau hoi..."
+                placeholder="Nhập câu hỏi..."
                 disabled={isLoading}
                 className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-[var(--primary)] transition disabled:bg-gray-50"
               />

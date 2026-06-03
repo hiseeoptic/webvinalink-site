@@ -42,11 +42,11 @@ export default function ProductCard({
         </p>
         {userRole === "tvv" ? (
           <p className="text-xs text-gray-500 mt-1">
-            Sieu Vang: {formatPrice(product.prices.super_gold)} VND
+            Siêu Vàng: {formatPrice(product.prices.super_gold)} VND
           </p>
         ) : (
           <p className="text-xs text-blue-500 mt-1">
-            Lien he TVV de co gia tot hon
+            Liên hệ TVV để có giá tốt hơn
           </p>
         )}
       </div>

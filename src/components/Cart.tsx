@@ -39,7 +39,7 @@ export default function Cart({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="bg-[var(--primary)] text-white p-4 flex items-center justify-between">
-          <h2 className="text-lg font-bold">Gio hang ({items.length})</h2>
+          <h2 className="text-lg font-bold">Giỏ hàng ({items.length})</h2>
           <button onClick={onClose} className="hover:bg-white/20 rounded-full p-1 transition">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -53,8 +53,8 @@ export default function Cart({
               <svg className="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
               </svg>
-              <p>Gio hang trong</p>
-              <p className="text-sm mt-1">Hay chon san pham de them vao gio</p>
+              <p>Giỏ hàng trống</p>
+              <p className="text-sm mt-1">Hãy chọn sản phẩm để thêm vào giỏ</p>
             </div>
           ) : (
             <div className="space-y-3">
@@ -106,18 +106,18 @@ export default function Cart({
         {items.length > 0 && (
           <div className="border-t p-4 bg-gray-50">
             <div className="flex justify-between mb-1">
-              <span className="text-gray-600">Tong tien:</span>
+              <span className="text-gray-600">Tổng tiền:</span>
               <span className="font-bold text-lg text-[var(--primary)]">{formatPrice(totalMoney)} VND</span>
             </div>
             <div className="flex justify-between mb-4">
-              <span className="text-gray-600">Tong diem CV:</span>
+              <span className="text-gray-600">Tổng điểm CV:</span>
               <span className="font-bold text-[var(--accent)]">{totalPoints.toLocaleString("vi-VN")} CV</span>
             </div>
             <button
               onClick={onSendEmail}
               className="w-full bg-[var(--primary)] hover:bg-[var(--primary-light)] text-white font-bold py-3 rounded-lg transition active:scale-95"
             >
-              Gui danh sach qua Email
+              Gửi danh sách qua Email
             </button>
           </div>
         )}

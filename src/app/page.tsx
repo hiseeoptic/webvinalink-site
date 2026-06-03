@@ -124,18 +124,18 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
           <div className="max-w-7xl mx-auto flex items-center justify-between text-sm">
             <div className="flex items-center gap-2">
               <span className="bg-[var(--primary)] text-white text-xs px-2 py-0.5 rounded-full font-medium">TVV</span>
-              <span className="text-gray-700">Xin chao, <strong>{tvvInfo.hoTen}</strong> (Ma so: {tvvInfo.maSo})</span>
+              <span className="text-gray-700">Xin chào, <strong>{tvvInfo.hoTen}</strong> (Mã số: {tvvInfo.maSo})</span>
               {tvvInfo.capBac && <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded-full">{tvvInfo.capBac}</span>}
             </div>
-            <button onClick={onLogout} className="text-gray-500 hover:text-red-500 text-xs transition">Dang xuat</button>
+            <button onClick={onLogout} className="text-gray-500 hover:text-red-500 text-xs transition">Đăng xuất</button>
           </div>
         </div>
       )}
       {role === "customer" && (
         <div className="bg-blue-50 border-b border-blue-200 px-4 py-2">
           <div className="max-w-7xl mx-auto flex items-center justify-between text-sm">
-            <span className="text-gray-600">Ban dang xem voi tu cach <strong>khach hang</strong> (gia ban le)</span>
-            <button onClick={onLogout} className="text-[var(--primary)] hover:underline text-xs transition">Doi vai tro</button>
+            <span className="text-gray-600">Bạn đang xem với tư cách <strong>khách hàng</strong> (giá bán lẻ)</span>
+            <button onClick={onLogout} className="text-[var(--primary)] hover:underline text-xs transition">Đổi vai trò</button>
           </div>
         </div>
       )}
@@ -144,15 +144,15 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
       <section className="bg-gradient-to-r from-[var(--primary-dark)] via-[var(--primary)] to-[var(--primary-light)] text-white py-12 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            San pham suc khoe & lam dep
+            Sản phẩm sức khỏe & làm đẹp
           </h2>
           <p className="text-green-100 text-lg mb-6 max-w-2xl mx-auto">
-            Vinalink Group - Bao ve suc khoe gia dinh ban voi cac san pham chat luong cao tu thien nhien
+            Vinalink Group - Bảo vệ sức khỏe gia đình bạn với các sản phẩm chất lượng cao từ thiên nhiên
           </p>
           <div className="max-w-md mx-auto relative">
             <input
               type="text"
-              placeholder="Tim kiem san pham..."
+              placeholder="Tìm kiếm sản phẩm..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full px-5 py-3 rounded-full text-gray-800 shadow-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)] text-sm"
@@ -179,19 +179,19 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
         <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-[var(--primary)]">{products.length}+</p>
-            <p className="text-xs text-gray-500">San pham</p>
+            <p className="text-xs text-gray-500">Sản phẩm</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-[var(--primary)]">4</p>
-            <p className="text-xs text-gray-500">Muc gia thanh vien</p>
+            <p className="text-xs text-gray-500">Mức giá thành viên</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-[var(--primary)]">5</p>
-            <p className="text-xs text-gray-500">Danh muc</p>
+            <p className="text-xs text-gray-500">Danh mục</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-[var(--primary)]">100%</p>
-            <p className="text-xs text-gray-500">Chat luong</p>
+            <p className="text-xs text-gray-500">Chất lượng</p>
           </div>
         </div>
       </section>
@@ -232,8 +232,8 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
-            <p className="text-lg">Khong tim thay san pham nao</p>
-            <p className="text-sm mt-1">Thu tim kiem voi tu khoa khac</p>
+            <p className="text-lg">Không tìm thấy sản phẩm nào</p>
+            <p className="text-sm mt-1">Thử tìm kiếm với từ khóa khác</p>
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -253,7 +253,7 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
       <section id="about" className="bg-white py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
-            Tai sao chon Vinalink?
+            Tại sao chọn Vinalink?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-6 rounded-xl bg-green-50">
@@ -262,8 +262,8 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Chat luong dam bao</h3>
-              <p className="text-sm text-gray-600">San pham duoc chung nhan ATTP, dang ky voi Bo Y te, san xuat theo tieu chuan quoc te.</p>
+              <h3 className="font-bold text-gray-800 mb-2">Chất lượng đảm bảo</h3>
+              <p className="text-sm text-gray-600">Sản phẩm được chứng nhận ATTP, đăng ký với Bộ Y tế, sản xuất theo tiêu chuẩn quốc tế.</p>
             </div>
             <div className="text-center p-6 rounded-xl bg-green-50">
               <div className="w-14 h-14 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -271,8 +271,8 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Gia tot nhat</h3>
-              <p className="text-sm text-gray-600">4 muc gia uu dai theo cap do thanh vien: Thuong, Bac, Vang va Sieu Vang.</p>
+              <h3 className="font-bold text-gray-800 mb-2">Giá tốt nhất</h3>
+              <p className="text-sm text-gray-600">4 mức giá ưu đãi theo cấp độ thành viên: Thường, Bạc, Vàng và Siêu Vàng.</p>
             </div>
             <div className="text-center p-6 rounded-xl bg-green-50">
               <div className="w-14 h-14 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -280,8 +280,8 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Ho tro tan tam</h3>
-              <p className="text-sm text-gray-600">Doi ngu tu van vien chuyen nghiep, chatbot tu van 24/7, ho tro ket hop san pham toi uu.</p>
+              <h3 className="font-bold text-gray-800 mb-2">Hỗ trợ tận tâm</h3>
+              <p className="text-sm text-gray-600">Đội ngũ tư vấn viên chuyên nghiệp, chatbot tư vấn 24/7, hỗ trợ kết hợp sản phẩm tối ưu.</p>
             </div>
           </div>
         </div>

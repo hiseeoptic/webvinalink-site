@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vinalink - Nguyen Duc Hoa | San pham suc khoe & lam dep",
+  title: "Vinalink - Nguyễn Đức Hoà | Sản phẩm sức khỏe & làm đẹp",
   description:
-    "Cung cap cac san pham bao ve suc khoe va cham soc ca nhan chat luong cao tu Vinalink Group. Tu van san pham, ket hop san pham toi uu.",
+    "Cung cấp các sản phẩm bảo vệ sức khỏe và chăm sóc cá nhân chất lượng cao từ Vinalink Group. Tư vấn sản phẩm, kết hợp sản phẩm tối ưu.",
   keywords: "vinalink, nguyen duc hoa, suc khoe, lam dep, thuc pham chuc nang",
 };
 

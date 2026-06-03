@@ -126,21 +126,21 @@ export default function ProductModal({
 
           {/* Pricing tiers */}
           <div className="mb-4">
-            <h3 className="font-semibold text-gray-800 mb-2">Chon goi & them vao gio:</h3>
+            <h3 className="font-semibold text-gray-800 mb-2">Chọn gói & thêm vào giỏ:</h3>
             <div className="grid grid-cols-2 gap-2">
               {tiers.map((tier) => (
                 <button key={tier} onClick={() => onAddToCart(product, tier)}
                   className={`${tierColors[tier]} rounded-lg p-3 text-left transition-all active:scale-95`}>
                   <span className="block text-xs font-medium opacity-70">{MEMBERSHIP_LABELS[tier]}</span>
                   <span className="block font-bold text-sm">{formatPrice(product.prices[tier])} VND</span>
-                  <span className="block text-xs mt-1 text-[var(--primary)] font-semibold">+ Them vao gio</span>
+                  <span className="block text-xs mt-1 text-[var(--primary)] font-semibold">+ Thêm vào giỏ</span>
                 </button>
               ))}
             </div>
             {userRole === "customer" && (
               <div className="mt-3 bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-blue-800">
-                <p className="font-medium">Ban muon mua voi muc gia thap hon?</p>
-                <p className="text-xs mt-1 text-blue-600">Vui long lien he nguoi gioi thieu hoac dang ky lam Tu van vien de duoc huong gia uu dai Bac / Vang / Sieu Vang.</p>
+                <p className="font-medium">Bạn muốn mua với mức giá thấp hơn?</p>
+                <p className="text-xs mt-1 text-blue-600">Vui lòng liên hệ người giới thiệu hoặc đăng ký làm Tư vấn viên để được hưởng giá ưu đãi Bạc / Vàng / Siêu Vàng.</p>
               </div>
             )}
           </div>
@@ -150,7 +150,7 @@ export default function ProductModal({
             {/* Thanh phan */}
             <details className="group">
               <summary className="font-semibold text-gray-800 cursor-pointer flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
-                Thanh phan cau tao {CHEVRON}
+                Thành phần cấu tạo {CHEVRON}
               </summary>
               <p className="text-gray-600 mt-2 px-3 leading-relaxed">{product.ingredients}</p>
             </details>
@@ -158,7 +158,7 @@ export default function ProductModal({
             {/* Huong dan su dung */}
             <details className="group">
               <summary className="font-semibold text-gray-800 cursor-pointer flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
-                Huong dan su dung {CHEVRON}
+                Hướng dẫn sử dụng {CHEVRON}
               </summary>
               <p className="text-gray-600 mt-2 px-3 leading-relaxed">{product.usage}</p>
             </details>
@@ -166,7 +166,7 @@ export default function ProductModal({
             {/* Cong dung */}
             <details className="group">
               <summary className="font-semibold text-gray-800 cursor-pointer flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
-                Cong dung {CHEVRON}
+                Công dụng {CHEVRON}
               </summary>
               <p className="text-gray-600 mt-2 px-3 leading-relaxed">{product.benefits}</p>
             </details>
@@ -174,12 +174,12 @@ export default function ProductModal({
             {/* Xuat xu */}
             <details className="group">
               <summary className="font-semibold text-gray-800 cursor-pointer flex items-center justify-between p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition">
-                Xuat xu & Nha san xuat {CHEVRON}
+                Xuất xứ & Nhà sản xuất {CHEVRON}
               </summary>
               <div className="mt-2 px-3 space-y-2 text-gray-600">
-                <p><span className="font-medium text-gray-700">Xuat xu:</span> {product.origin}</p>
-                <p><span className="font-medium text-gray-700">Nha san xuat:</span> {product.manufacturer}</p>
-                <p><span className="font-medium text-gray-700">Tiep thi & phan phoi:</span> {product.distributor}</p>
+                <p><span className="font-medium text-gray-700">Xuất xứ:</span> {product.origin}</p>
+                <p><span className="font-medium text-gray-700">Nhà sản xuất:</span> {product.manufacturer}</p>
+                <p><span className="font-medium text-gray-700">Tiếp thị & phân phối:</span> {product.distributor}</p>
               </div>
             </details>
 
@@ -189,7 +189,7 @@ export default function ProductModal({
                 className="font-semibold text-gray-800 cursor-pointer flex items-center justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition"
                 onClick={handleRegClick}
               >
-                Giay phep & Dang ky {CHEVRON}
+                Giấy phép & Đăng ký {CHEVRON}
               </summary>
               <div className="mt-2 px-3 space-y-2">
                 <p className="text-gray-600">{product.registration}</p>
@@ -197,7 +197,7 @@ export default function ProductModal({
                 {/* License image (visible to everyone if uploaded) */}
                 {licenseUrl && (
                   <div className="mt-2 border rounded-lg overflow-hidden">
-                    <p className="text-xs text-gray-500 p-2 bg-gray-50">Giay chung nhan dang ky:</p>
+                    <p className="text-xs text-gray-500 p-2 bg-gray-50">Giấy chứng nhận đăng ký:</p>
                     <img src={licenseUrl} alt="Giay phep" className="w-full" />
                   </div>
                 )}
@@ -224,7 +224,7 @@ export default function ProductModal({
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
-                      <span>[Admin] Upload giay phep</span>
+                      <span>[Admin] Upload giấy phép</span>
                       <input type="file" accept="image/*" onChange={handleFileUpload} className="hidden" />
                     </label>
                   </div>

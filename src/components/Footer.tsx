@@ -12,26 +12,26 @@ export default function Footer() {
               <Image src="/images/logo.png" alt="Vinalink Group" width={40} height={40} className="rounded" />
               <div>
                 <h3 className="text-white font-bold text-lg">Vinalink</h3>
-                <p className="text-xs text-gray-400">Nguyen Duc Hoa</p>
+                <p className="text-xs text-gray-400">Nguyễn Đức Hoà</p>
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Cung cap cac san pham bao ve suc khoe va cham soc ca nhan chat luong cao tu Vinalink Group.
+              Cung cấp các sản phẩm bảo vệ sức khỏe và chăm sóc cá nhân chất lượng cao từ Vinalink Group.
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Danh muc</h4>
+            <h4 className="text-white font-semibold mb-4">Danh mục</h4>
             <ul className="space-y-2 text-sm">
-              <li><span className="hover:text-white transition cursor-pointer">Thuc pham bo sung</span></li>
-              <li><span className="hover:text-white transition cursor-pointer">Bao ve suc khoe</span></li>
-              <li><span className="hover:text-white transition cursor-pointer">Cham soc ca nhan</span></li>
-              <li><span className="hover:text-white transition cursor-pointer">Cham soc da (Orico)</span></li>
+              <li><span className="hover:text-white transition cursor-pointer">Thực phẩm bổ sung</span></li>
+              <li><span className="hover:text-white transition cursor-pointer">Bảo vệ sức khỏe</span></li>
+              <li><span className="hover:text-white transition cursor-pointer">Chăm sóc cá nhân</span></li>
+              <li><span className="hover:text-white transition cursor-pointer">Chăm sóc da (Orico)</span></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Lien he</h4>
+            <h4 className="text-white font-semibold mb-4">Liên hệ</h4>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,8 +50,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-xs text-gray-500">
-          <p>&copy; 2024-2026 Nguyen Duc Hoa - Vinalink Group. Moi quyen duoc bao luu.</p>
-          <p className="mt-1">Thuc pham nay khong phai la thuoc va khong co tac dung thay the thuoc chua benh.</p>
+          <p>&copy; 2024-2026 Nguyễn Đức Hoà - Vinalink Group. Mọi quyền được bảo lưu.</p>
+          <p className="mt-1">Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.</p>
         </div>
       </div>
     </footer>

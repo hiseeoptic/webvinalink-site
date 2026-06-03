@@ -26,19 +26,19 @@ export default function Header({
           />
           <div>
             <h1 className="text-xl font-bold leading-tight">Vinalink</h1>
-            <p className="text-xs text-green-200">Nguyen Duc Hoa</p>
+            <p className="text-xs text-green-200">Nguyễn Đức Hoà</p>
           </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <Link href="/" className="hover:text-green-200 transition">
-            San pham
+            Sản phẩm
           </Link>
           <Link href="#about" className="hover:text-green-200 transition">
-            Gioi thieu
+            Giới thiệu
           </Link>
           <Link href="#contact" className="hover:text-green-200 transition">
-            Lien he
+            Liên hệ
           </Link>
         </nav>
 
@@ -104,21 +104,21 @@ export default function Header({
             className="block py-2 hover:text-green-200"
             onClick={() => setMenuOpen(false)}
           >
-            San pham
+            Sản phẩm
           </Link>
           <Link
             href="#about"
             className="block py-2 hover:text-green-200"
             onClick={() => setMenuOpen(false)}
           >
-            Gioi thieu
+            Giới thiệu
           </Link>
           <Link
             href="#contact"
             className="block py-2 hover:text-green-200"
             onClick={() => setMenuOpen(false)}
           >
-            Lien he
+            Liên hệ
           </Link>
         </nav>
       )}
