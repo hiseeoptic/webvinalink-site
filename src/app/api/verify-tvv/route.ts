@@ -96,23 +96,28 @@ export async function POST(req: NextRequest) {
       const recordMaSo = fields[1]?.trim();
 
       if (recordMaSo === maSo.trim()) {
+        // Column mapping (Sheet has empty columns at index 5, 8, 10, 12):
+        // 0:STT 1:MaSo 2:HoTen 3:Nhom 4:Tang 5:(empty)
+        // 6:HTTrucHe 7:Doi(Fi) 8:(empty) 9:CapBac 10:(empty)
+        // 11:DanhHieu 12:(empty) 13:MaBT 14:NguoiBaoTro
+        // 15:MaCD 16:NguoiChiDinh 17:VTChiDinh 18:ThiTruong 19:TGNDConLai
         const record: TVVRecord = {
           stt: fields[0] || "",
           maSo: fields[1] || "",
           hoTen: fields[2] || "",
           nhom: fields[3] || "",
           tang: fields[4] || "",
-          htTrucHe: fields[5] || "",
-          doi: fields[6] || "",
-          capBac: fields[7] || "",
-          danhHieu: fields[8] || "",
-          maBT: fields[9] || "",
-          nguoiBaoTro: fields[10] || "",
-          maCD: fields[11] || "",
-          nguoiChiDinh: fields[12] || "",
-          vtChiDinh: fields[13] || "",
-          thiTruong: fields[14] || "",
-          tgNDConLai: fields[15] || "",
+          htTrucHe: fields[6] || "",
+          doi: fields[7] || "",
+          capBac: fields[9] || "",
+          danhHieu: fields[11] || "",
+          maBT: fields[13] || "",
+          nguoiBaoTro: fields[14] || "",
+          maCD: fields[15] || "",
+          nguoiChiDinh: fields[16] || "",
+          vtChiDinh: fields[17] || "",
+          thiTruong: fields[18] || "",
+          tgNDConLai: fields[19] || "",
         };
 
         // Check if TVV is still active (TG ND Con Lai)
