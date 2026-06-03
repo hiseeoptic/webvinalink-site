@@ -8,6 +8,8 @@ import ProductModal from "@/components/ProductModal";
 import Cart from "@/components/Cart";
 import ChatBot from "@/components/ChatBot";
 import RoleGate, { UserRole, TVVInfo } from "@/components/RoleGate";
+import DeltaImmuneSection from "@/components/DeltaImmuneSection";
+import TechnologySection from "@/components/TechnologySection";
 import {
   Product,
   MembershipTier,
@@ -248,6 +250,12 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
           </div>
         )}
       </main>
+
+      {/* DeltaImmune Highlight */}
+      <DeltaImmuneSection />
+
+      {/* Production Technologies */}
+      <TechnologySection />
 
       {/* About Section */}
       <section id="about" className="bg-white py-12 px-4">

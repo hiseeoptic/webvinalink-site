@@ -126,6 +126,21 @@ export default function ProductModal({
           </div>
           <p className="text-gray-600 mb-4">{product.description}</p>
 
+          {/* DeltaImmune badge */}
+          {/DeltaImmune|Delta-immune|Deltaimmune/i.test(product.ingredients) && (
+            <div className="mb-4 flex items-center gap-3 bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 rounded-xl p-3">
+              <div className="text-2xl shrink-0">🧬</div>
+              <div>
+                <p className="font-bold text-sm text-emerald-800">
+                  Chứa hoạt chất sinh học DeltaImmune<sup>®</sup>
+                </p>
+                <p className="text-xs text-emerald-600">
+                  Công nghệ miễn dịch từ khoa học Xô Viết — kích hoạt đề kháng tức thì, bền vững.
+                </p>
+              </div>
+            </div>
+          )}
+
           {/* Pricing tiers */}
           <div className="mb-4">
             <h3 className="font-semibold text-gray-800 mb-2">Chọn gói & thêm vào giỏ:</h3>
