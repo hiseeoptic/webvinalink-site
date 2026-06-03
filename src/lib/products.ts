@@ -12,6 +12,11 @@ export interface Product {
   ingredients: string;
   usage: string;
   benefits: string;
+  origin: string;
+  manufacturer: string;
+  distributor: string;
+  registration: string;
+  licenseImage?: string;
 }
 
 export interface CartItem {
@@ -162,9 +167,9 @@ export const products: Product[] = [
     points: 207,
     image: "/images/products/vhealth-socola.jpg",
     description: "Thực phẩm bổ sung VHealth hương Socola 20g/hộp. Bột dinh dưỡng đa năng pha với nước.",
-    ingredients: "Moi goi 25g: Kem khong sua, bot hon hop hat (gao te, dau nanh, dau xanh, dau lang, hanh nhan, dau Ha Lan), Maltodextrin, Protein dau Ha Lan, chat xo hoa tan (FOS, Inulin), bot sua gay, yen mach, bot ca cao. Canxi (tu tao bien) 125mg, Vitamin C 15mg, Magie (Magie lactat dihydrat) 10mg, Kem (Kem gluconat) 2mg, Vitamin B1 0.5mg, Vitamin B2 0.5mg, Vitamin B6 0.5mg.",
-    usage: "Pha 1 goi voi khoang 150ml nuoc, khuay deu. Nguoi lon va tre em tren 6 tuoi: 1-2 goi/lan, 1-3 goi/ngay. Ngon hon khi pha voi nuoc am.",
-    benefits: "Bổ sung dinh dưỡng đa dạng, tăng cường sức đề kháng, hỗ trợ tiêu hóa, cung cấp năng lượng.",
+    ingredients: "Moi goi 25g chua: Kem khong sua (non dairy creamer); bot hon hop cac hat (Gao te, dau nanh, dau xanh, dau lang, hanh nhan, dau Ha Lan); Maltodextrin; Protein dau Ha Lan; chat xo hoa tan (FOS (oligofructose), Inulin); bot sua gay; Yen mach; bot ca cao; chat tao ngot tu nhien (Fructose); huong lieu TPTH (huong socola, huong vani); chat lam day (gom gua, gom xanthan); Hoang ky (Astragalus membranaceus); Canxi (tu tao bien) 125mg; Natri clorid; Dang sam (Codonopsis pilosula); chat chong dong von (silicon dioxide); Immulata (Nam hau thu, Tao Nannochloropsis sp. tuoi, lactose monohydrate); Vitamin C 15mg; Nam Chaga (Inonotus obliquus); IMCDeltaImmune (Vach te bao Lactobacillus rhamnosus, maltodextrin); bot chiet xuat Nam nguu chuong chi (Antrodia cinnamomea mycelia); Magie (Magie lactat dihydrat) 10mg; chat tao ngot tong hop (Sucralose); Kem (Kem gluconat) 2mg; Vitamin B1 (Thiamin mononitrat) 0.5mg; Vitamin B2 (Riboflavin) 0.5mg; Vitamin B6 (Pyridoxin hydroclorid) 0.5mg.",
+    usage: "Pha 1 goi Vhealth voi khoang 150ml nuoc. Co the pha voi nuoc loc, sua, nuoc hoa qua... khuay deu va thuong thuc. Ngon hon khi pha voi nuoc am. Dung cho nguoi lon, tre em tren 6 tuoi. Co the pha 1-2 goi/lan, ngay dung 1-3 goi hoac nhieu hon tuy nhu cau. Tre em su dung 1 goi/ngay, chia 1-2 lan. Khoi luong tinh: 375g (15 goi x 25g); 500g (20 goi x 25g); 750g (30 goi x 25g).",
+    benefits: "Bo sung dinh duong da dang, tang cuong suc de khang, ho tro tieu hoa, cung cap nang luong. Thuc pham nay khong phai la thuoc va khong co tac dung thay the thuoc chua benh.",
   },
   {
     id: 11,
@@ -175,9 +180,9 @@ export const products: Product[] = [
     points: 207,
     image: "/images/products/vhealth-traxanh.jpg",
     description: "Thực phẩm bổ sung VHealth hương Trà xanh 20g/hộp. Bột dinh dưỡng thơm ngon.",
-    ingredients: "Moi goi 25g: Kem khong sua, bot hon hop hat (gao te, dau nanh, dau xanh, dau lang, hanh nhan, dau Ha Lan), Maltodextrin, Protein dau Ha Lan, chat xo hoa tan (FOS, Inulin), bot sua gay, yen mach, bot tra xanh Matcha. Canxi (tu tao bien) 125mg, Vitamin C 15mg, Magie (Magie lactat dihydrat) 10mg, Kem (Kem gluconat) 2mg, Vitamin B1 0.5mg, Vitamin B2 0.5mg, Vitamin B6 0.5mg.",
-    usage: "Pha 1 gói VHealth với khoảng 150ml nước, khuấy đều. Người lớn và trẻ em trên 6 tuổi: 1-2 gói/lần, 1-3 gói/ngày.",
-    benefits: "Bổ sung dinh dưỡng, chống oxy hóa từ trà xanh, tăng cường miễn dịch, hỗ trợ tiêu hóa.",
+    ingredients: "Moi goi 25g chua: Kem khong sua (Non dairy creamer); bot hon hop cac hat (Gao te, dau nanh, dau xanh, dau lang, hanh nhan, dau Ha Lan); maltodextrin; protein dau Ha Lan; chat xo hoa tan (FOS (oligofructose), Inulin); bot sua gay; yen mach; chat tao ngot tu nhien (Fructose); huong lieu TPTH (huong tra xanh, huong tra xanh matcha, huong sua); bot Matcha; chat lam day (gom xanthan, gom gua); Hoang ky (Astragalus membranaceus); Canxi (tu tao bien) 125mg; Dang sam (Codonopsis pilosula); natri clorid; chat chong dong von (silicon dioxide); Immulata (Nam hau thu, Tao Nannochloropsis sp. tuoi, lactose monohydrate); Vitamin C 15mg; Nam Chaga (Inonotus obliquus); IMCDeltaImmune (Vach te bao Lactobacillus rhamnosus, maltodextrin); bot chiet xuat Nam nguu chuong chi (Antrodia cinnamomea mycelia); Magie (Magie lactat dihydrat) 10mg; chat tao ngot tong hop (Sucralose); Kem (kem gluconat) 2mg; Vitamin B1 (Thiamin mononitrat) 0.5mg; Vitamin B2 (Riboflavin) 0.5mg; Vitamin B6 (Pyridoxin hydroclorid) 0.5mg.",
+    usage: "Pha 1 goi Vhealth voi khoang 150ml nuoc. Co the pha voi nuoc loc, sua, nuoc hoa qua... khuay deu va thuong thuc. Ngon hon khi pha voi nuoc am. Dung cho nguoi lon, tre em tren 6 tuoi. Co the pha 1-2 goi/lan, ngay dung 1-3 goi hoac nhieu hon tuy nhu cau. Tre em su dung 1 goi/ngay, chia 1-2 lan.",
+    benefits: "Bo sung dinh duong, chong oxy hoa tu tra xanh Matcha, tang cuong mien dich, ho tro tieu hoa. Thuc pham nay khong phai la thuoc va khong co tac dung thay the thuoc chua benh.",
   },
   {
     id: 12,
@@ -452,7 +457,17 @@ export const products: Product[] = [
     usage: "Thoa đều lên da mặt và cổ sau bước toner và serum. Dùng sáng và tối.",
     benefits: "Dưỡng ẩm sâu, chống lão hóa, làm sáng da, cải thiện nếp nhăn, da căng mịn.",
   },
-];
+].map((p) => {
+  // Merge metadata from product-meta.ts
+  const meta = require("./product-meta").productMeta[p.slug];
+  return {
+    ...p,
+    origin: meta?.origin || "Viet Nam",
+    manufacturer: meta?.manufacturer || "Dang cap nhat",
+    distributor: meta?.distributor || "Cong ty Co phan Tap doan Lien ket Viet Nam (Vinalink Group)",
+    registration: meta?.registration || "Dang cap nhat",
+  };
+});
 
 export function formatPrice(price: number): string {
   return price.toLocaleString("vi-VN");
