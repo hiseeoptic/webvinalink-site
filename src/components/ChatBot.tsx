@@ -3,29 +3,40 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 
 type Provider = "gemini" | "claude";
+type UserRole = "guest" | "customer" | "tvv";
 
 interface Message {
   role: "user" | "assistant";
   content: string;
 }
 
-const SUGGESTIONS = [
+const CUSTOMER_SUGGESTIONS = [
   "San pham nao tot cho gan?",
   "Tu van combo cham soc da",
   "San pham nao cho tre em?",
   "Tim san pham duoi 500.000 VND",
 ];
 
+const TVV_SUGGESTIONS = [
+  "Huong dan xu ly tu choi 'dat qua'",
+  "Cach tuyen dung hieu qua",
+  "Combo goi y cho nguoi gia",
+  "Cac buoc bat dau kinh doanh",
+];
+
 const ADMIN_PASS = "02081995";
 
-export default function ChatBot() {
+export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole }) {
+  const isTVV = userRole === "tvv";
+  const SUGGESTIONS = isTVV ? TVV_SUGGESTIONS : CUSTOMER_SUGGESTIONS;
+  const welcomeMsg = isTVV
+    ? "Xin chao TVV! Minh la tro ly Vinalink. Minh co the tu van san pham, dao tao ky nang ban hang, xu ly tu choi, huong dan tuyen dung, va cac buoc bat dau kinh doanh. Ban can ho tro gi?"
+    : "Xin chao! Minh la tro ly tu van san pham Vinalink. Ban can tu van ve san pham nao hoac co cau hoi gi ve suc khoe & lam dep khong?";
+
   const [isOpen, setIsOpen] = useState(false);
+  const [showBubble, setShowBubble] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    {
-      role: "assistant",
-      content:
-        "Xin chao! Minh la tro ly tu van san pham Vinalink. Ban can tu van ve san pham nao hoac co cau hoi gi ve suc khoe & lam dep khong?",
-    },
+    { role: "assistant", content: welcomeMsg },
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -45,6 +56,13 @@ export default function ChatBot() {
       setProvider(saved);
     }
   }, []);
+
+  // Show attention bubble after 3 seconds
+  useEffect(() => {
+    if (isOpen) { setShowBubble(false); return; }
+    const timer = setTimeout(() => setShowBubble(true), 3000);
+    return () => clearTimeout(timer);
+  }, [isOpen]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -110,7 +128,7 @@ export default function ChatBot() {
         const res = await fetch("/api/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ messages: history, provider }),
+          body: JSON.stringify({ messages: history, provider, userRole }),
         });
 
         const data = await res.json();
@@ -137,21 +155,42 @@ export default function ChatBot() {
         setIsLoading(false);
       }
     },
-    [input, isLoading, messages, provider]
+    [input, isLoading, messages, provider, userRole]
   );
 
   return (
     <>
-      {/* Floating chat button */}
+      {/* Floating chat button + signal bubble */}
       {!isOpen && (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 bg-[var(--primary)] hover:bg-[var(--primary-light)] text-white rounded-full w-14 h-14 shadow-lg flex items-center justify-center transition-all active:scale-90 z-50"
-        >
-          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>
-        </button>
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+          {/* Attention bubble */}
+          {showBubble && (
+            <div
+              className="bg-white rounded-2xl rounded-br-sm shadow-lg px-4 py-3 max-w-[240px] animate-fade-in cursor-pointer border border-gray-100"
+              onClick={() => { setIsOpen(true); setShowBubble(false); }}
+            >
+              <p className="text-sm text-gray-800 font-medium">
+                {isTVV ? "Can ho tro ban hang hay tuyen dung? 💬" : "Xin chao! Can tu van san pham? 💬"}
+              </p>
+              <button
+                onClick={(e) => { e.stopPropagation(); setShowBubble(false); }}
+                className="absolute -top-1 -right-1 w-5 h-5 bg-gray-200 hover:bg-gray-300 rounded-full text-xs flex items-center justify-center text-gray-500"
+              >
+                x
+              </button>
+            </div>
+          )}
+          <button
+            onClick={() => { setIsOpen(true); setShowBubble(false); }}
+            className="bg-[var(--primary)] hover:bg-[var(--primary-light)] text-white rounded-full w-14 h-14 shadow-lg flex items-center justify-center transition-all active:scale-90 relative"
+          >
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+            {/* Pulse ring animation */}
+            <span className="absolute inset-0 rounded-full bg-[var(--primary)] opacity-30 animate-ping" />
+          </button>
+        </div>
       )}
 
       {/* Chat window */}

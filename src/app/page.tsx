@@ -310,7 +310,7 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
       />
 
       {/* ChatBot */}
-      <ChatBot />
+      <ChatBot userRole={role} />
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import { GoogleGenAI } from "@google/genai";
+import { buildSystemPrompt } from "@/lib/knowledge-base";
 
+// Legacy fallback - replaced by knowledge-base.ts
 const SYSTEM_PROMPT = `Ban la tro ly tu van san pham cua Vinalink Group - Nguyen Duc Hoa. Ban tu van chuyen nghiep, than thien, bang tieng Viet.
 
 DANH MUC SAN PHAM VINALINK:
@@ -61,7 +63,7 @@ Khi tu van:
 - Than thien, chuyen nghiep, khong qua dai dong
 - Tra loi bang tieng Viet, khong dau (de tuong thich font)`;
 
-async function callClaude(messages: { role: string; content: string }[]) {
+async function callClaude(messages: { role: string; content: string }[], systemPrompt: string) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
   const formattedMessages = messages.map((m) => ({
@@ -72,7 +74,7 @@ async function callClaude(messages: { role: string; content: string }[]) {
   const response = await client.messages.create({
     model: "claude-sonnet-4-20250514",
     max_tokens: 1024,
-    system: SYSTEM_PROMPT,
+    system: systemPrompt,
     messages: formattedMessages,
   });
 
@@ -80,7 +82,7 @@ async function callClaude(messages: { role: string; content: string }[]) {
   return textBlock ? textBlock.text : "Xin loi, toi khong the tra loi luc nay.";
 }
 
-async function callGemini(messages: { role: string; content: string }[]) {
+async function callGemini(messages: { role: string; content: string }[], systemPrompt: string) {
   const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
 
   const history = messages.slice(0, -1).map((m) => ({
@@ -94,7 +96,7 @@ async function callGemini(messages: { role: string; content: string }[]) {
     model: "gemini-2.0-flash",
     history,
     config: {
-      systemInstruction: SYSTEM_PROMPT,
+      systemInstruction: systemPrompt,
     },
   });
 
@@ -104,7 +106,7 @@ async function callGemini(messages: { role: string; content: string }[]) {
 
 export async function POST(req: NextRequest) {
   try {
-    const { messages, provider } = await req.json();
+    const { messages, provider, userRole } = await req.json();
 
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
       return NextResponse.json(
@@ -112,6 +114,10 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
+
+    // Build role-specific system prompt
+    const role = userRole === "tvv" ? "tvv" : "customer";
+    const systemPrompt = buildSystemPrompt(role);
 
     let reply: string;
 
@@ -122,7 +128,7 @@ export async function POST(req: NextRequest) {
           { status: 500 }
         );
       }
-      reply = await callClaude(messages);
+      reply = await callClaude(messages, systemPrompt);
     } else {
       if (!process.env.GEMINI_API_KEY) {
         return NextResponse.json(
@@ -130,7 +136,7 @@ export async function POST(req: NextRequest) {
           { status: 500 }
         );
       }
-      reply = await callGemini(messages);
+      reply = await callGemini(messages, systemPrompt);
     }
 
     return NextResponse.json({ reply, provider });
