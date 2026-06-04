@@ -197,27 +197,53 @@ export default function ProductModal({
                   </span>
                   {CHEVRON}
                 </summary>
-                <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 px-1">
+                <p className="text-xs text-gray-500 px-1 mt-2 mb-1">
+                  Bấm vào từng vị thuốc để xem phân tích chi tiết vai trò trong sản phẩm.
+                </p>
+                <div className="mt-2 space-y-2 px-1">
                   {herbs.map((herb) => (
-                    <div
+                    <details
                       key={herb.key}
-                      className="bg-white border border-emerald-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition"
+                      className="group/herb bg-white border border-emerald-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition"
                     >
-                      <div className="relative w-full h-32 bg-gray-50">
-                        <Image
-                          src={herb.image}
-                          alt={herb.name}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 640px) 100vw, 50vw"
-                        />
+                      <summary className="flex items-center gap-3 p-2 cursor-pointer list-none">
+                        <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-gray-50 shrink-0">
+                          <Image
+                            src={herb.image}
+                            alt={herb.name}
+                            fill
+                            className="object-cover"
+                            sizes="64px"
+                          />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-bold text-gray-800 text-sm">{herb.name}</h4>
+                          <p className="text-xs text-emerald-600 italic">{herb.scientificName}</p>
+                          <p className="text-xs text-gray-500 line-clamp-1 group-open/herb:hidden">
+                            {herb.benefit}
+                          </p>
+                        </div>
+                        {herb.detail && (
+                          <svg
+                            className="w-4 h-4 text-emerald-500 shrink-0 transition-transform group-open/herb:rotate-180"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        )}
+                      </summary>
+                      <div className="px-3 pb-3 pt-1">
+                        <p className="text-xs text-gray-600 leading-relaxed mb-2">{herb.benefit}</p>
+                        {herb.detail && (
+                          <div className="bg-emerald-50 rounded-lg p-3 border-l-2 border-emerald-400">
+                            <p className="text-xs font-semibold text-emerald-700 mb-1">
+                              Vì sao có trong sản phẩm này?
+                            </p>
+                            <p className="text-xs text-gray-700 leading-relaxed">{herb.detail}</p>
+                          </div>
+                        )}
                       </div>
-                      <div className="p-3">
-                        <h4 className="font-bold text-gray-800 text-sm">{herb.name}</h4>
-                        <p className="text-xs text-emerald-600 italic mb-1">{herb.scientificName}</p>
-                        <p className="text-xs text-gray-600 leading-relaxed">{herb.benefit}</p>
-                      </div>
-                    </div>
+                    </details>
                   ))}
                 </div>
               </details>
