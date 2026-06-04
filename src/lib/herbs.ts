@@ -163,6 +163,11 @@ export const HERBS: Record<string, Herb> = {
     image: "/images/herbs/la-chay.jpg",
     benefit: "Cây thuốc quý của Việt Nam. Hỗ trợ điều hòa miễn dịch, kháng viêm, giảm đau xương khớp và được nghiên cứu hỗ trợ sức khỏe toàn diện.",
   },
+  "ba-kich": {
+    key: "ba-kich", name: "Ba kích", scientificName: "Morinda officinalis",
+    image: "/images/herbs/ba-kich.jpg",
+    benefit: "Rễ củ màu tím đặc trưng, vị thuốc bổ thận tráng dương nổi tiếng. Tăng cường sinh lực nam giới, mạnh gân cốt, giảm đau lưng mỏi gối và chống mệt mỏi.",
+  },
 };
 
 // ============================================================
@@ -179,7 +184,7 @@ export const PRODUCT_HERBS: Record<string, string[]> = {
   "jointlink-max": ["bach-truat", "khuong-hoat", "day-dau-xuong", "nghe", "cam-thao"],
   "lacttocol-max": ["bach-truat", "tho-phuc-linh"],
   "mindenergy-max": ["dinh-lang", "bacopa", "nguu-tat"],
-  "manlink-max": ["nhan-sam", "dam-duong-hoac", "dong-trung-ha-thao", "bach-tat-le", "co-ca-ri"],
+  "manlink-max": ["nhan-sam", "dam-duong-hoac", "ba-kich", "dong-trung-ha-thao", "bach-tat-le", "co-ca-ri"],
   "kidsmune-max": ["hoang-ky", "diep-ca"],
   "vtopcan": ["la-tre", "sa", "du-du"],
   "vsportgel": ["dinh-lang"],
