@@ -138,20 +138,45 @@ export const HERBS: Record<string, Herb> = {
     image: "/images/herbs/la-tre.jpg",
     benefit: "Giàu Silica và chất chống oxy hóa. Thanh nhiệt, lợi tiểu, giải độc, hỗ trợ hạ sốt và làm mát cơ thể.",
   },
+  "hoang-dang": {
+    key: "hoang-dang", name: "Hoàng đằng", scientificName: "Fibraurea tinctoria",
+    image: "/images/herbs/hoang-dang.jpg",
+    benefit: "Rễ và thân có màu vàng đặc trưng, giàu Palmatin và Berberin. Thanh nhiệt, kháng khuẩn, chống viêm, hỗ trợ tiêu hóa và bảo vệ thành mạch tim.",
+  },
+  "thong-do": {
+    key: "thong-do", name: "Thông đỏ (Pine bark)", scientificName: "Taxus wallichiana",
+    image: "/images/herbs/thong-do.jpg",
+    benefit: "Dược liệu quý chứa chất chống oxy hóa mạnh (OPC, Taxol). Bảo vệ tế bào, chống lão hóa, tăng cường tuần hoàn và hỗ trợ sức khỏe tim mạch.",
+  },
+  "khuong-hoat": {
+    key: "khuong-hoat", name: "Khương hoạt", scientificName: "Notopterygium incisum",
+    image: "/images/herbs/khuong-hoat.jpg",
+    benefit: "Vị thuốc trừ phong thấp hàng đầu. Giúp giảm đau nhức xương khớp, đau mỏi vai gáy, khu phong tán hàn và hỗ trợ vận động linh hoạt.",
+  },
+  "day-dau-xuong": {
+    key: "day-dau-xuong", name: "Dây đau xương", scientificName: "Tinospora sinensis",
+    image: "/images/herbs/day-dau-xuong.jpg",
+    benefit: "Như tên gọi, là khắc tinh của đau nhức xương khớp. Khu phong trừ thấp, mạnh gân cốt, hỗ trợ giảm đau lưng, đau khớp và phục hồi vận động.",
+  },
+  "la-chay": {
+    key: "la-chay", name: "Lá chay", scientificName: "Artocarpus tonkinensis",
+    image: "/images/herbs/la-chay.jpg",
+    benefit: "Cây thuốc quý của Việt Nam. Hỗ trợ điều hòa miễn dịch, kháng viêm, giảm đau xương khớp và được nghiên cứu hỗ trợ sức khỏe toàn diện.",
+  },
 };
 
 // ============================================================
 // GÁN THẢO DƯỢC CHO TỪNG SẢN PHẨM (theo slug)
 // ============================================================
 export const PRODUCT_HERBS: Record<string, string[]> = {
-  "caphelink": ["hoang-ky", "nam-chaga"],
+  "caphelink": ["la-chay", "hoang-ky", "nam-chaga"],
   "bach-xuan": ["nhan-sam", "linh-chi", "dong-trung-ha-thao"],
   "vhealth-socola": ["hoang-ky", "dang-sam", "nam-chaga"],
   "vhealth-tra-xanh": ["hoang-ky", "dang-sam", "nam-chaga"],
-  "genecel-max": ["linh-chi", "bach-thuoc", "kho-sam"],
+  "genecel-max": ["linh-chi", "bach-thuoc", "kho-sam", "thong-do"],
   "detoxmune-max": ["tho-phuc-linh"],
-  "cardiopro-max": ["dan-sam", "hoang-ba", "natto"],
-  "jointlink-max": ["bach-truat", "nghe", "cam-thao"],
+  "cardiopro-max": ["dan-sam", "hoang-ba", "hoang-dang", "natto"],
+  "jointlink-max": ["bach-truat", "khuong-hoat", "day-dau-xuong", "nghe", "cam-thao"],
   "lacttocol-max": ["bach-truat", "tho-phuc-linh"],
   "mindenergy-max": ["dinh-lang", "bacopa", "nguu-tat"],
   "manlink-max": ["nhan-sam", "dam-duong-hoac", "dong-trung-ha-thao", "bach-tat-le", "co-ca-ri"],
