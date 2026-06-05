@@ -227,7 +227,7 @@ export const HERBS: Record<string, Herb> = {
   },
   "loi-khuan": {
     key: "loi-khuan", name: "Lợi khuẩn (Probiotic)", scientificName: "Lactobacillus acidophilus & rhamnosus",
-    image: "/images/herbs/lunasin.jpg",
+    image: "/images/herbs/loi-khuan.jpg",
     benefit: "Hai chủng lợi khuẩn 10⁸ CFU giúp cân bằng hệ vi sinh đường ruột, tăng cường tiêu hóa và hấp thu dưỡng chất.",
     detail: "Lactobacillus acidophilus và rhamnosus là hai lợi khuẩn quan trọng cho đường ruột. Trong Bách Xuân, lợi khuẩn đóng vai trò 'người vận chuyển': giúp hệ tiêu hóa khỏe mạnh để hấp thu tối đa các dưỡng chất bổ huyết và isoflavone. Đường ruột khỏe cũng liên quan mật thiết đến làn da và miễn dịch — yếu tố then chốt cho vẻ đẹp từ bên trong của phụ nữ.",
   },
