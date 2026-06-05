@@ -111,7 +111,7 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
     body += "================================\n";
     body += `TONG TIEN: ${formatPrice(totalMoney)} VND\n`;
     body += `TONG DIEM: ${totalPoints} CV\n\n`;
-    body += "Lien he: vinalink.nguyenduchoa.com\n";
+    body += "Lien he: suckhoechudong.nguyenduchoa.com\n";
 
     window.location.href = `mailto:${email}?subject=Danh sach san pham Vinalink - Nguyen Duc Hoa&body=${encodeURIComponent(body)}`;
   }, [cart]);
