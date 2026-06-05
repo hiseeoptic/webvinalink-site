@@ -74,7 +74,7 @@ export default function TrainingSection() {
                       <h4 className="font-semibold text-gray-800 text-sm mb-1 flex items-start gap-2">
                         <span className="text-[var(--primary)]">▸</span> {s.heading}
                       </h4>
-                      <p className="text-sm text-gray-600 leading-relaxed pl-4">{s.content}</p>
+                      <p className="text-sm text-gray-600 leading-relaxed pl-4 whitespace-pre-line">{s.content}</p>
                     </div>
                   ))}
                 </div>
