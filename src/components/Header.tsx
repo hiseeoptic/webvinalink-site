@@ -7,9 +7,11 @@ import Image from "next/image";
 export default function Header({
   cartCount,
   onCartClick,
+  isTVV = false,
 }: {
   cartCount: number;
   onCartClick: () => void;
+  isTVV?: boolean;
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -34,9 +36,11 @@ export default function Header({
           <Link href="/" className="hover:text-green-200 transition">
             Sản phẩm
           </Link>
-          <Link href="#dao-tao" className="hover:text-green-200 transition">
-            Đào tạo
-          </Link>
+          {isTVV && (
+            <Link href="#dao-tao" className="hover:text-green-200 transition">
+              Đào tạo
+            </Link>
+          )}
           <Link href="#about" className="hover:text-green-200 transition">
             Giới thiệu
           </Link>
@@ -46,29 +50,31 @@ export default function Header({
         </nav>
 
         <div className="flex items-center gap-3">
-          <button
-            onClick={onCartClick}
-            className="relative bg-white/20 hover:bg-white/30 rounded-full p-2 transition"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {isTVV && (
+            <button
+              onClick={onCartClick}
+              className="relative bg-white/20 hover:bg-white/30 rounded-full p-2 transition"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"
-              />
-            </svg>
-            {cartCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-[var(--accent)] text-black text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
-                {cartCount}
-              </span>
-            )}
-          </button>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"
+                />
+              </svg>
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-[var(--accent)] text-black text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
+                  {cartCount}
+                </span>
+              )}
+            </button>
+          )}
 
           <button
             className="md:hidden p-2"
@@ -109,6 +115,15 @@ export default function Header({
           >
             Sản phẩm
           </Link>
+          {isTVV && (
+            <Link
+              href="#dao-tao"
+              className="block py-2 hover:text-green-200"
+              onClick={() => setMenuOpen(false)}
+            >
+              Đào tạo
+            </Link>
+          )}
           <Link
             href="#about"
             className="block py-2 hover:text-green-200"

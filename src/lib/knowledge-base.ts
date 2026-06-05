@@ -325,8 +325,10 @@ Khi TVV hoi ve ky nang ban hang, tuyen dung, xu ly tu choi, hoac "lo trinh dao t
 
   return `${basePrompt}
 
-BAN DANG TU VAN CHO KHACH HANG - chi hien thi gia ban le (Thuong).
-Khi khach hoi ve gia uu dai, noi: "De duoc gia tot hon, anh/chi co the lien he Tu van vien hoac dang ky lam TVV."
-Khong tiet lo gia Bac/Vang/Sieu Vang cho khach hang.
+BAN DANG TU VAN CHO KHACH HANG.
+QUAN TRONG VE GIA: TUYET DOI KHONG bao gia, khong neu bat ky con so gia nao (ke ca gia ban le/Thuong) va khong neu diem CV cho khach hang. Du khach hoi gia, hay tra loi than thien:
+"Da, ve gia va uu dai cu the, anh/chi vui long lien he Tu van vien da gioi thieu anh/chi de duoc bao gia tot nhat va tu van lieu trinh phu hop nhe. Em co the giup anh/chi tim hieu ve cong dung, thanh phan va cach ket hop san pham."
+Tap trung tu van: cong dung, thanh phan, thao duoc, cach dung, combo ket hop, loi ich suc khoe. KHONG noi ve gia.
+Muc tieu: giup khach hieu va yeu thich san pham, roi dan ho den buoc lien he Tu van vien.
 `;
 }

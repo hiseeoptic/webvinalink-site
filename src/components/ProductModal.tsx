@@ -120,9 +120,11 @@ export default function ProductModal({
           {/* Title + CV */}
           <div className="flex items-start justify-between mb-2">
             <h2 className="text-2xl font-bold text-gray-900">{product.name}</h2>
-            <span className="bg-[var(--accent)] text-black text-sm font-bold px-3 py-1 rounded-full shrink-0 ml-2">
-              {product.points} CV
-            </span>
+            {userRole === "tvv" && (
+              <span className="bg-[var(--accent)] text-black text-sm font-bold px-3 py-1 rounded-full shrink-0 ml-2">
+                {product.points} CV
+              </span>
+            )}
           </div>
           <p className="text-gray-600 mb-4">{product.description}</p>
 
@@ -141,26 +143,34 @@ export default function ProductModal({
             </div>
           )}
 
-          {/* Pricing tiers */}
-          <div className="mb-4">
-            <h3 className="font-semibold text-gray-800 mb-2">Chọn gói & thêm vào giỏ:</h3>
-            <div className="grid grid-cols-2 gap-2">
-              {tiers.map((tier) => (
-                <button key={tier} onClick={() => onAddToCart(product, tier)}
-                  className={`${tierColors[tier]} rounded-lg p-3 text-left transition-all active:scale-95`}>
-                  <span className="block text-xs font-medium opacity-70">{MEMBERSHIP_LABELS[tier]}</span>
-                  <span className="block font-bold text-sm">{formatPrice(product.prices[tier])} VND</span>
-                  <span className="block text-xs mt-1 text-[var(--primary)] font-semibold">+ Thêm vào giỏ</span>
-                </button>
-              ))}
-            </div>
-            {userRole === "customer" && (
-              <div className="mt-3 bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-blue-800">
-                <p className="font-medium">Bạn muốn mua với mức giá thấp hơn?</p>
-                <p className="text-xs mt-1 text-blue-600">Vui lòng liên hệ người giới thiệu hoặc đăng ký làm Tư vấn viên để được hưởng giá ưu đãi Bạc / Vàng / Siêu Vàng.</p>
+          {/* Pricing tiers - chỉ TVV thấy giá & giỏ hàng */}
+          {userRole === "tvv" ? (
+            <div className="mb-4">
+              <h3 className="font-semibold text-gray-800 mb-2">Chọn gói & thêm vào giỏ:</h3>
+              <div className="grid grid-cols-2 gap-2">
+                {tiers.map((tier) => (
+                  <button key={tier} onClick={() => onAddToCart(product, tier)}
+                    className={`${tierColors[tier]} rounded-lg p-3 text-left transition-all active:scale-95`}>
+                    <span className="block text-xs font-medium opacity-70">{MEMBERSHIP_LABELS[tier]}</span>
+                    <span className="block font-bold text-sm">{formatPrice(product.prices[tier])} VND</span>
+                    <span className="block text-xs mt-1 text-[var(--primary)] font-semibold">+ Thêm vào giỏ</span>
+                  </button>
+                ))}
               </div>
-            )}
-          </div>
+            </div>
+          ) : (
+            <div className="mb-4 bg-gradient-to-r from-[var(--primary)] to-[var(--primary-light)] rounded-xl p-4 text-white text-center">
+              <div className="text-2xl mb-1">💬</div>
+              <p className="font-bold text-base mb-1">Quan tâm sản phẩm này?</p>
+              <p className="text-sm text-green-50">
+                Vui lòng liên hệ <strong>Tư vấn viên đã giới thiệu bạn</strong> để được tư vấn chi tiết về
+                cách dùng, liệu trình và nhận báo giá &amp; ưu đãi tốt nhất.
+              </p>
+              <p className="text-xs text-green-100 mt-3 border-t border-white/20 pt-3">
+                Bạn là Tư vấn viên? Hãy đăng nhập bằng mã số để xem bảng giá &amp; đặt hàng.
+              </p>
+            </div>
+          )}
 
           {/* Expandable sections */}
           <div className="space-y-3 text-sm">

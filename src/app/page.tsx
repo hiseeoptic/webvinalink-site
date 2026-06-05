@@ -140,7 +140,7 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header cartCount={cartCount} onCartClick={() => setCartOpen(true)} />
+      <Header cartCount={cartCount} onCartClick={() => setCartOpen(true)} isTVV={role === "tvv"} />
 
       {/* TVV Welcome Bar */}
       {role === "tvv" && tvvInfo && (
@@ -158,7 +158,7 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
       {role === "customer" && (
         <div className="bg-blue-50 border-b border-blue-200 px-4 py-2">
           <div className="max-w-7xl mx-auto flex items-center justify-between text-sm">
-            <span className="text-gray-600">Bạn đang xem với tư cách <strong>khách hàng</strong> (giá bán lẻ)</span>
+            <span className="text-gray-600">Bạn đang xem với tư cách <strong>khách hàng</strong> — liên hệ Tư vấn viên để được báo giá</span>
             <button onClick={onLogout} className="text-[var(--primary)] hover:underline text-xs transition">Đổi vai trò</button>
           </div>
         </div>
@@ -279,8 +279,8 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
       {/* Production Technologies */}
       <TechnologySection />
 
-      {/* TVV Training Curriculum */}
-      <TrainingSection />
+      {/* TVV Training Curriculum - chỉ Tư vấn viên xem được */}
+      {role === "tvv" && <TrainingSection />}
 
       {/* About Section */}
       <section id="about" className="bg-white py-12 px-4">
