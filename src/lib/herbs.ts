@@ -132,7 +132,7 @@ export const HERBS: Record<string, Herb> = {
     key: "bach-thuoc", name: "Bạch thược", scientificName: "Paeonia lactiflora",
     image: "/images/herbs/bach-thuoc.jpg",
     benefit: "Vị thuốc bổ huyết, dưỡng âm. Giúp điều hòa kinh nguyệt, giảm đau, làm dịu thần kinh và hỗ trợ chức năng gan, làm đẹp da.",
-    detail: "Bạch thược chứa Paeoniflorin giúp dưỡng huyết, làm dịu và chống oxy hóa. Trong Genecel Max, Bạch thược bổ huyết và dưỡng âm — nuôi dưỡng cơ thể từ bên trong, hỗ trợ làn da và làm chậm lão hóa. Nó tạo sự 'cân bằng âm dương' cho công thức, làm dịu tính mạnh của các thành phần chống oxy hóa khác.",
+    detail: "Bạch thược chứa Paeoniflorin giúp dưỡng huyết, làm dịu và chống oxy hóa. Trong Bách Xuân, Bạch thược là 1 trong 4 vị của bài Tứ Vật Thang kinh điển — nó 'liễm âm, dưỡng huyết', giữ cho máu được nuôi dưỡng và điều hòa, làm dịu các vị hoạt huyết mạnh (Đương quy, Xuyên khung) để cân bằng công thức. Trong Genecel Max, Bạch thược bổ huyết, dưỡng âm, hỗ trợ làn da và làm chậm lão hóa.",
   },
   "co-ca-ri": {
     key: "co-ca-ri", name: "Cỏ cà ri (Fenugreek)", scientificName: "Trigonella foenum-graecum",
@@ -200,6 +200,37 @@ export const HERBS: Record<string, Herb> = {
     benefit: "Rễ củ màu tím đặc trưng, vị thuốc bổ thận tráng dương nổi tiếng. Tăng cường sinh lực nam giới, mạnh gân cốt, giảm đau lưng mỏi gối và chống mệt mỏi.",
     detail: "Ba kích chứa các anthraglycosid, iridoid và đường khử giúp kích thích sản sinh testosterone nội sinh. Trong Man-Link Max, Ba kích đóng vai trò 'trị gốc' theo Đông y: bổ thận dương, làm ấm và nuôi dưỡng tạng thận — gốc rễ của sinh lực phái mạnh. Kết hợp với Dâm dương hoắc và L-Arginine (giãn mạch), Ba kích giúp cải thiện sinh lý một cách bền vững thay vì chỉ kích thích tức thời.",
   },
+  // ===== BÁCH XUÂN - Bài Tứ Vật Thang (bổ huyết cho phụ nữ) =====
+  "duong-quy": {
+    key: "duong-quy", name: "Đương quy", scientificName: "Angelica sinensis",
+    image: "/images/herbs/duong-quy.jpg",
+    benefit: "Được mệnh danh 'nhân sâm dành cho phụ nữ'. Bổ huyết, hoạt huyết, điều hòa kinh nguyệt, giảm đau bụng kinh và làm hồng hào da dẻ.",
+    detail: "Đương quy là vị 'quân' (chủ dược) trong bài Tứ Vật Thang. Chứa Ligustilide và acid ferulic giúp vừa BỔ huyết (tạo máu) vừa HOẠT huyết (lưu thông máu). Trong Bách Xuân (hàm lượng cao nhất, tương đương 150mg thảo dược), Đương quy là trái tim của công thức: nuôi dưỡng và lưu thông khí huyết cho phụ nữ — gốc rễ của làn da hồng hào, kinh nguyệt đều và sức khỏe phái đẹp.",
+  },
+  "thuc-dia": {
+    key: "thuc-dia", name: "Thục địa", scientificName: "Rehmannia glutinosa",
+    image: "/images/herbs/thuc-dia.jpg",
+    benefit: "Rễ Sinh địa chế biến chín, vị ngọt, tính ấm. Đại bổ âm huyết, bổ thận, sinh tân dịch, làm đen tóc và bồi bổ cơ thể suy nhược.",
+    detail: "Thục địa (Sinh địa đã cửu chưng cửu sái - chín lần đồ chín lần phơi) là vị 'thần' bổ huyết, dưỡng âm mạnh nhất trong Tứ Vật Thang. Trong Bách Xuân, Thục địa bổ sung 'phần âm' và tân dịch cho cơ thể — bù đắp tình trạng thiếu máu, khô da, mệt mỏi thường gặp ở phụ nữ sau sinh hoặc tuổi tiền mãn kinh. Nó cộng hưởng với Đương quy tạo nền tảng bổ huyết vững chắc.",
+  },
+  "xuyen-khung": {
+    key: "xuyen-khung", name: "Xuyên khung", scientificName: "Ligusticum chuanxiong",
+    image: "/images/herbs/xuyen-khung.jpg",
+    benefit: "Vị thuốc 'khí trong huyết'. Hoạt huyết, hành khí, khu phong giảm đau, đặc biệt hiệu quả với đau đầu, hoa mắt và rối loạn kinh nguyệt.",
+    detail: "Xuyên khung được ví là 'khí dược trong huyết' — giúp đẩy khí và huyết lưu thông khắp cơ thể, kể cả lên đầu. Trong Bách Xuân, Xuyên khung giữ vai trò 'sứ': dẫn dắt và thúc đẩy ba vị bổ huyết kia vận hành, tránh tình trạng 'bổ mà trệ' (bổ nhiều gây ứ). Nó giúp giảm đau đầu, hoa mắt và đau bụng kinh — những triệu chứng do khí huyết kém lưu thông.",
+  },
+  "soy-isoflavone": {
+    key: "soy-isoflavone", name: "Soy Isoflavone (Mầm đậu nành)", scientificName: "Glycine max",
+    image: "/images/herbs/lunasin.jpg",
+    benefit: "Tinh chất mầm đậu nành chứa Isoflavone - nội tiết tố nữ thực vật (phytoestrogen). Hỗ trợ cân bằng nội tiết, làm đẹp da và giảm triệu chứng tiền mãn kinh.",
+    detail: "Isoflavone (Genistein, Daidzein) có cấu trúc tương tự estrogen nội sinh nên được gọi là 'estrogen thực vật'. Trong Bách Xuân, Soy isoflavone là điểm nhấn HIỆN ĐẠI bổ sung cho bài thuốc cổ: giúp bù đắp sự suy giảm nội tiết tố nữ theo tuổi tác, từ đó cải thiện làn da, vóc dáng, giảm bốc hỏa và các triệu chứng tiền mãn kinh — an toàn vì nguồn gốc thực vật.",
+  },
+  "loi-khuan": {
+    key: "loi-khuan", name: "Lợi khuẩn (Probiotic)", scientificName: "Lactobacillus acidophilus & rhamnosus",
+    image: "/images/herbs/lunasin.jpg",
+    benefit: "Hai chủng lợi khuẩn 10⁸ CFU giúp cân bằng hệ vi sinh đường ruột, tăng cường tiêu hóa và hấp thu dưỡng chất.",
+    detail: "Lactobacillus acidophilus và rhamnosus là hai lợi khuẩn quan trọng cho đường ruột. Trong Bách Xuân, lợi khuẩn đóng vai trò 'người vận chuyển': giúp hệ tiêu hóa khỏe mạnh để hấp thu tối đa các dưỡng chất bổ huyết và isoflavone. Đường ruột khỏe cũng liên quan mật thiết đến làn da và miễn dịch — yếu tố then chốt cho vẻ đẹp từ bên trong của phụ nữ.",
+  },
   // ===== THÀNH PHẦN QUÝ (cho VTopcan & sản phẩm cao cấp) =====
   "fucoidan": {
     key: "fucoidan", name: "Fucoidan", scientificName: "Chiết xuất tảo nâu (Fucus / Mozuku)",
@@ -232,7 +263,7 @@ export const HERBS: Record<string, Herb> = {
 // ============================================================
 export const PRODUCT_HERBS: Record<string, string[]> = {
   "caphelink": ["la-chay", "hoang-ky", "nam-chaga"],
-  "bach-xuan": ["nhan-sam", "linh-chi", "dong-trung-ha-thao"],
+  "bach-xuan": ["duong-quy", "thuc-dia", "bach-thuoc", "xuyen-khung", "soy-isoflavone", "loi-khuan"],
   "vhealth-socola": ["hoang-ky", "dang-sam", "nam-chaga"],
   "vhealth-tra-xanh": ["hoang-ky", "dang-sam", "nam-chaga"],
   "genecel-max": ["linh-chi", "bach-thuoc", "kho-sam", "thong-do"],
