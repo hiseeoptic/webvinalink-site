@@ -243,7 +243,7 @@ const rawProducts = [
     category: "bao-ve-suc-khoe",
     prices: { normal: 505636, silver: 451636, gold: 407455, super_gold: 378000 },
     points: 168,
-    image: "/images/products/genecel.jpg",
+    image: "/images/products/kidsmune.jpg",
     description: "Thực phẩm bảo vệ sức khỏe Kidsmune® Max - hỗ trợ miễn dịch cho trẻ em.",
     ingredients: "Mỗi gói: Inulin 405mg, IMCDelta-immune (vách tế bào Lactobacillus rhamnosus) 300mg, Sữa non (Colostrum) 200mg, Cao Hoàng kỳ 155mg, Cao Diếp cá 130mg, Galacto Oligosaccharide 90mg, L-Lysine (L-Lysine Hydrochloride) 50mg, Taurine 50mg, FOS 10mg, DHA 5mg, Kẽm (Zinc gluconate) 2mg, Lutein 1mg, Folic Acid 130mcg. Phụ liệu: sucrose, bột cacao, hương tổng hợp, silicon dioxid, caramel, povidon, sucralose.",
     usage: "Trẻ 3-4 tuổi: 1 gói/lần x 1-2 lần/ngày. Trẻ 5-9 tuổi: 1 gói/lần x 2-3 lần/ngày. Trẻ 10 tuổi trở lên: 2 gói/lần x 2 lần/ngày. Pha vào nước hoặc sữa. CBSP: 1415/2022/ĐKSP.",
