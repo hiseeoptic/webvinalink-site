@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
@@ -16,7 +16,6 @@ import {
   CartItem,
   products,
   CATEGORIES,
-  getProductsByCategory,
   formatPrice,
   MEMBERSHIP_LABELS,
 } from "@/lib/products";
@@ -38,12 +37,34 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
   const [cartOpen, setCartOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredProducts = getProductsByCategory(selectedCategory).filter(
-    (p) =>
-      !searchQuery ||
-      p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      p.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Giá đọc từ Google Sheet (fallback về giá gốc trong code nếu lỗi)
+  const [liveProducts, setLiveProducts] = useState<Product[]>(products);
+
+  useEffect(() => {
+    let active = true;
+    fetch("/api/products")
+      .then((r) => r.json())
+      .then((data) => {
+        if (active && Array.isArray(data.products) && data.products.length > 0) {
+          setLiveProducts(data.products);
+        }
+      })
+      .catch(() => {
+        /* giữ giá gốc */
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  const filteredProducts = liveProducts
+    .filter((p) => selectedCategory === "all" || p.category === selectedCategory)
+    .filter(
+      (p) =>
+        !searchQuery ||
+        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        p.description.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
@@ -180,7 +201,7 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
       <section className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           <div>
-            <p className="text-2xl font-bold text-[var(--primary)]">{products.length}+</p>
+            <p className="text-2xl font-bold text-[var(--primary)]">{liveProducts.length}+</p>
             <p className="text-xs text-gray-500">Sản phẩm</p>
           </div>
           <div>
