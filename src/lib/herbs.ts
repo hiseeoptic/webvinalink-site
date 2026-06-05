@@ -231,6 +231,37 @@ export const HERBS: Record<string, Herb> = {
     benefit: "Hai chủng lợi khuẩn 10⁸ CFU giúp cân bằng hệ vi sinh đường ruột, tăng cường tiêu hóa và hấp thu dưỡng chất.",
     detail: "Lactobacillus acidophilus và rhamnosus là hai lợi khuẩn quan trọng cho đường ruột. Trong Bách Xuân, lợi khuẩn đóng vai trò 'người vận chuyển': giúp hệ tiêu hóa khỏe mạnh để hấp thu tối đa các dưỡng chất bổ huyết và isoflavone. Đường ruột khỏe cũng liên quan mật thiết đến làn da và miễn dịch — yếu tố then chốt cho vẻ đẹp từ bên trong của phụ nữ.",
   },
+  // ===== TOPAPRO - Bột protein thực vật cao cấp =====
+  "proteosmart": {
+    key: "proteosmart", name: "ProteoSMART (Bột hạt cô đặc)", scientificName: "Hạt bí ngô, hướng dương, hạt lanh",
+    image: "/images/herbs/proteosmart.jpg",
+    benefit: "Hỗn hợp protein thực vật cô đặc (≥57%) từ hạt bí ngô, hạt hướng dương và hạt lanh. Cung cấp đạm sạch, dễ tiêu, giàu khoáng chất và Omega.",
+    detail: "ProteoSMART là 'điểm nhấn công nghệ' của TOPAPRO (200mg). Được cô đặc từ 3 loại hạt giàu dinh dưỡng: Hạt bí ngô (giàu kẽm, magie), Hạt hướng dương (vitamin E, selen) và Hạt lanh (Omega-3 ALA, lignan). Hàm lượng protein cô đặc trên 57% giúp bổ sung đạm thực vật chất lượng cao, dễ hấp thu, không gây đầy bụng — lý tưởng cho trẻ biếng ăn, người ăn chay và người cần phục hồi thể trạng.",
+  },
+  "hat-ngu-coc": {
+    key: "hat-ngu-coc", name: "Hỗn hợp 10 loại hạt & ngũ cốc", scientificName: "Gạo lứt, đậu, hạt sen, óc chó...",
+    image: "/images/herbs/hat-ngu-coc.jpg",
+    benefit: "Bột từ 10 loại hạt: gạo tẻ, đậu xanh, gạo lứt, đậu Hà Lan, đậu lăng, đậu trắng, hạt sen, hạnh nhân, hạt bí đỏ, hạt óc chó.",
+    detail: "Hỗn hợp 10 loại hạt và ngũ cốc tạo nền tảng dinh dưỡng toàn diện cho TOPAPRO. Mỗi loại góp một thế mạnh: Gạo lứt (vitamin B, chất xơ), các loại đậu (đạm thực vật, lysine), Hạt sen (an thần, bổ tỳ), Hạnh nhân & Óc chó (Omega-3, vitamin E tốt cho não). Sự đa dạng này giúp bổ sung đầy đủ axit amin, vitamin và khoáng chất — biến TOPAPRO thành bữa ăn dinh dưỡng cân bằng thay vì chỉ là bột đạm đơn thuần.",
+  },
+  "nam-men": {
+    key: "nam-men", name: "Nấm men thủy phân (AminbioCer-VIDS)", scientificName: "Saccharomyces cerevisiae",
+    image: "/images/herbs/nam-men.jpg",
+    benefit: "Nấm men Saccharomyces cerevisiae thủy phân — nguồn axit amin, nucleotide, vitamin nhóm B và Beta-glucan tự nhiên hỗ trợ miễn dịch và tiêu hóa.",
+    detail: "AminbioCer-VIDS (150mg) là nấm men Saccharomyces cerevisiae đã được thủy phân để cơ thể hấp thu tối đa. Đây là thành phần được khoa học nghiên cứu nhiều: (1) Vách tế bào nấm men giàu Beta-1,3/1,6-glucan — được chứng minh kích hoạt đại thực bào qua thụ thể Dectin-1, tăng cường miễn dịch bẩm sinh; (2) Mannan-oligosaccharide (MOS) hoạt động như prebiotic nuôi lợi khuẩn đường ruột; (3) Quá trình thủy phân giải phóng nucleotide và axit amin tự do giúp tái tạo tế bào ruột, kích thích trẻ ăn ngon. Đây chính là cầu nối giữa 'dinh dưỡng' và 'miễn dịch' trong TOPAPRO.",
+  },
+  "bio-she": {
+    key: "bio-she", name: "Bio-She (Phức hợp 5 thảo dược)", scientificName: "Lá ổi, hương nhu, me rừng, cà ri, vỏ chanh",
+    image: "/images/herbs/bio-she.jpg",
+    benefit: "Phức hợp chiết xuất từ Lá ổi, Lá hương nhu, Quả me rừng (Amla), Lá cà ri Ấn Độ và Vỏ chanh — giàu polyphenol chống oxy hóa và hỗ trợ tiêu hóa.",
+    detail: "Bio-She (60mg) là phức hợp thảo dược được nghiên cứu về khả năng chống oxy hóa và hỗ trợ chuyển hóa: (1) Lá ổi (Psidium guajava) giàu polyphenol và quercetin, hỗ trợ tiêu hóa và ổn định đường huyết; (2) Lá hương nhu (Ocimum sanctum - 'Tulsi') là thảo dược adaptogen của Ấn Độ, giảm stress và kháng viêm; (3) Quả me rừng/Amla (Emblica officinalis) — một trong những nguồn vitamin C tự nhiên cao nhất, chống oxy hóa mạnh; (4) Lá cà ri Ấn Độ và Vỏ chanh giàu tinh dầu, kích thích tiêu hóa. Bio-She giúp TOPAPRO không chỉ bổ dưỡng mà còn bảo vệ tế bào và tăng hấp thu.",
+  },
+  "chlorella": {
+    key: "chlorella", name: "Tảo lục Chlorella", scientificName: "Chlorella pyrenoidosa",
+    image: "/images/herbs/chlorella.jpg",
+    benefit: "Vi tảo lục giàu diệp lục, protein, vitamin và 'Chlorella Growth Factor'. Hỗ trợ thải độc, tăng đề kháng và bổ sung vi chất.",
+    detail: "Chlorella pyrenoidosa là vi tảo lục có hàm lượng diệp lục cao nhất trong tự nhiên. Trong TOPAPRO, Chlorella bổ sung: protein hoàn chỉnh, vitamin (B12, A, C), sắt, và đặc biệt là CGF (Chlorella Growth Factor) — được nghiên cứu hỗ trợ tái tạo tế bào và tăng trưởng ở trẻ. Diệp lục còn giúp thải độc kim loại nặng và làm sạch cơ thể, bổ trợ hoàn hảo cho nguồn đạm thực vật của sản phẩm.",
+  },
   // ===== THÀNH PHẦN QUÝ (cho VTopcan & sản phẩm cao cấp) =====
   "fucoidan": {
     key: "fucoidan", name: "Fucoidan", scientificName: "Chiết xuất tảo nâu (Fucus / Mozuku)",
@@ -275,8 +306,8 @@ export const PRODUCT_HERBS: Record<string, string[]> = {
   "manlink-max": ["nhan-sam", "dam-duong-hoac", "ba-kich", "dong-trung-ha-thao", "bach-tat-le", "co-ca-ri"],
   "kidsmune-max": ["hoang-ky", "diep-ca"],
   "vtopcan": ["fucoidan", "lunasin", "nam-nguu-chuong-chi", "tao-bien", "la-tre", "sa", "du-du"],
+  "topapro": ["proteosmart", "hat-ngu-coc", "nam-men", "bio-she", "chlorella"],
   "vsportgel": ["dinh-lang"],
-  "oricode-sam": ["nhan-sam"],
   "nuoc-tay-trang": ["nhan-sam"],
   "nuoc-hoa-hong-toner": ["nhan-sam", "du-du"],
   "sua-rua-mat": ["nhan-sam"],
