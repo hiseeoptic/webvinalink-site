@@ -10,6 +10,7 @@ import ChatBot from "@/components/ChatBot";
 import RoleGate, { UserRole, TVVInfo } from "@/components/RoleGate";
 import DeltaImmuneSection from "@/components/DeltaImmuneSection";
 import TechnologySection from "@/components/TechnologySection";
+import TrainingSection from "@/components/TrainingSection";
 import {
   Product,
   MembershipTier,
@@ -277,6 +278,9 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
 
       {/* Production Technologies */}
       <TechnologySection />
+
+      {/* TVV Training Curriculum */}
+      <TrainingSection />
 
       {/* About Section */}
       <section id="about" className="bg-white py-12 px-4">

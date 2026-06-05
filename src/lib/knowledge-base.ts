@@ -41,39 +41,98 @@ IMCDeltaImmune la thanh phan doc quyen cua IMC, duoc chiet xuat tu vach te bao v
 `;
 
 export const SALES_TRAINING = `
-=== KY NANG BAN HANG ===
+=== KY NANG BAN HANG & HEN GAP ===
 
-1. QUY TRINH TU VAN 5 BUOC
+** NGUYEN TAC VANG: DUNG "BAM" SAN PHAM - HAY TAO CUOC HEN **
+Muc dich cua cuoc goi/tin nhan khong phai ban hang ngay, ma la tao co hoi gap mat de noi chuyen.
+Giong nhu moi gioi bat dong san: ho khong ban nha qua dien thoai, ho tao cuoc hen de xem nha.
+
+1. TAM LY QUAN TRONG TRUOC KHI GOI
+- Khach hang co "chuong trinh chong ban hang" trong dau - ho da luyen cach tu choi ca doi
+- Neu ban noi giong nhan vien ban hang, ho se tu dong tu choi
+- Bi mat: Thay doi "cau chuyen noi tam" cua ban tu "minh phai ban" thanh "minh muon giup"
+- Dong luc that su: ban dang giup nguoi khac giai quyet van de suc khoe, khong phai ban san pham
+
+2. CONG THUC "TOI THUOC TÒ MÒ" (The Ice Breaker Formula)
+Cong thuc nay giup mo dau cuoc tro chuyen ma khong gay phan khang:
+
+Buoc 1: Mo dau bang su to mo
+"Em vua to mo thoi, anh/chi co bao gio [van de lien quan] khong?"
+
+Buoc 2: Cho ho tra loi
+Doi ho noi - DUNG noi tiep ngay
+
+Buoc 3: Xin phep chia se
+"Neu em chi cho anh/chi xem mot cach [giai quyet van de do] thi co duoc khong?"
+
+Vi du thuc te voi san pham Vinalink:
+- "Em vua to mo thoi, anh/chi co thay met moi hay kho ngu khong?" -> "Neu em chi cho anh/chi xem 1 cach tang nang luong tu nhien thi co duoc khong?"
+- "Em vua to mo thoi, me anh/chi co hay bi dau khop khong?" -> "Neu em chi cho anh/chi xem 1 san pham ho tro khop rat tot thi co duoc khong?"
+- "Em vua to mo thoi, anh/chi co muon da dep hon ma khong can my pham dat tien?" -> "Neu em chi cho anh/chi xem bo cham soc da Orico thi co duoc khong?"
+
+3. QUY TRINH TU VAN 5 BUOC
 Buoc 1: LANG NGHE - Hoi ve nhu cau suc khoe, van de dang gap
 Buoc 2: DONG CAM - "Em hieu, nhieu nguoi cung gap tinh trang nhu vay..."
 Buoc 3: GIAI PHAP - Gioi thieu san pham phu hop voi van de cu the
 Buoc 4: MINH CHUNG - Chia se ket qua thuc te, feedback khach hang
-Buoc 5: HANH DONG - De xuat goi san pham cu the, gia, cach dung
+Buoc 5: HANH DONG - De xuat cuoc hen gap mat, KHONG ban qua dien thoai
 
-2. CAU HOI KHAI THAC NHU CAU
+4. CACH GOI DIEN / NHAN TIN HIEU QUA
+- Giay dau tien quyet dinh tat ca - phai am ap, tu nhien, KHONG giong ban hang
+- Dung cau mo dau: "Chao anh/chi, em [ten], em goi vi [ly do cu the/ca nhan]..."
+- Muc dich cuoc goi: XIN CUOC HEN, khong phai ban san pham
+- Hen vao tuong lai xa hon = it bi tu choi hon (tuan sau thay vi ngay mai)
+- Neu gap voicemail: de lai tin ngan, vui ve, khong noi ve san pham
+
+5. CAU HOI KHAI THAC NHU CAU
 - "Anh/chi dang quan tam den suc khoe gi nhat?"
 - "Gia dinh minh co ai dang gap van de suc khoe khong?"
 - "Anh/chi da thu san pham nao chua? Ket qua the nao?"
-- "Anh/chi muon cham soc suc khoe phong ngua hay dang can ho tro dieu tri?"
+- "Anh/chi muon cham soc suc khoe phong ngua hay dang can ho tro?"
 
-3. XU LY TU CHOI THUONG GAP
+6. XU LY TU CHOI - NGUYEN TAC "DONG Y + CHUYEN HUONG"
+Quy tac vang: KHONG BAO GIO tranh luan. Dong y voi ho truoc, roi chuyen huong nhe nhang.
 
-Tu choi: "San pham dat qua"
-=> Xu ly: "Em hieu. Nhung neu tinh ra moi ngay chi khoang XX.000 dong cho suc khoe. Anh/chi uong ca phe moi ngay cung het bay nhieu. Ma suc khoe thi khong co gia nao bang."
-=> So sanh: Detoxmune 584.000 / 30 ngay = ~19.500/ngay
+"San pham dat qua"
+=> "Da, em hieu. Tinh ra moi ngay khoang 19.000 dong thoi - bang ly ca phe. Ma suc khoe thi khong co gia nao bang. Hay de em moi anh/chi 1 ly ca phe, em chia se them nhe?"
 
-Tu choi: "Toi khong tin thuc pham chuc nang"
-=> Xu ly: "Da, em hieu. Day khong phai thuoc, ma la thuc pham bo sung dinh duong tu thien nhien. Giong nhu vitamin, khong uong cung khong sao, nhung uong thi co the khoe hon. Anh/chi co the thu 1 hop truoc, cam nhan ket qua roi quyet dinh."
+"Toi khong tin thuc pham chuc nang"
+=> "Da, em hoan toan hieu. Nhieu nguoi cung nghi vay ban dau. Day la thuc pham bo sung tu thien nhien, khong phai thuoc. Em khong can anh/chi tin ngay - chi can thu 1 hop va cam nhan. Duoc khong?"
 
-Tu choi: "De toi suy nghi"
-=> Xu ly: "Da, anh/chi cu suy nghi. Em gui anh/chi tai lieu de tim hieu them nhe. Tien thi em co chuong trinh uu dai chi con X ngay, neu anh/chi quyet dinh som thi duoc gia tot hon."
+"De toi suy nghi da"
+=> "Da, rat tot! Em gui anh/chi tai lieu de tham khao. Tien thi [ngay X] em goi lai de xem anh/chi co cau hoi gi khong nhe?"
 
-Tu choi: "Toi da co bac si rieng"
-=> Xu ly: "Tuyet voi! Bac si cham soc suc khoe cho anh/chi la rat tot. San pham nay la thuc pham bo sung, ho tro them cho co the, khong thay the thuoc. Nhieu bac si cung khuyen dung thuc pham chuc nang de phong ngua."
+"Toi da co bac si rieng"
+=> "Tuyet voi! San pham nay bo sung them cho co the thoi, khong thay thuoc. Nhieu bac si cung khuyen dung."
+
+"Gui link/tai lieu cho toi xem"
+=> "100 link se thieu mat thong tin quan trong. Hay de em gap anh/chi 10 phut de tom tat - xong roi anh/chi quyet dinh. Xau nhat thi minh uong duoc ly ca phe ngon!"
+
+"Toi ban lam, khong co thoi gian"
+=> "Em hieu anh/chi ban. Chinh vi vay em muon tim thoi gian phu hop nhat. Thu Sau tuan sau duoc khong? Chi can 15 phut thoi."
+
+"Ban dang ban gi day?"
+=> "Em khong ban gi ca. Em muon chia se voi anh/chi 1 thong tin ve suc khoe ma em nghi se co ich. Minh gap nhau 10 phut de em trinh bay, neu khong phu hop thi thoi. Fair khong?"
+
+7. CONG THUC TIN NHAN VA EMAIL
+- Ngan gon (duoi 3 cau)
+- Ca nhan hoa (goi ten, nhac chi tiet rieng)
+- Khong ban hang trong tin nhan
+- Vi du: "Chao chi Lan, em co 1 thong tin ve [van de chi quan tam]. Khi nao chi ranh em chia se nhe?"
+
+8. BIEN HEN TUONG LAI THANH HEN NGAY
+Khi khach noi "OK, hen gap sau":
+- Dua ra 2 lua chon cu the: "Anh/chi thich Thu 3 hay Thu 5 tuan sau?"
+- Gui tin xac nhan ngay: "Em xac nhan hen anh/chi Thu 5, 10h tai [dia diem]. Em se goi nhac truoc 1 ngay nhe!"
+- Giu lien lac giua 2 moc hen: gui 1 bai viet hay, 1 video ngan ve suc khoe
 `;
 
 export const RECRUITMENT_TRAINING = `
-=== KY NANG TUYEN DUNG ===
+=== KY NANG TUYEN DUNG & TAO CUOC HEN ===
+
+** NGUYEN TAC #1: BAN CUOC HEN, KHONG PHAI BAN CO HOI **
+Khi tiep can nguoi moi, muc tieu duy nhat la: hen gap 10-15 phut.
+KHONG giai thich ke hoach kinh doanh qua dien thoai/tin nhan.
 
 1. XAC DINH DOI TUONG TIEM NANG
 - Nguoi quan tam suc khoe ban than va gia dinh
@@ -81,27 +140,60 @@ export const RECRUITMENT_TRAINING = `
 - Nguoi co mang luoi quan he rong (giao vien, nhan vien van phong, noi tro)
 - Nguoi da co kinh nghiem ban hang hoac kinh doanh
 - Nguoi tre, nang dong, muon khoi nghiep
+- KEY: Nghi den VAN DE ho dang gap, khong phai san pham ban muon ban
 
-2. CAU MOI TIEP CAN
-- "Em dang lam viec voi mot tap doan suc khoe, co nhieu san pham rat tot. Anh/chi co muon tim hieu khong?"
-- "Em thay anh/chi rat quan tam suc khoe. Em co co hoi kinh doanh vua cham soc suc khoe vua co thu nhap, anh/chi co muon nghe khong?"
-- "Anh/chi co bao gio nghi den viec co thu nhap them tu linh vuc suc khoe chua?"
+2. CONG THUC TIEP CAN "3 BUOC"
 
-3. TRINH BAY CO HOI KINH DOANH
-Buoc 1: Gioi thieu Vinalink Group - tap doan suc khoe hang dau
-Buoc 2: Gioi thieu san pham - chat luong, chung nhan ATTP, Bo Y te
-Buoc 3: Mo hinh kinh doanh - he thong nhi phan, 2 nhanh Phai/Trai
-Buoc 4: Ke hoach thu nhap - hoa hong ban hang, thuong nhom, thuong toan cau
-Buoc 5: Lo trinh thang hang - Tu van vien -> Bac -> Vang -> Sieu Vang -> Kim cuong
-Buoc 6: Ho tro - Dao tao, mentor, he thong online, su kien
+Buoc 1 - Mo dau KHONG ban hang:
+"Chao anh/chi [ten], em co 1 thong tin ma em nghi se co ich cho anh/chi. Minh gap nhau uong ca phe 15 phut duoc khong?"
 
-4. XU LY TU CHOI TUYEN DUNG
+Buoc 2 - Neu ho hoi "Ve cai gi?":
+"Em muon trinh bay truc tiep cho sinh dong hon. Chi 15 phut thoi, neu khong phu hop thi thoi. Toi thieu thi minh co buoi ca phe vui ve!"
+
+Buoc 3 - Chot hen cu the:
+"Anh/chi thich Thu 3 hay Thu 5? Sang hay chieu?"
+
+3. CACH XIN GIOI THIEU (REFERRALS) - IT BI TU CHOI NHAT
+Trong 3 loai cuoc goi (moi tham gia / moi mua / xin gioi thieu), xin gioi thieu it bi tu choi nhat.
+- "Anh/chi co biet ai dang quan tam den suc khoe khong? Em muon chia se thong tin tot cho ho."
+- "Anh/chi co ban nao dang muon co thu nhap them khong? Em co co hoi phu hop."
+- Khi nguoi khac gioi thieu ban den, ty le hen gap tang gap 3 lan.
+
+4. TAO HE THONG GIOI THIEU TU DONG
+- Sach/tai lieu: Tang sach ve suc khoe cho khach hang, trong sach co thong tin lien he cua ban
+- Moi nguoi deu thich chia se dieu tot cho ban be - tao "cong cu" de ho chia se de dang
+- Vi du: "Em co 1 cuon sach nho ve cham soc suc khoe, em tang anh/chi. Neu anh/chi thich, cho ban be muon doc nhe!"
+
+5. XU LY TU CHOI TUYEN DUNG
 
 "Toi khong co thoi gian"
-=> "Anh/chi chi can 1-2 gio/ngay. Nhieu nguoi lam part-time van co thu nhap tot. He thong online ho tro 24/7."
+=> "Em hieu anh/chi ban. Chi can 1-2 gio/ngay, lam online duoc. Nhieu nguoi lam part-time van co thu nhap tot. He thong online ho tro 24/7."
 
 "Da cap la lua dao"
-=> "Em hieu lo lang cua anh/chi. Vinalink la cong ty hop phap, co giay phep ban hang da cap so 009/QLCT-GCN, dang ky voi Bo Cong Thuong. San pham co chung nhan ATTP, san xuat tai Viet Nam. Anh/chi co the kiem tra tren website Bo Cong Thuong."
+=> "Em hieu lo lang cua anh/chi. Vinalink la cong ty hop phap, giay phep ban hang da cap so 009/QLCT-GCN, dang ky Bo Cong Thuong. San pham chung nhan ATTP. Anh/chi kiem tra tren website Bo Cong Thuong duoc."
+
+"Toi khong biet ban hang"
+=> "Khong can biet ban hang. Co dao tao tu A-Z, co mentor huong dan. Chi can anh/chi san sang hoc. Minh gap nhau 15 phut de em trinh bay cu the nhe?"
+
+"Toi khong co von"
+=> "Chi can bat dau tu 1 don nho, dung thu san pham. Khi co ket qua, chia se voi nguoi than. Khong can dau tu lon."
+
+"Hay gui thong tin cho toi xem truoc"
+=> "Thong tin kha nhieu, gui qua tin nhan se thieu. Cho em gap anh/chi 15 phut trinh bay truc quan hon. Xau nhat thi minh co buoi ca phe vui ve!"
+
+6. SAU KHI BI TU CHOI
+- KHONG BAO GIO cat dut quan he - ho co the doi y sau
+- Gui tin nhan: "Da, em hieu. Cam on anh/chi da lang nghe. Neu khi nao doi y, anh/chi cu lien he em nhe!"
+- Giu lien lac binh thuong (like Facebook, comment, gui tin nhan chuc mung sinh nhat...)
+- "Hom nay noi Khong" khong co nghia la "Mai noi Khong". Hoan canh thay doi, nguoi ta se doi y.
+
+7. TRINH BAY CO HOI KINH DOANH (khi da gap mat)
+Buoc 1: Gioi thieu Vinalink Group - tap doan suc khoe
+Buoc 2: Gioi thieu san pham - chat luong, chung nhan ATTP, Bo Y te
+Buoc 3: Mo hinh kinh doanh - he thong nhi phan, 2 nhanh Phai/Trai
+Buoc 4: Ke hoach thu nhap - hoa hong, thuong nhom, thuong toan cau
+Buoc 5: Lo trinh: TVV -> Bac -> Vang -> Sieu Vang -> Kim cuong
+Buoc 6: Ho tro - Dao tao, mentor, he thong online, su kien
 
 "Toi khong biet ban hang"
 => "Khong can biet ban hang tu dau. Co he thong dao tao tu A-Z, co mentor huong dan. Chi can anh/chi san sang hoc va lam theo huong dan."
@@ -153,6 +245,45 @@ MUC TIEU 90 NGAY DAU:
 - Thang 3: Ban 15 don, tuyen 5 TVV, dat cap Vang
 `;
 
+export const TRAINING_CURRICULUM = `
+=== LO TRINH DAO TAO TVV: "CACH DAT LICH HEN KHONG SO BI TU CHOI" (6 MODULE) ===
+Day la giao trinh chinh thuc. Khi TVV hoi ve dao tao / lo trinh / cach lam, hay huong dan theo dung 6 module nay, goi y hoc tuan tu, va trich noi dung module phu hop.
+
+MODULE 1 - TAI SAO DAT LICH HEN LAI KHO:
+- 2 nguyen nhan: TAM LY (so bi tu choi, xau ho) + THIEU KY NANG (khong co kich ban).
+- Bai hoc: Dat lich hen KHONG phai ban hang. Muc tieu duy nhat la DAT DUOC LICH HEN.
+
+MODULE 2 - THAY DOI CAU CHUYEN NOI TAM:
+- Cau chuyen "kem mien phi": neu qua trinh kho chiu, ta se bo cuoc -> phai lam viec goi dien tro nen thoa man (van de tam ly).
+- Doi cau chuyen cu ("toi lam phien ho") thanh moi ("toi dang giup ho").
+- Xau ho den tu BEN TRONG. Doc to moi sang: "Toi dang giup do, khong phai lam phien."
+
+MODULE 3 - XAY DUNG KY NANG:
+- Nguyen tac vang: BAN CUOC HEN, khong ban san pham (nhu moi gioi BDS).
+- Kich ban 5 buoc: (1) Mo dau than thien (2) Ly do ngan (3) Hoi van de cua ho (4) Xin hen cu the "ranh thu 3 hay thu 4?" (5) Dong lich hen.
+- Ky thuat "TOI CHI TO MO": "Toi chi to mo - anh/chi co thay kho khi [van de] khong?" -> khong gay ap luc.
+
+MODULE 4 - CAC KENH DAT LICH HEN:
+- Goi dien: sang som / chieu toi; hen NGAY HOM NAY hoac MAI (hen cang xa, xac suat cang thap).
+- Tin nhan: ngan, than thien, KHONG gui link/bai dai, khong "sale" ngay.
+- Gioi thieu (referral): it bi tu choi nhat. Xin gioi thieu nhieu hon.
+- Tang sach/tai lieu truoc de tao thien cam.
+
+MODULE 5 - XU LY CAU HOI & PHAN DOI:
+- Phan doi = dau hieu QUAN TAM (tot). Dong cam + chuyen huong ve cuoc hen, khong tranh luan.
+- 8 phan doi mau: "gui link?" / "ban gi a?" / "toi ban" / "khong quan tam" / "bao lau?" / "chi phi?"... (deu quay ve: gap 15-20 phut).
+- "Dung goi lai" -> ton trong, de ngo cua, DUNG LAI.
+- "Khong" hom nay khac "Khong" mai mai - giu lien lac dinh ky.
+
+MODULE 6 - KE HOACH HANH DONG:
+- Ky nang den tu THUC HANH (khong phai doc sach). Doc -> dong vai -> ap dung -> rut kinh nghiem -> lap lai.
+- Ke hoach 30 ngay: Tuan 1 (5 cuoc goi) -> Tuan 2 (10) -> Tuan 3 (15) -> Tuan 4 (danh gia).
+- Theo doi moi ngay: so cuoc goi / so hen / so tu choi / ghi chu.
+- Cam ket: 5 cuoc goi trong 24h toi.
+
+Cach huong dan: Neu TVV moi, goi y bat dau Module 1. Neu hoi van de cu the (vd xu ly tu choi), tra loi tu Module tuong ung va neu ro "noi dung nay thuoc Module X". Luon khuyen thuc hanh.
+`;
+
 // ============================================================
 // FUNCTION: Build system prompt based on user role
 // ============================================================
@@ -186,7 +317,9 @@ ${RECRUITMENT_TRAINING}
 
 ${GETTING_STARTED_GUIDE}
 
-Khi TVV hoi ve ky nang ban hang, tuyen dung, xu ly tu choi - hay tra loi chi tiet voi vi du cu the.
+${TRAINING_CURRICULUM}
+
+Khi TVV hoi ve ky nang ban hang, tuyen dung, xu ly tu choi, hoac "lo trinh dao tao / cach lam" - hay tra loi chi tiet voi vi du cu the va dan chieu dung Module trong lo trinh 6 module.
 `;
   }
 

@@ -34,6 +34,9 @@ export default function Header({
           <Link href="/" className="hover:text-green-200 transition">
             Sản phẩm
           </Link>
+          <Link href="#dao-tao" className="hover:text-green-200 transition">
+            Đào tạo
+          </Link>
           <Link href="#about" className="hover:text-green-200 transition">
             Giới thiệu
           </Link>

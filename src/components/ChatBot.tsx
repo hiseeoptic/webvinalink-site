@@ -18,10 +18,10 @@ const CUSTOMER_SUGGESTIONS = [
 ];
 
 const TVV_SUGGESTIONS = [
+  "Lộ trình đào tạo cho người mới",
+  "Cách đặt lịch hẹn không bị từ chối",
   "Hướng dẫn xử lý từ chối 'đắt quá'",
   "Cách tuyển dụng hiệu quả",
-  "Combo gợi ý cho người già",
-  "Các bước bắt đầu kinh doanh",
 ];
 
 const ADMIN_PASS = "02081995";
