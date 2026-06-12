@@ -651,6 +651,525 @@ export const TRAINING_MODULES_2: TrainingModule[] = [
   },
 ];
 
+// ============================================================
+// KHÓA 3: NHÂN BẢN & XÂY DỰNG ĐỘI NHÓM (Duplication)
+// Dựa trên: Mark & Rene Yarnell - Your First Year in Network Marketing;
+// Eric Worre - Go Pro (bước "Khởi động đúng" & "Phát triển qua sự kiện").
+// ============================================================
+
+export const COURSE3_INTRO = {
+  title: "Nhân bản & Xây dựng đội nhóm",
+  subtitle: "Khóa dành cho Tư vấn viên giai đoạn xây nhóm (6 tháng – 1 năm)",
+  goal: "Học cách 'nhân bản' chính mình: khởi động người mới đúng cách, dạy họ tự làm được, tổ chức buổi gặp và xây một hệ thống lặp lại được — nền tảng của thu nhập bền vững.",
+  moduleCount: 6,
+};
+
+export const TRAINING_MODULES_3: TrainingModule[] = [
+  {
+    id: 1,
+    title: "Nhân bản — trái tim của nghề",
+    objective:
+      "Hiểu vì sao 'nhân bản' (duplication) quan trọng hơn nỗ lực cá nhân, và một hệ thống tốt phải đơn giản đến mức ai cũng lặp lại được.",
+    sections: [
+      {
+        heading: "1.1. Một mình giỏi không bằng cả nhóm cùng làm được",
+        content:
+          "Ở giai đoạn 1-2, bạn tự bán, tự mời. Nhưng thu nhập lớn và bền vững KHÔNG đến từ việc bạn làm nhiều hơn — mà từ việc giúp NHIỀU người cùng làm được những điều đơn giản.\n\n" +
+          "Đây gọi là NHÂN BẢN (duplication): nhân chính mình lên thông qua đội nhóm. Một người làm 100% công sức không bằng 100 người mỗi người làm 1%.",
+      },
+      {
+        heading: "1.2. Hệ thống phải đơn giản đến mức ai cũng lặp lại được",
+        content:
+          "Nguyên tắc vàng của nhân bản: 'Nếu nó không đơn giản, nó sẽ không nhân bản.'\n\n" +
+          "Đừng dạy người mới những chiêu thức phức tạp mà chỉ bạn làm được. Hãy dạy quy trình ĐƠN GIẢN, lặp lại được: dùng sản phẩm → kể trải nghiệm → mời gặp → để công cụ/sự kiện trình bày → khởi động người mới giống y như vậy.",
+      },
+      {
+        heading: "1.3. Dạy bằng cách LÀM, không bằng cách giỏi",
+        content:
+          "Người mới không sao chép điều bạn NÓI, họ sao chép điều bạn LÀM. Nếu bạn dùng slide phức tạp, họ sợ. Nếu bạn dùng một câu chuyện ngắn + một công cụ đơn giản, họ nghĩ 'À, mình cũng làm được'.\n\n" +
+          "Mục tiêu của bạn ở giai đoạn này: làm sao cho người mới sau khi xem bạn làm 2-3 lần là tự tin tự làm được.",
+      },
+    ],
+    takeaway:
+      "Nhân bản là trái tim của ngành: nhân chính mình qua đội nhóm bằng một hệ thống đơn giản, ai cũng lặp lại được. 'Nếu không đơn giản, nó sẽ không nhân bản.'",
+    reviewQuestions: [
+      "Vì sao thu nhập bền vững đến từ nhân bản chứ không phải nỗ lực cá nhân?",
+      "Một hệ thống tốt cần đặc điểm gì để nhân bản được?",
+      "Người mới sao chép điều bạn NÓI hay điều bạn LÀM?",
+    ],
+  },
+  {
+    id: 2,
+    title: "Khởi động người mới đúng cách (48 giờ vàng)",
+    objective:
+      "Nắm quy trình khởi động một thành viên mới trong 24-48 giờ đầu — giai đoạn quyết định họ ở lại hay bỏ cuộc.",
+    sections: [
+      {
+        heading: "2.1. 48 giờ đầu quyết định tất cả",
+        content:
+          "Người mới hào hứng nhất trong 48 giờ đầu sau khi tham gia. Nếu bạn để họ 'tự bơi', họ sẽ nguội lạnh và bỏ cuộc. Hãy khởi động NGAY khi nhiệt huyết còn cao.\n\n" +
+          "Đây là bước 'Khởi động đúng' (Get Started Right) — một trong 7 kỹ năng lõi của Eric Worre.",
+      },
+      {
+        heading: "2.2. Checklist khởi động người mới",
+        content:
+          "Ngay trong 48h đầu, cùng người mới làm:\n" +
+          "• Giúp họ DÙNG sản phẩm và đặt mục tiêu trải nghiệm cá nhân\n" +
+          "• Cùng viết DANH SÁCH 100 người quen của họ\n" +
+          "• Đặt mục tiêu 90 ngày + hành động tuần đầu (5 liên hệ/ngày)\n" +
+          "• Cắm họ vào nhóm Zalo/sự kiện/buổi họp tuần\n" +
+          "• Hẹn lịch buổi chia sẻ ĐẦU TIÊN cùng bạn (bạn làm, họ xem)",
+      },
+      {
+        heading: "2.3. 'Tôi làm — Bạn xem; Bạn làm — Tôi xem'",
+        content:
+          "Quy trình đào tạo người mới qua 4 bước:\n" +
+          "1) TÔI LÀM, bạn xem (buổi đầu bạn trình bày, họ quan sát)\n" +
+          "2) TÔI LÀM, bạn phụ (họ tham gia một phần)\n" +
+          "3) BẠN LÀM, tôi phụ (họ làm chính, bạn hỗ trợ)\n" +
+          "4) BẠN LÀM, tôi xem (họ tự làm, bạn chỉ quan sát & góp ý)\n\n" +
+          "Khi họ qua được bước 4 — bạn đã nhân bản thành công một người.",
+      },
+    ],
+    takeaway:
+      "48 giờ đầu là 'giờ vàng'. Hãy khởi động người mới ngay theo checklist, rồi dẫn họ qua 4 bước 'Tôi làm-Bạn xem → Bạn làm-Tôi xem' cho đến khi họ tự đứng vững.",
+    reviewQuestions: [
+      "Vì sao 48 giờ đầu quyết định người mới ở lại hay bỏ cuộc?",
+      "Liệt kê các việc cần làm trong checklist khởi động người mới.",
+      "Mô tả 4 bước 'Tôi làm - Bạn làm'.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Edification — Nghệ thuật tôn vinh",
+    objective:
+      "Học cách 'tôn vinh' người dẫn dắt, công cụ và sự kiện để tạo niềm tin — thay vì tự biến mình thành chuyên gia.",
+    sections: [
+      {
+        heading: "3.1. Đừng làm chuyên gia — hãy KẾT NỐI tới chuyên gia",
+        content:
+          "Người mới thường nghĩ: 'Tôi phải biết hết mới tư vấn được.' Sai. Bạn không cần là chuyên gia. Bạn chỉ cần KẾT NỐI khách/người mới tới chuyên gia, công cụ, hoặc sự kiện.\n\n" +
+          "Đây gọi là EDIFICATION (tôn vinh): nâng giá trị của người đỡ đầu, của diễn giả, của tài liệu trước mặt người mới.",
+      },
+      {
+        heading: "3.2. Cách tôn vinh người đỡ đầu (upline)",
+        content:
+          "Trước khi cho người mới gặp người đỡ đầu của bạn, hãy 'dọn đường' bằng lời tôn vinh:\n" +
+          "'Em sẽ kết nối anh/chị với chị X — người đã giúp rất nhiều người thành công, rất có tâm và kinh nghiệm. Chị ấy bận lắm nhưng em xin được một buổi cho anh/chị.'\n\n" +
+          "Khi bạn tôn vinh người khác, lời nói của họ có sức nặng gấp nhiều lần. Edification giúp người mới TIN trước cả khi gặp.",
+      },
+      {
+        heading: "3.3. Tôn vinh giúp hệ thống nhân bản",
+        content:
+          "Khi bạn tôn vinh CÔNG CỤ (video, tài liệu) và SỰ KIỆN thay vì bản thân, người mới học được rằng: 'À, mình không cần giỏi — chỉ cần dẫn người ta tới công cụ và sự kiện.' Điều này khiến họ tự tin làm theo.\n\n" +
+          "Ngược lại, nếu bạn khoe mình giỏi, người mới sẽ nghĩ 'mình không làm được như anh ấy' và bỏ cuộc.",
+      },
+    ],
+    takeaway:
+      "Đừng cố làm chuyên gia. Hãy tôn vinh người đỡ đầu, công cụ và sự kiện — vừa tạo niềm tin cho người mới, vừa dạy họ rằng họ cũng làm được theo cách đơn giản đó.",
+    reviewQuestions: [
+      "Edification (tôn vinh) là gì và vì sao quan trọng?",
+      "Vì sao không nên tự biến mình thành chuyên gia trước người mới?",
+      "Hãy viết một câu 'tôn vinh người đỡ đầu' theo cách của bạn.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Dạy người khác biết dạy lại (3 thế hệ)",
+    objective:
+      "Hiểu nguyên tắc 'đào tạo người đào tạo' — đội nhóm chỉ vững khi sâu ít nhất 3 thế hệ và không phụ thuộc vào bạn.",
+    sections: [
+      {
+        heading: "4.1. Đừng làm thay — hãy dạy để họ tự làm",
+        content:
+          "Sai lầm phổ biến: bạn tự đi chốt đơn cho cả tuyến dưới. Kết quả: họ phụ thuộc bạn, bạn kiệt sức, hệ thống sụp khi bạn nghỉ.\n\n" +
+          "Lãnh đạo giỏi KHÔNG làm thay. Họ DẠY người dưới tự làm, rồi dạy người đó tiếp tục dạy lại người mới của họ.",
+      },
+      {
+        heading: "4.2. Quy tắc 3 thế hệ",
+        content:
+          "Một nhánh chỉ thật sự vững khi nó SÂU ít nhất 3 thế hệ: Bạn → A → B → C, và C vẫn hoạt động mà không cần bạn.\n\n" +
+          "Khi A biết dạy B, B biết dạy C — nghĩa là 'kỹ năng dạy lại' đã được nhân bản. Đó mới là thu nhập thụ động thật sự.",
+      },
+      {
+        heading: "4.3. Đào tạo người đào tạo (Train the trainer)",
+        content:
+          "Thay vì tự đào tạo 50 người, hãy đào tạo 5 'đội trưởng' và dạy mỗi người cách đào tạo 10 người của họ.\n\n" +
+          "Mỗi khi bạn dạy một người mới, hãy nói: 'Sau này em sẽ dạy lại y hệt cách anh đang dạy em.' Gieo tư duy 'dạy lại' ngay từ đầu — đó là cách hệ thống lớn lên theo cấp số nhân.",
+      },
+    ],
+    takeaway:
+      "Đừng làm thay — hãy dạy để họ tự làm và tự dạy lại. Một nhánh vững khi sâu ít nhất 3 thế hệ và chạy được mà không cần bạn. Hãy đào tạo người đào tạo.",
+    reviewQuestions: [
+      "Vì sao 'làm thay' cho tuyến dưới lại nguy hiểm?",
+      "Quy tắc '3 thế hệ' nghĩa là gì?",
+      "Làm sao để gieo tư duy 'dạy lại' cho người mới ngay từ đầu?",
+    ],
+  },
+  {
+    id: 5,
+    title: "Sức mạnh của buổi gặp & sự kiện",
+    objective:
+      "Biết cách dùng buổi gặp nhỏ tại nhà, gặp 1-1, và sự kiện lớn để nhân bản nhanh và giữ lửa đội nhóm.",
+    sections: [
+      {
+        heading: "5.1. Vì sao sự kiện quan trọng",
+        content:
+          "Eric Worre coi 'Phát triển nhóm qua sự kiện' là kỹ năng lõi thứ 7. Sự kiện làm điều mà một mình bạn không làm được: tạo niềm tin tập thể, khơi cảm xúc, cho người mới thấy 'không chỉ mình tôi tin điều này'.\n\n" +
+          "Người tham gia sự kiện đều đặn có tỷ lệ ở lại và thành công cao hơn hẳn.",
+      },
+      {
+        heading: "5.2. Ba loại buổi gặp",
+        content:
+          "• GẶP 1-1 / 2-1: bạn (và người đỡ đầu) gặp 1 khách — thân mật, phù hợp người mới ngại đám đông.\n" +
+          "• BUỔI GẶP TẠI NHÀ (home meeting): mời 5-10 người tới nhà nghe chia sẻ — ấm cúng, dễ nhân bản.\n" +
+          "• SỰ KIỆN LỚN (OPP, hội thảo công ty): tạo khí thế, công nhận, đào tạo tập trung.\n\n" +
+          "Người mới nên bắt đầu từ gặp 1-1, rồi tổ chức buổi tại nhà, rồi đưa khách lên sự kiện lớn.",
+      },
+      {
+        heading: "5.3. 'Mời lên sự kiện' là kỹ năng cần dạy",
+        content:
+          "Một việc đơn giản người mới nào cũng làm được: MỜI khách và tuyến dưới đi sự kiện. Bạn không cần giỏi — chỉ cần đưa được người đến, để sự kiện làm phần còn lại.\n\n" +
+          "Hãy dạy đội nhóm: 'Việc của mình là đưa người đến sự kiện. Sự kiện sẽ làm công việc thuyết phục.'",
+      },
+    ],
+    takeaway:
+      "Sự kiện tạo niềm tin tập thể mà một mình bạn không tạo được. Dạy đội nhóm đi từ gặp 1-1 → buổi tại nhà → sự kiện lớn, và xem 'mời người lên sự kiện' là kỹ năng ai cũng làm được.",
+    reviewQuestions: [
+      "Vì sao sự kiện giúp giữ chân và phát triển đội nhóm?",
+      "Ba loại buổi gặp là gì? Người mới nên bắt đầu từ đâu?",
+      "Vì sao 'mời người lên sự kiện' là kỹ năng dễ nhân bản nhất?",
+    ],
+  },
+  {
+    id: 6,
+    title: "Giữ lửa & chăm sóc đội nhóm",
+    objective:
+      "Học cách công nhận, hỗ trợ và giữ chân thành viên — vì xây nhóm đã khó, giữ nhóm còn khó hơn.",
+    sections: [
+      {
+        heading: "6.1. Công nhận — nhu cầu lớn nhất của con người",
+        content:
+          "Con người khao khát được CÔNG NHẬN hơn cả tiền. Hãy khen ngợi công khai từng bước tiến nhỏ của đội nhóm: đơn hàng đầu tiên, người mới đầu tiên, lên cấp...\n\n" +
+          "Một lời khen đúng lúc giữ một người ở lại lâu hơn mọi bài thuyết giảng. 'Người ta sẽ quên điều bạn nói, nhưng nhớ mãi cảm giác bạn khiến họ thấy mình quan trọng.'",
+      },
+      {
+        heading: "6.2. Hợp nhóm đều đặn",
+        content:
+          "Duy trì buổi họp nhóm hàng tuần (offline hoặc online): chia sẻ kết quả, học kỹ năng, công nhận thành tích, tạo khí thế. Đây là 'mạch máu' giữ đội nhóm sống.\n\n" +
+          "Người tham gia họp nhóm đều đặn thường là người trụ lại và phát triển.",
+      },
+      {
+        heading: "6.3. Chăm theo cấp độ — đầu tư đúng người",
+        content:
+          "Không phải ai cũng cần chăm như nhau. Hãy dành nhiều thời gian nhất cho NGƯỜI ĐANG LÀM (người đói khát, chịu hành động), vừa phải cho người đang học, và giữ liên lạc nhẹ nhàng với người chưa sẵn sàng.\n\n" +
+          "Đầu tư thời gian vào người chịu chạy — đừng dồn hết sức kéo người không muốn đi.",
+      },
+    ],
+    takeaway:
+      "Xây nhóm đã khó, giữ nhóm còn khó hơn. Hãy công nhận thường xuyên, hợp nhóm đều đặn, và đầu tư thời gian nhiều nhất vào người chịu hành động.",
+    reviewQuestions: [
+      "Vì sao 'công nhận' lại giữ chân người mạnh hơn cả tiền?",
+      "Buổi họp nhóm hàng tuần có vai trò gì?",
+      "Nên dành nhiều thời gian nhất cho nhóm người nào?",
+    ],
+  },
+];
+
+// ============================================================
+// KHÓA 4: LÃNH ĐẠO & THỦ LĨNH — TỰ DO TÀI CHÍNH
+// Dựa trên: Richard Bliss Brooke - The Four Year Career;
+// Mark Yarnell - xây đội độc lập; 4 giai đoạn (Momentum, Stability).
+// ============================================================
+
+export const COURSE4_INTRO = {
+  title: "Lãnh đạo & Thủ lĩnh — Tự do tài chính",
+  subtitle: "Khóa dành cho Tư vấn viên giai đoạn bứt phá (1 – 3 năm)",
+  goal: "Học cách chuyển từ người làm sang người LÃNH ĐẠO: xây nhiều thủ lĩnh độc lập, tạo văn hóa và hệ thống tự vận hành, tiến tới momentum và tự do tài chính.",
+  moduleCount: 6,
+};
+
+export const TRAINING_MODULES_4: TrainingModule[] = [
+  {
+    id: 1,
+    title: "Từ người làm sang người lãnh đạo",
+    objective:
+      "Hiểu sự khác biệt giữa 'quản lý' và 'lãnh đạo', và vì sao bạn phải trở thành người mà người khác muốn đi theo.",
+    sections: [
+      {
+        heading: "1.1. Lãnh đạo — không phải quản lý",
+        content:
+          "Quản lý là kiểm soát, ép buộc, theo dõi. Lãnh đạo là TRUYỀN CẢM HỨNG để người khác TỰ NGUYỆN đi theo. Trong nghề này không ai là 'nhân viên' của bạn — họ là đối tác độc lập. Bạn không thể ra lệnh; bạn chỉ có thể làm gương và dẫn dắt.\n\n" +
+          "Mark Yarnell nhấn mạnh: thành công đến từ sự HỢP TÁC, không phải quản lý theo cấp bậc.",
+      },
+      {
+        heading: "1.2. Trở thành người đáng để đi theo",
+        content:
+          "Đội nhóm của bạn sẽ chỉ lớn bằng con người bạn. Muốn có đội nhóm tốt hơn, bạn phải trở thành người tốt hơn: phát triển bản thân (sách, khóa học, tư duy), giữ thái độ tích cực, sống đúng giá trị.\n\n" +
+          "Nguyên tắc: 'Để có đội nhóm tốt hơn, đừng tìm người tốt hơn — hãy trở thành người lãnh đạo tốt hơn.'",
+      },
+      {
+        heading: "1.3. Lãnh đạo bằng tầm nhìn",
+        content:
+          "Người làm chỉ thấy việc trước mắt. Người lãnh đạo VẼ RA tương lai để cả nhóm cùng hướng tới: bức tranh về cuộc sống tự do, về một đội nhóm lớn mạnh, về di sản để lại.\n\n" +
+          "Khi đội nhóm nhìn thấy tương lai rõ ràng, họ tự có động lực — bạn không cần thúc ép.",
+      },
+    ],
+    takeaway:
+      "Bạn không quản lý đối tác độc lập — bạn lãnh đạo bằng tấm gương và tầm nhìn. Đội nhóm chỉ lớn bằng con người bạn, nên hãy không ngừng trở thành người lãnh đạo tốt hơn.",
+    reviewQuestions: [
+      "Khác biệt giữa 'quản lý' và 'lãnh đạo' trong nghề này là gì?",
+      "Vì sao 'đội nhóm chỉ lớn bằng con người bạn'?",
+      "Lãnh đạo bằng tầm nhìn nghĩa là gì?",
+    ],
+  },
+  {
+    id: 2,
+    title: "Xây dựng thủ lĩnh độc lập",
+    objective:
+      "Học cách tìm và phát triển những thủ lĩnh có thể tự vận hành nhánh của họ mà không cần bạn.",
+    sections: [
+      {
+        heading: "2.1. Tìm 'người đói khát', không tìm 'người giỏi'",
+        content:
+          "Như Khóa 2 đã học: động lực quan trọng hơn kỹ năng. Thủ lĩnh tương lai thường KHÔNG phải người giỏi nhất, mà là người KHAO KHÁT nhất — người có lý do (WHY) đủ lớn và chịu hành động.\n\n" +
+          "Hãy quan sát ai trong nhóm tự chạy, tự học, không cần thúc — đó là 'hạt giống thủ lĩnh'. Dồn tâm sức vào họ.",
+      },
+      {
+        heading: "2.2. Phát triển theo CHIỀU SÂU, không chỉ chiều rộng",
+        content:
+          "Người mới thích tuyển thật nhiều người (chiều rộng). Nhưng thu nhập lớn và bền đến từ CHIỀU SÂU: giúp một vài nhánh phát triển sâu nhiều tầng, có thủ lĩnh ở mỗi tầng.\n\n" +
+          "Một nhánh sâu, có thủ lĩnh tự vận hành, giá trị hơn 100 người ngang hàng không ai dẫn dắt.",
+      },
+      {
+        heading: "2.3. 'Trao quyền' cho thủ lĩnh",
+        content:
+          "Khi một người đã đủ kỹ năng, hãy LÙI LẠI và để họ tự dẫn nhánh: tự tổ chức họp nhóm, tự đào tạo, tự công nhận. Bạn chuyển từ 'người làm cùng' sang 'người cố vấn'.\n\n" +
+          "Trao quyền là cách duy nhất để bạn tự do — nếu mọi thứ vẫn cần bạn, bạn chưa có thủ lĩnh, bạn chỉ có người phụ thuộc.",
+      },
+    ],
+    takeaway:
+      "Tìm người đói khát chứ không phải người giỏi nhất. Phát triển theo chiều sâu, xây thủ lĩnh ở mỗi tầng và trao quyền để họ tự vận hành — đó là con đường tới tự do.",
+    reviewQuestions: [
+      "Vì sao nên tìm 'người đói khát' hơn là 'người giỏi'?",
+      "Khác biệt giữa phát triển chiều rộng và chiều sâu?",
+      "Vì sao 'trao quyền' cho thủ lĩnh là điều kiện để bạn tự do?",
+    ],
+  },
+  {
+    id: 3,
+    title: "Văn hóa & niềm tin đội nhóm",
+    objective:
+      "Xây dựng một văn hóa đội nhóm tích cực, gắn kết — thứ giữ người ở lại lâu hơn cả tiền hoa hồng.",
+    sections: [
+      {
+        heading: "3.1. Văn hóa là 'chất keo' của đội nhóm",
+        content:
+          "Người ta tham gia vì cơ hội, nhưng Ở LẠI vì con người và cảm giác thuộc về. Một đội nhóm có văn hóa ấm áp, tôn trọng, cùng giúp nhau — sẽ giữ người dù thị trường khó khăn.\n\n" +
+          "Lãnh đạo tạo văn hóa bằng chính cách mình hành xử: tử tế, chính trực, công nhận, không nói xấu, luôn nâng đỡ.",
+      },
+      {
+        heading: "3.2. Xây 'niềm tin' (belief) cho đội nhóm",
+        content:
+          "Yarnell nhấn mạnh: niềm tin là tài sản lớn nhất. Niềm tin gồm 4 tầng: tin vào ngành, tin vào công ty & sản phẩm, tin vào người dẫn dắt, và tin vào CHÍNH MÌNH.\n\n" +
+          "Việc của lãnh đạo là liên tục nuôi dưỡng 4 niềm tin này qua câu chuyện thành công, trải nghiệm sản phẩm thật, sự kiện và sự công nhận.",
+      },
+      {
+        heading: "3.3. Giá trị & sự chính trực",
+        content:
+          "Đội nhóm bền vững được xây trên giá trị thật: bán sản phẩm tốt, nói sự thật, đặt lợi ích khách hàng và đối tác lên trước. Đừng vì hoa hồng mà thổi phồng hay hứa hão.\n\n" +
+          "Uy tín mất nhiều năm để xây, mất một phút để sụp. Văn hóa chính trực là nền móng của một sự nghiệp lâu dài.",
+      },
+    ],
+    takeaway:
+      "Người ta tham gia vì cơ hội nhưng ở lại vì văn hóa và con người. Hãy xây văn hóa ấm áp, chính trực và nuôi dưỡng 4 tầng niềm tin (ngành, công ty/sản phẩm, người dẫn dắt, bản thân).",
+    reviewQuestions: [
+      "Vì sao văn hóa giữ người ở lại hơn cả hoa hồng?",
+      "4 tầng niềm tin (belief) trong nghề là gì?",
+      "Vì sao sự chính trực là nền móng của sự nghiệp lâu dài?",
+    ],
+  },
+  {
+    id: 4,
+    title: "Momentum — bứt phá theo cấp số nhân",
+    objective:
+      "Hiểu 4 giai đoạn phát triển của một đội nhóm và cách tạo 'momentum' (đà bùng nổ) ở giai đoạn 1-3 năm.",
+    sections: [
+      {
+        heading: "4.1. Bốn giai đoạn của một tổ chức",
+        content:
+          "Mọi đội nhóm lớn đều đi qua 4 giai đoạn: KHỞI TẠO (gây dựng nền, chậm) → TẬP TRUNG (xây thủ lĩnh chủ chốt) → BÙNG NỔ/MOMENTUM (tăng trưởng theo cấp số nhân) → ỔN ĐỊNH (hệ thống tự chạy, thu nhập bền).\n\n" +
+          "Hiểu mình đang ở giai đoạn nào giúp bạn kiên nhẫn ở giai đoạn đầu (vốn chậm và dễ nản) và biết khi nào cần dồn lực.",
+      },
+      {
+        heading: "4.2. Momentum đến từ chiều sâu + thủ lĩnh",
+        content:
+          "Bùng nổ KHÔNG đến từ việc bạn tuyển thêm vài người. Nó đến khi nhiều nhánh đồng loạt có thủ lĩnh tự vận hành và mỗi thủ lĩnh lại nhân bản tiếp.\n\n" +
+          "Đây là lý do 1-2 năm đầu xây nền có vẻ chậm, nhưng khi 'đủ chín', tăng trưởng tăng tốc theo cấp số nhân — vì nhiều tầng cùng nhân bản một lúc.",
+      },
+      {
+        heading: "4.3. Kiên trì qua 'thung lũng' đầu",
+        content:
+          "Nhiều người bỏ cuộc ở giai đoạn Khởi tạo vì thấy chậm. Nhưng đây là lúc gieo hạt — kết quả đến sau. Người thắng là người chịu kiên trì 'gieo' đủ lâu để bước vào giai đoạn Bùng nổ.\n\n" +
+          "Như The Four Year Career chỉ ra: cho ngành này 3-4 năm nghiêm túc, cuộc đời bạn có thể thay đổi hoàn toàn.",
+      },
+    ],
+    takeaway:
+      "Đội nhóm đi qua 4 giai đoạn: Khởi tạo → Tập trung → Bùng nổ → Ổn định. Momentum đến từ nhiều nhánh sâu cùng có thủ lĩnh nhân bản. Hãy kiên trì qua 'thung lũng' đầu để chạm tới bùng nổ.",
+    reviewQuestions: [
+      "Bốn giai đoạn phát triển của một đội nhóm là gì?",
+      "Momentum (bùng nổ) thật sự đến từ đâu?",
+      "Vì sao nhiều người bỏ cuộc ở giai đoạn đầu, và làm sao vượt qua?",
+    ],
+  },
+  {
+    id: 5,
+    title: "Hệ thống tự vận hành",
+    objective:
+      "Xây các hệ thống và công cụ giúp đội nhóm chạy mà không phụ thuộc vào một cá nhân — kể cả bạn.",
+    sections: [
+      {
+        heading: "5.1. Hệ thống quan trọng hơn cá nhân",
+        content:
+          "Một đội nhóm phụ thuộc vào tài năng một người sẽ sụp khi người đó nghỉ. Một đội nhóm chạy bằng HỆ THỐNG (quy trình, công cụ, sự kiện định kỳ) thì bền vững và nhân bản được.\n\n" +
+          "Câu hỏi của lãnh đạo: 'Nếu mình nghỉ 3 tháng, đội nhóm có tự chạy được không?' Nếu chưa, hãy xây hệ thống.",
+      },
+      {
+        heading: "5.2. Chuẩn hóa công cụ & quy trình",
+        content:
+          "Xây bộ công cụ chuẩn để ai cũng dùng: video giới thiệu, tài liệu sản phẩm, kịch bản mời, checklist khởi động, lịch sự kiện cố định. Khi mọi người dùng CÙNG công cụ, hệ thống nhân bản đồng nhất.\n\n" +
+          "Vinalink đã có sẵn: website tư vấn, chatbot AI, tài liệu sản phẩm, lộ trình đào tạo — hãy dạy đội nhóm tận dụng để khỏi 'mỗi người một kiểu'.",
+      },
+      {
+        heading: "5.3. Tự động hóa việc lặp lại",
+        content:
+          "Những việc lặp đi lặp lại (giới thiệu sản phẩm, trả lời câu hỏi cơ bản, đào tạo người mới) nên giao cho CÔNG CỤ: website, chatbot, video, buổi đào tạo định kỳ.\n\n" +
+          "Bạn dành thời gian quý giá cho việc chỉ con người làm được: truyền cảm hứng, xây quan hệ, phát triển thủ lĩnh.",
+      },
+    ],
+    takeaway:
+      "Hệ thống bền hơn cá nhân. Hãy chuẩn hóa công cụ & quy trình, tận dụng website/chatbot/sự kiện để tự động hóa việc lặp lại — để đội nhóm chạy được kể cả khi vắng bạn.",
+    reviewQuestions: [
+      "Vì sao hệ thống quan trọng hơn tài năng cá nhân?",
+      "Việc chuẩn hóa công cụ giúp gì cho nhân bản?",
+      "Những việc nào nên giao cho công cụ, việc nào chỉ con người làm được?",
+    ],
+  },
+  {
+    id: 6,
+    title: "Tự do tài chính & để lại di sản",
+    objective:
+      "Hướng tới đích đến cuối cùng: thu nhập thụ động, tự do thời gian và trở thành người cố vấn cho thế hệ sau.",
+    sections: [
+      {
+        heading: "6.1. Thu nhập thụ động — phần thưởng của nhân bản",
+        content:
+          "Khi đội nhóm đã có nhiều thủ lĩnh tự vận hành và hệ thống tự chạy, thu nhập của bạn không còn phụ thuộc vào việc bạn có đi làm hay không. Đó là TỰ DO TÀI CHÍNH: tiền làm việc cho bạn, không phải bạn làm việc vì tiền.\n\n" +
+          "Đây là lời hứa của The Four Year Career: 3-4 năm gây dựng đúng cách để đổi lấy tự do lâu dài.",
+      },
+      {
+        heading: "6.2. Tự do thời gian — giá trị thật sự",
+        content:
+          "Tiền chỉ là phương tiện. Phần thưởng thật là TỰ DO: có mặt trong bữa tối cùng gia đình, đi du lịch khi muốn, làm điều mình yêu. Đừng quên lý do (WHY) ban đầu đã đưa bạn vào nghề.\n\n" +
+          "Nhiều người đạt tự do tài chính nhưng đánh mất sức khỏe và gia đình — hãy giữ cân bằng trên hành trình.",
+      },
+      {
+        heading: "6.3. Trở thành người cố vấn — để lại di sản",
+        content:
+          "Đỉnh cao của nghề không phải là thu nhập, mà là số người bạn đã giúp thay đổi cuộc đời. Khi bạn đã tự do, hãy trở thành NGƯỜI CỐ VẤN: nâng đỡ thế hệ thủ lĩnh kế tiếp, truyền lại giá trị và câu chuyện.\n\n" +
+          "Di sản lớn nhất bạn để lại là những con người bạn đã giúp trở nên tốt hơn — và họ tiếp tục giúp người khác.",
+      },
+    ],
+    takeaway:
+      "Đích đến là tự do tài chính VÀ tự do thời gian — nhưng đừng đánh mất sức khỏe, gia đình trên đường đi. Đỉnh cao thật sự là trở thành người cố vấn, để lại di sản qua những con người bạn đã giúp.",
+    reviewQuestions: [
+      "Thu nhập thụ động đến từ đâu trong nghề này?",
+      "Vì sao 'tự do thời gian' mới là phần thưởng thật sự?",
+      "Di sản lớn nhất một thủ lĩnh để lại là gì?",
+    ],
+  },
+];
+
+// ============================================================
+// LỘ TRÌNH PHÁT TRIỂN TVV THEO 4 GIAI ĐOẠN
+// Tổng hợp từ: Eric Worre (Go Pro, 90 ngày), Richard Bliss Brooke
+// (The Four Year Career), Mark Yarnell (Your First Year), 4 Phases of NM.
+// ============================================================
+
+export interface RoadmapPhase {
+  num: number;
+  name: string;
+  period: string;
+  emoji: string;
+  goal: string;
+  focus: string[];
+  course: string; // Khóa tương ứng
+  milestone: string;
+}
+
+export const DEVELOPMENT_ROADMAP: RoadmapPhase[] = [
+  {
+    num: 1,
+    name: "Tân binh – Khởi động",
+    period: "1 – 3 tháng",
+    emoji: "🌱",
+    goal: "Hiểu & dùng sản phẩm, lập danh sách 100 người, học cách hẹn gặp, có khách hàng và đối tác đầu tiên.",
+    focus: [
+      "Dùng thử 3-5 sản phẩm, học DeltaImmune, thảo dược, combo",
+      "Lập danh sách 100 người quen",
+      "Mỗi ngày: 5 liên hệ mới · 3 theo dõi · 1 buổi chia sẻ",
+      "Cắm rễ vào nhóm & sự kiện",
+    ],
+    course: "Khóa 1: Cách đặt lịch hẹn không sợ bị từ chối",
+    milestone: "5 đơn · 2 đối tác · cấp Bạc",
+  },
+  {
+    num: 2,
+    name: "Chiến binh – Xây nền",
+    period: "3 – 6 tháng",
+    emoji: "⚔️",
+    goal: "Thành thạo kỹ năng kể chuyện, xử lý từ chối, giữ động lực và bắt đầu có nhóm nhỏ.",
+    focus: [
+      "Thành thạo 7 kỹ năng lõi (mời, trình bày, theo dõi, chốt)",
+      "Kể chuyện thuyết phục thay vì tranh luận",
+      "Xử lý khéo câu hỏi 'đa cấp', 'không có tiền'",
+      "Bắt đầu mời & khởi động người mới",
+    ],
+    course: "Khóa 2: Nghệ thuật kể chuyện & Tạo động lực",
+    milestone: "nhóm 3-5 người · cấp Vàng",
+  },
+  {
+    num: 3,
+    name: "Đội trưởng – Nhân bản",
+    period: "6 tháng – 1 năm",
+    emoji: "👥",
+    goal: "Nhân bản chính mình: khởi động người mới đúng cách, dạy họ tự làm được, tổ chức buổi gặp và xây hệ thống lặp lại.",
+    focus: [
+      "Khởi động người mới trong '48 giờ vàng'",
+      "Edification – tôn vinh người dẫn dắt & sự kiện",
+      "Dạy người khác biết dạy lại (3 thế hệ)",
+      "Tổ chức buổi gặp tại nhà & đưa người lên sự kiện",
+    ],
+    course: "Khóa 3: Nhân bản & Xây dựng đội nhóm",
+    milestone: "nhóm 10-20 người · Siêu Vàng",
+  },
+  {
+    num: 4,
+    name: "Thủ lĩnh – Bứt phá",
+    period: "1 – 3 năm",
+    emoji: "👑",
+    goal: "Chuyển từ người làm sang người lãnh đạo: xây nhiều thủ lĩnh độc lập, tạo văn hóa & hệ thống tự vận hành, tiến tới tự do tài chính.",
+    focus: [
+      "Lãnh đạo bằng tấm gương & tầm nhìn",
+      "Xây thủ lĩnh độc lập theo chiều sâu",
+      "Tạo văn hóa, niềm tin & hệ thống tự chạy",
+      "Momentum → Tự do tài chính & để lại di sản",
+    ],
+    course: "Khóa 4: Lãnh đạo & Thủ lĩnh – Tự do tài chính",
+    milestone: "Kim cương · tự do tài chính",
+  },
+];
+
 // Tất cả các khóa đào tạo (hiển thị trên trang)
 export interface TrainingCourse {
   intro: { title: string; subtitle: string; goal: string; moduleCount: number };
@@ -660,4 +1179,6 @@ export interface TrainingCourse {
 export const COURSES: TrainingCourse[] = [
   { intro: TRAINING_INTRO, modules: TRAINING_MODULES },
   { intro: COURSE2_INTRO, modules: TRAINING_MODULES_2 },
+  { intro: COURSE3_INTRO, modules: TRAINING_MODULES_3 },
+  { intro: COURSE4_INTRO, modules: TRAINING_MODULES_4 },
 ];

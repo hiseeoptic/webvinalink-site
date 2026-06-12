@@ -1,6 +1,78 @@
 "use client";
 
-import { COURSES, TrainingModule } from "@/lib/training";
+import { COURSES, TrainingModule, DEVELOPMENT_ROADMAP } from "@/lib/training";
+
+const PHASE_THEME = [
+  { ring: "border-[var(--primary)]", badge: "bg-[var(--primary)]", soft: "bg-green-50", text: "text-[var(--primary)]" },
+  { ring: "border-amber-500", badge: "bg-amber-600", soft: "bg-amber-50", text: "text-amber-700" },
+  { ring: "border-blue-500", badge: "bg-blue-600", soft: "bg-blue-50", text: "text-blue-700" },
+  { ring: "border-purple-500", badge: "bg-purple-600", soft: "bg-purple-50", text: "text-purple-700" },
+];
+
+function RoadmapOverview() {
+  return (
+    <div className="mb-14">
+      <div className="text-center mb-8">
+        <span className="inline-block bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+          LỘ TRÌNH TỔNG QUAN
+        </span>
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+          🚀 Hành trình 4 giai đoạn của Tư vấn viên
+        </h3>
+        <p className="text-gray-600 max-w-2xl mx-auto text-sm">
+          Lộ trình đúc kết từ các chuyên gia kinh doanh theo mạng hàng đầu thế giới
+          (Eric Worre – Go Pro, Richard B. Brooke – The Four Year Career, Mark Yarnell – Your First Year).
+          Mỗi giai đoạn gắn với một khóa học và cột mốc thăng tiến rõ ràng.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {DEVELOPMENT_ROADMAP.map((p, i) => {
+          const t = PHASE_THEME[i] || PHASE_THEME[0];
+          return (
+            <div
+              key={p.num}
+              className={`relative bg-white rounded-2xl border-t-4 ${t.ring} border border-gray-100 shadow-sm hover:shadow-md transition p-5 flex flex-col`}
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className={`w-12 h-12 rounded-xl ${t.soft} flex items-center justify-center text-2xl shrink-0`}>
+                  {p.emoji}
+                </div>
+                <div>
+                  <span className={`inline-block ${t.badge} text-white text-[10px] font-bold px-2 py-0.5 rounded-full`}>
+                    GIAI ĐOẠN {p.num}
+                  </span>
+                  <p className="font-bold text-gray-900 text-sm leading-tight mt-0.5">{p.name}</p>
+                  <p className="text-xs text-gray-400">{p.period}</p>
+                </div>
+              </div>
+
+              <p className="text-xs text-gray-600 leading-relaxed mb-3">{p.goal}</p>
+
+              <ul className="space-y-1.5 mb-4 flex-1">
+                {p.focus.map((f, fi) => (
+                  <li key={fi} className="flex items-start gap-1.5 text-xs text-gray-700">
+                    <span className={`${t.text} mt-0.5`}>✓</span>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className={`${t.soft} rounded-lg p-2.5 mb-2`}>
+                <p className="text-[10px] font-bold text-gray-400 uppercase mb-0.5">Khóa học</p>
+                <p className={`text-xs font-semibold ${t.text} leading-tight`}>{p.course}</p>
+              </div>
+              <div className="flex items-center gap-1.5 text-xs">
+                <span className="text-gray-400">🎯 Cột mốc:</span>
+                <span className="font-semibold text-gray-700">{p.milestone}</span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 function ModuleAccordion({ mod, color }: { mod: TrainingModule; color: string }) {
   return (
@@ -60,7 +132,7 @@ function ModuleAccordion({ mod, color }: { mod: TrainingModule; color: string })
 }
 
 export default function TrainingSection() {
-  const courseColors = ["bg-[var(--primary)]", "bg-amber-600"];
+  const courseColors = ["bg-[var(--primary)]", "bg-amber-600", "bg-blue-600", "bg-purple-600"];
 
   return (
     <section id="dao-tao" className="bg-gradient-to-b from-amber-50 to-white py-16 px-4">
@@ -74,9 +146,18 @@ export default function TrainingSection() {
             🎓 Lộ trình đào tạo TVV
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            {COURSES.length} khóa học nền tảng giúp bạn tự tin khởi nghiệp cùng Vinalink — từ cách
-            đặt lịch hẹn đến nghệ thuật kể chuyện & tạo động lực.
+            {COURSES.length} khóa học nền tảng theo {DEVELOPMENT_ROADMAP.length} giai đoạn phát triển — từ
+            cách đặt lịch hẹn, nghệ thuật kể chuyện, đến nhân bản đội nhóm và trở thành thủ lĩnh.
           </p>
+        </div>
+
+        {/* Lộ trình tổng quan 4 giai đoạn */}
+        <RoadmapOverview />
+
+        {/* Tiêu đề danh sách khóa học */}
+        <div className="text-center mb-8">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900">📚 Nội dung chi tiết các khóa học</h3>
+          <p className="text-gray-500 text-sm mt-1">Nhấn vào từng module để xem nội dung đầy đủ</p>
         </div>
 
         {/* Từng khóa */}
@@ -85,8 +166,8 @@ export default function TrainingSection() {
             <div key={ci}>
               {/* Mini-header của khóa */}
               <div className="text-center mb-5">
-                <span className={`inline-block ${ci === 0 ? "bg-[var(--primary)]" : "bg-amber-600"} text-white text-xs font-bold px-3 py-1 rounded-full mb-2`}>
-                  KHÓA {ci + 1}
+                <span className={`inline-block ${courseColors[ci] || "bg-[var(--primary)]"} text-white text-xs font-bold px-3 py-1 rounded-full mb-2`}>
+                  KHÓA {ci + 1} · GIAI ĐOẠN {ci + 1}
                 </span>
                 <h3 className="text-2xl font-bold text-gray-900">{course.intro.title}</h3>
                 <p className="text-gray-600 text-sm max-w-2xl mx-auto mt-1">{course.intro.goal}</p>

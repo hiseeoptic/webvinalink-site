@@ -319,6 +319,104 @@ MODULE 6 - PHAI HANH DONG:
 Khi TVV hoi ve ky nang ke chuyen, xu ly cau "da cap", tao dong luc, "biet ma khong lam" -> tra loi tu Khoa 2 va neu ro Module. Luon mem hoa giong, am ap kieu Viet.
 `;
 
+export const DEVELOPMENT_ROADMAP_TEXT = `
+=== LO TRINH PHAT TRIEN TVV THEO 4 GIAI DOAN (tong hop tu Eric Worre - Go Pro, Richard Bliss Brooke - The Four Year Career, Mark Yarnell - Your First Year) ===
+Khi TVV hoi "nguoi moi bat dau tu dau", "lo trinh thang tien", "toi nen lam gi giai doan nay", hay dinh vi ho vao 1 trong 4 giai doan va chi ro Khoa hoc + viec can lam.
+
+GIAI DOAN 1 - TAN BINH / KHOI DONG (1-3 thang) -> muc tieu cap BAC:
+- Trong tam: Hieu & dung san pham, lap danh sach 100 nguoi, hoc cach dat lich hen.
+- Hoat dong moi ngay: 5 lien he moi + 3 theo doi (follow-up) + 1 buoi chia se.
+- Hoc: KHOA 1 (Cach dat lich hen khong so bi tu choi).
+- Cot moc: 5 don + 2 doi tac + cap Bac.
+
+GIAI DOAN 2 - CHIEN BINH / XAY NEN (3-6 thang) -> muc tieu cap VANG:
+- Trong tam: Thanh thao ke chuyen, xu ly tu choi, giu dong luc, bat dau co nhom nho.
+- Hoc: KHOA 2 (Nghe thuat ke chuyen & Tao dong luc).
+- Cot moc: nhom 3-5 nguoi + cap Vang.
+
+GIAI DOAN 3 - DOI TRUONG / NHAN BAN (6 thang - 1 nam) -> muc tieu SIEU VANG:
+- Trong tam: Nhan ban chinh minh - khoi dong nguoi moi dung cach (48 gio vang), day ho tu lam duoc, to chuc buoi gap, xay he thong lap lai.
+- Hoc: KHOA 3 (Nhan ban & Xay dung doi nhom).
+- Cot moc: nhom 10-20 nguoi + Sieu Vang.
+
+GIAI DOAN 4 - THU LINH / BUT PHA (1-3 nam) -> muc tieu KIM CUONG & TU DO TAI CHINH:
+- Trong tam: Chuyen tu nguoi lam sang nguoi lanh dao - xay nhieu thu linh doc lap, tao van hoa & he thong tu van hanh, tien toi momentum.
+- Hoc: KHOA 4 (Lanh dao & Thu linh - Tu do tai chinh).
+- Cot moc: Kim cuong + tu do tai chinh.
+`;
+
+export const TRAINING_CURRICULUM_3 = `
+=== KHOA 3: NHAN BAN & XAY DUNG DOI NHOM (6 MODULE) ===
+Khoa cho giai doan xay nhom (6 thang - 1 nam). LUU Y VAN HOA: KHONG dung "da cap/MLM/kim tu thap"; dung "kinh doanh cung Vinalink", "chia se", "gioi thieu".
+
+MODULE 1 - NHAN BAN LA TRAI TIM CUA NGHE:
+- Thu nhap ben vung KHONG den tu lam nhieu hon, ma tu giup NHIEU nguoi cung lam duoc viec don gian.
+- Nguyen tac vang: "Neu khong don gian, no se khong nhan ban." Day bang cach LAM, khong bang cach gioi.
+
+MODULE 2 - KHOI DONG NGUOI MOI (48 GIO VANG):
+- 48h dau quyet dinh ho o lai hay bo cuoc -> khoi dong ngay khi nhiet huyet con cao.
+- Checklist: giup ho dung san pham, viet danh sach 100, dat muc tieu 90 ngay, cam vao nhom/su kien, hen buoi chia se dau tien.
+- Quy trinh 4 buoc: (1) Toi lam-ban xem (2) Toi lam-ban phu (3) Ban lam-toi phu (4) Ban lam-toi xem.
+
+MODULE 3 - EDIFICATION (TON VINH):
+- Dung lam chuyen gia - hay KET NOI nguoi moi toi chuyen gia/cong cu/su kien.
+- Ton vinh nguoi do dau (upline) truoc khi cho nguoi moi gap -> loi noi co suc nang gap nhieu lan.
+- Ton vinh cong cu & su kien day nguoi moi: "minh khong can gioi, chi can dan toi cong cu".
+
+MODULE 4 - DAY NGUOI KHAC BIET DAY LAI (3 THE HE):
+- Dung lam thay -> ho phu thuoc, ban kiet suc. Hay day de ho tu lam roi tu day lai.
+- Quy tac 3 the he: nhanh vung khi sau it nhat 3 tang (Ban -> A -> B -> C) va C chay khong can ban.
+- Dao tao nguoi dao tao: day 5 doi truong, moi nguoi day 10 nguoi cua ho.
+
+MODULE 5 - SUC MANH CUA BUOI GAP & SU KIEN:
+- Su kien tao niem tin tap the ma mot minh khong tao duoc (ky nang loi thu 7 cua Eric Worre).
+- 3 loai: gap 1-1/2-1 -> buoi tai nha (home meeting) -> su kien lon (OPP/hoi thao).
+- "Moi nguoi len su kien" la ky nang ai cung lam duoc - de su kien lam phan thuyet phuc.
+
+MODULE 6 - GIU LUA & CHAM SOC DOI NHOM:
+- Cong nhan la nhu cau lon nhat - khen cong khai tung buoc tien nho.
+- Hop nhom hang tuan = mach mau giu doi nhom song.
+- Cham theo cap do: dau tu thoi gian nhieu nhat cho NGUOI DANG LAM (chiu hanh dong).
+
+Khi TVV hoi ve khoi dong nguoi moi, day tuyen duoi, to chuc su kien, giu chan thanh vien -> tra loi tu Khoa 3 va neu ro Module.
+`;
+
+export const TRAINING_CURRICULUM_4 = `
+=== KHOA 4: LANH DAO & THU LINH - TU DO TAI CHINH (6 MODULE) ===
+Khoa cho giai doan but pha (1-3 nam). LUU Y VAN HOA: KHONG dung "da cap/MLM/kim tu thap".
+
+MODULE 1 - TU NGUOI LAM SANG NGUOI LANH DAO:
+- Lanh dao = truyen cam hung de nguoi khac TU NGUYEN di theo (khong quan ly/ra lenh - ho la doi tac doc lap).
+- "De co doi nhom tot hon, hay tro thanh nguoi lanh dao tot hon." Lanh dao bang tam nhin.
+
+MODULE 2 - XAY DUNG THU LINH DOC LAP:
+- Tim "nguoi doi khat" (WHY lon, chiu hanh dong), khong phai "nguoi gioi nhat".
+- Phat trien CHIEU SAU (thu linh moi tang) hon chieu rong.
+- Trao quyen: lui lai de ho tu dan nhanh -> dieu kien de ban tu do.
+
+MODULE 3 - VAN HOA & NIEM TIN DOI NHOM:
+- Nguoi ta tham gia vi co hoi nhung O LAI vi van hoa & con nguoi.
+- 4 tang niem tin (belief): tin nganh - tin cong ty/san pham - tin nguoi dan dat - tin chinh minh.
+- Chinh truc la nen mong: ban san pham tot, noi su that, dat loi ich khach & doi tac len truoc.
+
+MODULE 4 - MOMENTUM (BUT PHA THEO CAP SO NHAN):
+- 4 giai doan to chuc: Khoi tao -> Tap trung -> Bung no/Momentum -> On dinh.
+- Momentum den tu nhieu nhanh sau cung co thu linh nhan ban - khong phai tuyen them vai nguoi.
+- Kien tri qua "thung lung" dau (giai doan dau cham, de nan) -> moi cham toi bung no.
+
+MODULE 5 - HE THONG TU VAN HANH:
+- He thong ben hon ca nhan. Cau hoi: "Neu minh nghi 3 thang, doi nhom co tu chay khong?"
+- Chuan hoa cong cu & quy trinh (website, chatbot, tai lieu, su kien dinh ky) -> nhan ban dong nhat.
+- Tu dong hoa viec lap lai; danh thoi gian cho viec chi con nguoi lam duoc (truyen cam hung, xay quan he).
+
+MODULE 6 - TU DO TAI CHINH & DE LAI DI SAN:
+- Thu nhap thu dong = phan thuong cua nhan ban (tien lam viec cho ban).
+- Tu do THOI GIAN moi la phan thuong that - dung danh mat suc khoe/gia dinh tren duong di.
+- Dinh cao: tro thanh nguoi co van, de lai di san qua nhung con nguoi ban da giup.
+
+Khi TVV hoi ve lanh dao, xay thu linh, van hoa nhom, momentum, tu do tai chinh -> tra loi tu Khoa 4 va neu ro Module.
+`;
+
 // ============================================================
 // FUNCTION: Build system prompt based on user role
 // ============================================================
@@ -354,11 +452,17 @@ ${RECRUITMENT_TRAINING}
 
 ${GETTING_STARTED_GUIDE}
 
+${DEVELOPMENT_ROADMAP_TEXT}
+
 ${TRAINING_CURRICULUM}
 
 ${TRAINING_CURRICULUM_2}
 
-Khi TVV hoi ve ky nang ban hang, tuyen dung, xu ly tu choi, hoac "lo trinh dao tao / cach lam" - hay tra loi chi tiet voi vi du cu the va dan chieu dung Module trong lo trinh 6 module.
+${TRAINING_CURRICULUM_3}
+
+${TRAINING_CURRICULUM_4}
+
+Khi TVV hoi ve ky nang ban hang, tuyen dung, xu ly tu choi, hoac "lo trinh dao tao / cach lam" - hay tra loi chi tiet voi vi du cu the. Truoc tien dinh vi TVV vao 1 trong 4 GIAI DOAN (Tan binh 1-3 thang / Chien binh 3-6 thang / Doi truong 6 thang-1 nam / Thu linh 1-3 nam), roi dan chieu dung Khoa hoc (1-4) va Module phu hop voi giai doan do.
 `;
   }
 
