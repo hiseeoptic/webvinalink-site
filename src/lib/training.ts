@@ -1104,7 +1104,7 @@ export interface RoadmapPhase {
   goal: string;
   focus: string[];
   course: string; // Khóa tương ứng
-  milestone: string;
+  source: string; // Nguồn tài liệu của giai đoạn (minh bạch để kiểm chứng)
 }
 
 export const DEVELOPMENT_ROADMAP: RoadmapPhase[] = [
@@ -1121,7 +1121,7 @@ export const DEVELOPMENT_ROADMAP: RoadmapPhase[] = [
       "Cắm rễ vào nhóm & sự kiện",
     ],
     course: "Khóa 1: Cách đặt lịch hẹn không sợ bị từ chối",
-    milestone: "5 đơn · 2 đối tác · cấp Bạc",
+    source: "Tài liệu đào tạo nội bộ (đặt lịch hẹn)",
   },
   {
     num: 2,
@@ -1136,7 +1136,7 @@ export const DEVELOPMENT_ROADMAP: RoadmapPhase[] = [
       "Bắt đầu mời & khởi động người mới",
     ],
     course: "Khóa 2: Nghệ thuật kể chuyện & Tạo động lực",
-    milestone: "nhóm 3-5 người · cấp Vàng",
+    source: 'Phương pháp kể chuyện của Tom "Big Al" Schreiter',
   },
   {
     num: 3,
@@ -1151,7 +1151,7 @@ export const DEVELOPMENT_ROADMAP: RoadmapPhase[] = [
       "Tổ chức buổi gặp tại nhà & đưa người lên sự kiện",
     ],
     course: "Khóa 3: Nhân bản & Xây dựng đội nhóm",
-    milestone: "nhóm 10-20 người · Siêu Vàng",
+    source: "Eric Worre – Go Pro; Mark Yarnell – Your First Year",
   },
   {
     num: 4,
@@ -1166,7 +1166,7 @@ export const DEVELOPMENT_ROADMAP: RoadmapPhase[] = [
       "Momentum → Tự do tài chính & để lại di sản",
     ],
     course: "Khóa 4: Lãnh đạo & Thủ lĩnh – Tự do tài chính",
-    milestone: "Kim cương · tự do tài chính",
+    source: "Richard B. Brooke – The Four Year Career; Mark Yarnell",
   },
 ];
 

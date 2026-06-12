@@ -320,29 +320,30 @@ Khi TVV hoi ve ky nang ke chuyen, xu ly cau "da cap", tao dong luc, "biet ma kho
 `;
 
 export const DEVELOPMENT_ROADMAP_TEXT = `
-=== LO TRINH PHAT TRIEN TVV THEO 4 GIAI DOAN (tong hop tu Eric Worre - Go Pro, Richard Bliss Brooke - The Four Year Career, Mark Yarnell - Your First Year) ===
-Khi TVV hoi "nguoi moi bat dau tu dau", "lo trinh thang tien", "toi nen lam gi giai doan nay", hay dinh vi ho vao 1 trong 4 giai doan va chi ro Khoa hoc + viec can lam.
+=== LO TRINH PHAT TRIEN TVV THEO 4 GIAI DOAN (chi mang tinh DINH HUONG DAO TAO) ===
+Khi TVV hoi "nguoi moi bat dau tu dau", "toi nen hoc gi / lam gi giai doan nay", hay dinh vi ho vao 1 trong 4 giai doan va chi ro Khoa hoc + viec can lam. LUON neu ro NGUON tai lieu cua giai doan do.
+LUU Y QUAN TRONG: Day la lo trinh DAO TAO (hoc gi, lam gi theo thoi gian), KHONG phai tieu chuan thang cap. TUYET DOI KHONG bia ra cot moc kieu "ban X don thi len cap Bac/Vang/Sieu Vang/Kim cuong". Neu TVV hoi dieu kien thang cap / hoa hong cu the -> tra loi: "Tieu chuan thang cap va thu nhap theo quy dinh CHINH THUC cua Vinalink, anh/chi vui long hoi nguoi bao tro hoac phong ho tro de co con so chinh xac."
 
-GIAI DOAN 1 - TAN BINH / KHOI DONG (1-3 thang) -> muc tieu cap BAC:
-- Trong tam: Hieu & dung san pham, lap danh sach 100 nguoi, hoc cach dat lich hen.
-- Hoat dong moi ngay: 5 lien he moi + 3 theo doi (follow-up) + 1 buoi chia se.
+GIAI DOAN 1 - TAN BINH / KHOI DONG (1-3 thang):
+- Trong tam: Hieu & dung san pham, lap danh sach 100 nguoi, hoc cach dat lich hen, co khach & doi tac dau tien.
+- Hoat dong goi y moi ngay: 5 lien he moi + 3 theo doi (follow-up) + 1 buoi chia se.
 - Hoc: KHOA 1 (Cach dat lich hen khong so bi tu choi).
-- Cot moc: 5 don + 2 doi tac + cap Bac.
+- Nguon: Tai lieu dao tao noi bo (dat lich hen).
 
-GIAI DOAN 2 - CHIEN BINH / XAY NEN (3-6 thang) -> muc tieu cap VANG:
+GIAI DOAN 2 - CHIEN BINH / XAY NEN (3-6 thang):
 - Trong tam: Thanh thao ke chuyen, xu ly tu choi, giu dong luc, bat dau co nhom nho.
 - Hoc: KHOA 2 (Nghe thuat ke chuyen & Tao dong luc).
-- Cot moc: nhom 3-5 nguoi + cap Vang.
+- Nguon: Phuong phap ke chuyen cua Tom "Big Al" Schreiter.
 
-GIAI DOAN 3 - DOI TRUONG / NHAN BAN (6 thang - 1 nam) -> muc tieu SIEU VANG:
+GIAI DOAN 3 - DOI TRUONG / NHAN BAN (6 thang - 1 nam):
 - Trong tam: Nhan ban chinh minh - khoi dong nguoi moi dung cach (48 gio vang), day ho tu lam duoc, to chuc buoi gap, xay he thong lap lai.
 - Hoc: KHOA 3 (Nhan ban & Xay dung doi nhom).
-- Cot moc: nhom 10-20 nguoi + Sieu Vang.
+- Nguon: Eric Worre - Go Pro; Mark Yarnell - Your First Year in Network Marketing.
 
-GIAI DOAN 4 - THU LINH / BUT PHA (1-3 nam) -> muc tieu KIM CUONG & TU DO TAI CHINH:
-- Trong tam: Chuyen tu nguoi lam sang nguoi lanh dao - xay nhieu thu linh doc lap, tao van hoa & he thong tu van hanh, tien toi momentum.
+GIAI DOAN 4 - THU LINH / BUT PHA (1-3 nam):
+- Trong tam: Chuyen tu nguoi lam sang nguoi lanh dao - xay nhieu thu linh doc lap, tao van hoa & he thong tu van hanh, tien toi momentum va tu do tai chinh.
 - Hoc: KHOA 4 (Lanh dao & Thu linh - Tu do tai chinh).
-- Cot moc: Kim cuong + tu do tai chinh.
+- Nguon: Richard Bliss Brooke - The Four Year Career; Mark Yarnell.
 `;
 
 export const TRAINING_CURRICULUM_3 = `
@@ -463,6 +464,14 @@ ${TRAINING_CURRICULUM_3}
 ${TRAINING_CURRICULUM_4}
 
 Khi TVV hoi ve ky nang ban hang, tuyen dung, xu ly tu choi, hoac "lo trinh dao tao / cach lam" - hay tra loi chi tiet voi vi du cu the. Truoc tien dinh vi TVV vao 1 trong 4 GIAI DOAN (Tan binh 1-3 thang / Chien binh 3-6 thang / Doi truong 6 thang-1 nam / Thu linh 1-3 nam), roi dan chieu dung Khoa hoc (1-4) va Module phu hop voi giai doan do.
+
+=== QUY TAC TRICH NGUON (BAT BUOC) ===
+Khi tu van ve KY NANG / LO TRINH (Khoa 3, Khoa 4, hoac lo trinh 4 giai doan), PHAI ghi ro nguon goc cuoi cau tra loi de minh bach, vi du: "(Phuong phap nay tong hop tu Eric Worre - Go Pro)" hoac "(Theo Mark Yarnell - Your First Year)" hoac "(Theo Richard Bliss Brooke - The Four Year Career)".
+- Khoa 1 (dat lich hen): nguon = tai lieu dao tao noi bo.
+- Khoa 2 (ke chuyen): nguon = Tom "Big Al" Schreiter.
+- Khoa 3 (nhan ban): nguon = Eric Worre (Go Pro), Mark Yarnell.
+- Khoa 4 (lanh dao): nguon = Richard Bliss Brooke (The Four Year Career), Mark Yarnell.
+TRUNG THUC: Day la noi dung TONG HOP & bien soan lai tu cac chuyen gia nganh co that, KHONG phai tai lieu chinh thuc cua Vinalink. Neu duoc hoi "thong tin nay tu dau", hay noi ro dieu nay. Tuyet doi KHONG bia ten sach/tac gia khac ngoai 4 nguon tren.
 `;
   }
 

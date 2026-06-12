@@ -62,14 +62,22 @@ function RoadmapOverview() {
                 <p className="text-[10px] font-bold text-gray-400 uppercase mb-0.5">Khóa học</p>
                 <p className={`text-xs font-semibold ${t.text} leading-tight`}>{p.course}</p>
               </div>
-              <div className="flex items-center gap-1.5 text-xs">
-                <span className="text-gray-400">🎯 Cột mốc:</span>
-                <span className="font-semibold text-gray-700">{p.milestone}</span>
+              <div className="flex items-start gap-1.5 text-xs">
+                <span className="text-gray-400 shrink-0">📖 Nguồn:</span>
+                <span className="text-gray-600 italic">{p.source}</span>
               </div>
             </div>
           );
         })}
       </div>
+
+      {/* Ghi chú minh bạch nguồn */}
+      <p className="text-xs text-gray-400 italic text-center mt-6 max-w-3xl mx-auto leading-relaxed">
+        📖 <strong>Về nguồn nội dung:</strong> Khóa 1–2 dựa trên tài liệu nội bộ &amp; phương pháp của Tom &quot;Big Al&quot; Schreiter.
+        Khóa 3–4 &amp; lộ trình được tổng hợp, biên soạn lại từ các chuyên gia ngành có thật (Eric Worre – Go Pro,
+        Richard B. Brooke – The Four Year Career, Mark Yarnell – Your First Year), KHÔNG phải tài liệu chính thức của Vinalink.
+        Lộ trình mang tính định hướng đào tạo; tiêu chuẩn thăng cấp &amp; thu nhập theo quy định chính thức của công ty.
+      </p>
     </div>
   );
 }

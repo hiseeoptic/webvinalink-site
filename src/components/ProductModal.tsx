@@ -8,7 +8,7 @@ import {
   MEMBERSHIP_LABELS,
   formatPrice,
 } from "@/lib/products";
-import { getHerbsForProduct } from "@/lib/herbs";
+import { getHerbsForProduct, getHerbSynergy } from "@/lib/herbs";
 
 const CHEVRON = (
   <svg className="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,6 +32,7 @@ export default function ProductModal({
   const allTiers: MembershipTier[] = ["normal", "silver", "gold", "super_gold"];
   const tiers = userRole === "tvv" ? allTiers : (["normal"] as MembershipTier[]);
   const herbs = getHerbsForProduct(product.slug);
+  const herbSynergy = getHerbSynergy(product.slug);
   const tierColors: Record<MembershipTier, string> = {
     normal: "bg-gray-100 hover:bg-gray-200 text-gray-800",
     silver: "bg-slate-200 hover:bg-slate-300 text-slate-800",
@@ -216,6 +217,20 @@ export default function ProductModal({
                   </span>
                   {CHEVRON}
                 </summary>
+
+                {/* Tổng quan: các thảo dược kết hợp với nhau xử lý vấn đề gì */}
+                {herbSynergy && (
+                  <div className="mt-2 mb-1 bg-emerald-50 border border-emerald-200 rounded-xl p-3">
+                    <p className="text-xs font-bold text-emerald-800 mb-1.5 flex items-center gap-1.5">
+                      <span>🔬</span> Khi kết hợp với nhau, các thảo dược này làm gì trong cơ thể?
+                    </p>
+                    <p className="text-xs text-gray-700 leading-relaxed">{herbSynergy}</p>
+                    <p className="text-[10px] text-gray-400 italic mt-2">
+                      * Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.
+                    </p>
+                  </div>
+                )}
+
                 <p className="text-xs text-gray-500 px-1 mt-2 mb-1">
                   Bấm vào từng vị thuốc để xem phân tích chi tiết vai trò trong sản phẩm.
                 </p>

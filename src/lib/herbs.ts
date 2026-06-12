@@ -319,3 +319,45 @@ export function getHerbsForProduct(slug: string): Herb[] {
   const keys = PRODUCT_HERBS[slug] || [];
   return keys.map((k) => HERBS[k]).filter(Boolean);
 }
+
+// ============================================================
+// TỔNG QUAN: Các thảo dược trong sản phẩm KẾT HỢP với nhau
+// xử lý vấn đề gì trong cơ thể (cơ chế phối hợp).
+// Hiển thị ở đầu mục "Thảo dược trong sản phẩm".
+// ============================================================
+export const PRODUCT_HERB_SYNERGY: Record<string, string> = {
+  "cardiopro-max":
+    "Bộ thành phần phối hợp theo cơ chế 'khơi thông – làm tan – bảo vệ' cho hệ tim mạch: Đan sâm hoạt huyết, làm giãn mạch vành và tăng tưới máu cơ tim; Cao Natto (Nattokinase) làm tan và ngăn cục máu đông gây tắc mạch; Hoàng bá và Hoàng đằng (giàu Berberin/Palmatin) thanh nhiệt, kháng viêm thành mạch và hỗ trợ kiểm soát mỡ máu. Khi kết hợp, chúng vừa giúp dòng máu lưu thông tốt hơn, vừa giảm viêm và nguy cơ xơ vữa — hỗ trợ trái tim hoạt động nhẹ nhàng, bền bỉ hơn.",
+  "jointlink-max":
+    "Các vị thuốc xử lý đau khớp theo nguyên lý 'trừ nguyên nhân – giảm viêm – phục hồi': Khương hoạt và Dây đau xương khu phong trừ thấp, đánh vào gốc gây đau nhức theo Đông y; Khương hoàng (Curcumin) giảm phản ứng viêm tại khớp; Bạch truật trừ thấp, kiện tỳ nâng thể trạng; Cam thảo điều hòa, làm dịu dạ dày và hài hòa các vị mạnh. Cùng nhau, chúng giúp giảm sưng đau, làm chậm thoái hóa và hỗ trợ vận động linh hoạt hơn.",
+  "mindenergy-max":
+    "Ba thảo dược phối hợp để 'nuôi não – tăng trí nhớ – dẫn máu lên não': Bacopa bảo vệ và kích thích đầu mút thần kinh, cải thiện trí nhớ; Đinh lăng tăng tuần hoàn máu não và giảm mệt mỏi thần kinh; Ngưu tất 'dẫn đường', đưa máu giàu dưỡng chất lên não để hai vị kia phát huy tác dụng. Kết hợp cùng DHA và enzyme tiêu sợi huyết trong sản phẩm, bộ ba này hỗ trợ tuần hoàn não, khả năng ghi nhớ và tập trung.",
+  "manlink-max":
+    "Sáu thảo dược chia hai nhóm bổ trợ nhau theo triết lý 'trị cả gốc lẫn ngọn': nhóm BỔ THẬN – TRỊ GỐC (Ba kích, Đông trùng hạ thảo, Nhân sâm) nuôi dưỡng tạng thận và nguyên khí — nền tảng của sinh lực bền lâu; nhóm TĂNG LỰC – TRỊ NGỌN (Dâm dương hoắc, Bạch tật lê, Cỏ cà ri) kích thích testosterone nội sinh và tăng tuần hoàn tới cơ quan sinh dục. Khi kết hợp (cùng L-Arginine giãn mạch), chúng vừa cải thiện sinh lý, vừa bồi bổ tận gốc giúp phái mạnh dẻo dai, bền sức.",
+  "bach-xuan":
+    "Sản phẩm lấy bài Tứ Vật Thang kinh điển làm gốc — bốn vị phối theo vai trò 'quân–thần–tá–sứ': Đương quy (quân) bổ và hoạt huyết; Thục địa (thần) đại bổ âm huyết; Bạch thược (tá) liễm âm, dưỡng huyết, làm dịu; Xuyên khung (sứ) hành khí dẫn huyết để 'bổ mà không trệ'. Hai điểm nhấn hiện đại được thêm vào: Soy Isoflavone bù đắp nội tiết tố nữ suy giảm theo tuổi, và Lợi khuẩn giúp đường ruột hấp thu tối đa dưỡng chất. Cùng nhau, công thức nuôi dưỡng khí huyết và cân bằng nội tiết — gốc rễ của làn da hồng hào, kinh nguyệt đều và vẻ đẹp từ bên trong.",
+  "genecel-max":
+    "Bốn thảo dược tạo cơ chế 'làm sạch – bảo vệ – tái tạo' ở cấp tế bào: Khổ sâm thanh nhiệt, hỗ trợ thải độc để 'dọn sạch' môi trường tế bào; Linh chi và Thông đỏ (giàu chất chống oxy hóa OPC, Triterpene) tạo 'lá chắn' chống gốc tự do bảo vệ tế bào và collagen; Bạch thược bổ huyết, dưỡng âm nuôi dưỡng làn da. Phối cùng DeltaImmune, bộ thảo dược hỗ trợ làm chậm lão hóa và trẻ hóa cơ thể từ gốc.",
+  "caphelink":
+    "Ba thảo dược biến ly cà phê thành thức uống vừa tỉnh táo vừa dưỡng sức: Hoàng kỳ bổ khí, chống mệt mỏi; Nấm Chaga bổ sung chất chống oxy hóa và hỗ trợ miễn dịch; Lá chay — cây thuốc Việt — hỗ trợ điều hòa đề kháng. Kết hợp với DeltaImmune, chúng giúp người dùng tỉnh táo mà vẫn được bồi bổ và bảo vệ sức khỏe mỗi ngày.",
+  "vhealth-socola":
+    "Bộ ba thảo dược nâng bữa ăn dinh dưỡng thành thực phẩm bổ dưỡng đúng nghĩa: Đảng sâm và Hoàng kỳ bổ khí, kiện tỳ giúp ăn ngon, tăng thể lực; Nấm Chaga bổ sung 'lớp giáp' chống oxy hóa và hỗ trợ miễn dịch. Cùng DeltaImmune và các vitamin, chúng bồi bổ khí huyết và tăng đề kháng nền tảng cho cả gia đình.",
+  "vhealth-tra-xanh":
+    "Bộ ba thảo dược nâng bữa ăn dinh dưỡng thành thực phẩm bổ dưỡng đúng nghĩa: Đảng sâm và Hoàng kỳ bổ khí, kiện tỳ giúp ăn ngon, tăng thể lực; Nấm Chaga cùng tinh chất trà xanh Matcha bổ sung chất chống oxy hóa và hỗ trợ miễn dịch. Cùng DeltaImmune và các vitamin, chúng bồi bổ khí huyết và tăng đề kháng nền tảng cho cả gia đình.",
+  "lacttocol-max":
+    "Hai vị thuốc kiện tỳ, bảo vệ đường ruột: Bạch truật kiện tỳ, tăng tiêu hóa và bảo vệ niêm mạc ruột; Thổ phục linh trừ thấp, giải độc làm sạch đường ruột. Kết hợp với lợi khuẩn Lactobacillus và chất xơ FOS (prebiotic) trong sản phẩm, chúng giúp cân bằng hệ vi sinh, cải thiện tiêu hóa và hấp thu dưỡng chất.",
+  "detoxmune-max":
+    "Thổ phục linh là vị thảo dược 'trị gốc' của sản phẩm: thanh nhiệt, trừ thấp, hỗ trợ gan đào thải độc tố — đặc biệt với người hay mẩn ngứa, nóng gan do rượu bia. Nó phối hợp với DeltaImmune và ALA (axit alpha-lipoic) để bảo vệ tế bào gan toàn diện: vừa giải độc, vừa chống oxy hóa và tăng đề kháng cho lá gan.",
+  "kidsmune-max":
+    "Hai thảo dược lành tính phối hợp cho trẻ: Hoàng kỳ bổ khí, tăng đề kháng giúp trẻ ít ốm vặt; Diếp cá thanh nhiệt, hỗ trợ hệ tiêu hóa và hô hấp — hai hệ trẻ hay gặp vấn đề. Cùng Sữa non (Colostrum), DeltaImmune, Lysine và DHA, sản phẩm vừa làm mát, vừa tăng miễn dịch giúp trẻ ăn ngon, ngủ tốt.",
+  "vtopcan":
+    "Bộ thành phần xây 'hàng rào bảo vệ tế bào nhiều tầng' theo triết lý Đông–Tây y: Fucoidan (tảo nâu) và Lunasin (peptide đậu nành) là mũi nhọn — kích hoạt miễn dịch và bảo vệ DNA tế bào; Nấm Ngưu chương chi bảo vệ, giải độc gan; Tảo biển bổ sung Omega-3 và dưỡng chất nuôi tế bào; nhóm thảo dược Việt (Lá tre, Sả, Hoa đu đủ đực) thanh nhiệt, giải độc và chống oxy hóa. Cùng nhau, chúng hỗ trợ nâng cao sức khỏe và bảo vệ cơ thể từ gốc rễ tế bào — phù hợp người cần chăm sóc đặc biệt.",
+  "topapro":
+    "Năm thành phần kết hợp tạo 'bữa ăn dinh dưỡng – miễn dịch' hoàn chỉnh: ProteoSMART (hạt bí, hướng dương, lanh) cùng 10 loại hạt/ngũ cốc cung cấp đạm thực vật, axit amin, vitamin và khoáng; Nấm men thủy phân bổ sung Beta-glucan và nucleotide tăng miễn dịch, kích thích ăn ngon; Tảo lục Chlorella thải độc và bổ vi chất; phức hợp Bio-She (lá ổi, hương nhu, Amla...) chống oxy hóa và hỗ trợ tiêu hóa. Cùng nhau, chúng bổ sung đạm sạch dễ hấp thu và tăng đề kháng — lý tưởng cho trẻ biếng ăn, người ăn chay và người cần phục hồi.",
+  "vsportgel":
+    "Đinh lăng — 'nhân sâm của người nghèo' — giúp giảm mệt mỏi và phục hồi thể lực, phối cùng Collagen peptide, Glucosamine và BCAA trong sản phẩm để hỗ trợ vận động, bảo vệ và phục hồi cơ – khớp cho người chơi thể thao và lao động nặng.",
+};
+
+export function getHerbSynergy(slug: string): string | undefined {
+  return PRODUCT_HERB_SYNERGY[slug];
+}
