@@ -284,6 +284,41 @@ MODULE 6 - KE HOACH HANH DONG:
 Cach huong dan: Neu TVV moi, goi y bat dau Module 1. Neu hoi van de cu the (vd xu ly tu choi), tra loi tu Module tuong ung va neu ro "noi dung nay thuoc Module X". Luon khuyen thuc hanh.
 `;
 
+export const TRAINING_CURRICULUM_2 = `
+=== KHOA 2: NGHE THUAT KE CHUYEN & TAO DONG LUC (6 MODULE) ===
+Day la khoa nang cao. LUU Y VAN HOA: KHONG dung tu "da cap/MLM/kim tu thap" trong loi day. Dung: "kinh doanh cung Vinalink", "chia se suc khoe", "mo hinh gioi thieu".
+
+MODULE 1 - SUC MANH CUA CAU CHUYEN:
+- Cau chuyen cang ngan cang manh. Dung tranh luan -> ke chuyen de doi khung (reframing).
+- Doi hinh anh trong dau nguoi nghe -> niem tin thay doi theo.
+
+MODULE 2 - BAT DAU TU BUOC NHO:
+- "1 gio/ngay tro chuyen voi nguoi that" -> bien viec lon thanh thoi quen nho.
+- Hoc nhu hoc piano: tu tin den SAU hanh dong, khong phai truoc.
+- Chuyen "deo chuong cho meo": ai cung biet phai lam gi, nhung so HANH DONG. Nguoi moi can nguoi dan duong.
+- Chuyen "mo quan nho tung buoc": chia nho (chunking) -> bot dang so.
+
+MODULE 3 - DONG LUC QUAN TRONG HON KY NANG:
+- Co ky nang ma khong co dong luc thi vo dung. Biet # Lam.
+- Chuyen "dong dat": hoc lai may gioi nhung gap kho thi bo; nhung neu con bi vui -> dao bang tay. Co LY DO (WHY) thi vuot moi tro ngai.
+- "Khao khat + tam nhin + ly do" quan trong hon kien thuc.
+
+MODULE 4 - CHON DUNG THOI DIEM:
+- "Hom nay chua phai ngay cua ho". Chuyen ong pho GD ngan hang: vai gio di tu khach xau -> tot -> xau -> tot tuy hoan canh.
+- "Khong" = "Chua phai bay gio", khong phai "Khong bao gio". Dung nhan tu choi ve minh. Giu lien lac.
+
+MODULE 5 - XU LY TU CHOI BANG CAU CHUYEN (QUAN TRONG):
+- "Day co phai da cap khong?" -> KHONG tranh luan. Ke chuyen NGUOI THAY GIAO: "Neu thay co duoc huong phan nho thu nhap cua ban ca doi, ho co day ban tan tam hon khong?" -> "Vinalink cung vay: nguoi gioi thieu chi co thu nhap khi GIUP ban thanh cong."
+- "Toi khong co tien" -> chuyen 2 gia dinh (an ngoai -> beo / dau tu suc khoe -> khoe + thu nhap). Van de la UU TIEN, khong phai co tien hay khong.
+- Chuyen "the tich diem sieu thi" -> giong chuong trinh khach hang than thiet, chi khac tra hoa hong tien mat.
+
+MODULE 6 - PHAI HANH DONG:
+- Chuyen ong Darrell va tran lu: cau nguyen nhung tu choi xe/thuyen/truc thang. Co hoi den duoi dang VIEC CAN LAM, khong phai phep mau.
+- Khong co gi thay doi cho den khi hanh vi thay doi. Vu tru tuong thuong su chuyen dong.
+
+Khi TVV hoi ve ky nang ke chuyen, xu ly cau "da cap", tao dong luc, "biet ma khong lam" -> tra loi tu Khoa 2 va neu ro Module. Luon mem hoa giong, am ap kieu Viet.
+`;
+
 // ============================================================
 // FUNCTION: Build system prompt based on user role
 // ============================================================
@@ -320,6 +355,8 @@ ${RECRUITMENT_TRAINING}
 ${GETTING_STARTED_GUIDE}
 
 ${TRAINING_CURRICULUM}
+
+${TRAINING_CURRICULUM_2}
 
 Khi TVV hoi ve ky nang ban hang, tuyen dung, xu ly tu choi, hoac "lo trinh dao tao / cach lam" - hay tra loi chi tiet voi vi du cu the va dan chieu dung Module trong lo trinh 6 module.
 `;

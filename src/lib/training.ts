@@ -410,3 +410,254 @@ export const TRAINING_MODULES: TrainingModule[] = [
     ],
   },
 ];
+
+// ============================================================
+// KHÓA 2: NGHỆ THUẬT KỂ CHUYỆN & TẠO ĐỘNG LỰC
+// Dựa trên các bài học kinh điển của Tom "Big Al" Schreiter
+// Đã Việt hoá: KHÔNG dùng "đa cấp/MLM/kim tự tháp" trong lời dạy.
+// Dùng: "kinh doanh cùng Vinalink", "chia sẻ sức khỏe", "mô hình giới thiệu".
+// ============================================================
+
+export const COURSE2_INTRO = {
+  title: "Nghệ thuật kể chuyện & Tạo động lực",
+  subtitle: "Khóa nâng cao cho Tư vấn viên Vinalink",
+  goal: "Học cách dùng câu chuyện để thay đổi góc nhìn người nghe, tạo động lực bền vững và biến người do dự thành người sẵn sàng hành động — không tranh luận, không gây áp lực.",
+  moduleCount: 6,
+};
+
+export const TRAINING_MODULES_2: TrainingModule[] = [
+  {
+    id: 1,
+    title: "Sức mạnh của câu chuyện",
+    objective:
+      "Hiểu vì sao một câu chuyện ngắn mạnh hơn mọi lời tranh luận, và cách 'đổi khung' suy nghĩ người nghe.",
+    sections: [
+      {
+        heading: "1.1. Câu chuyện càng ngắn — càng mạnh",
+        content:
+          "Nhiều người nói quá dài khi chia sẻ về sản phẩm hay cơ hội. Càng nói nhiều, người nghe càng phản đối, càng nghi ngờ, càng tìm lý do từ chối.\n\n" +
+          "Người giỏi không tranh cãi, không giải thích dài dòng. Họ chỉ dùng MỘT câu chuyện ngắn để đổi góc nhìn người nghe. Khi hình ảnh trong đầu họ thay đổi — niềm tin của họ thay đổi theo.",
+      },
+      {
+        heading: "1.2. Đừng thắng tranh luận — hãy đổi khung (Reframing)",
+        content:
+          "Khi ai đó hỏi một câu khó (ví dụ về mô hình kinh doanh), đừng lao vào tranh luận bằng lý lẽ. Bạn càng cãi, họ càng phòng thủ.\n\n" +
+          "Thay vào đó, hãy ĐỔI KHUNG: kể một câu chuyện hoặc đưa một ví dụ đời thường khiến họ tự nhìn vấn đề theo cách mới, tích cực hơn. Đây là kỹ năng cốt lõi của thuyết phục, lãnh đạo và bán hàng.",
+      },
+      {
+        heading: "1.3. Công thức ẩn sau mọi câu chuyện hay",
+        content:
+          "Ý tưởng phức tạp → Ví dụ đơn giản, quen thuộc → Cảm xúc rõ ràng.\n\n" +
+          "Người giỏi thuyết phục không làm người khác 'thông minh hơn'. Họ làm cho tương lai và lựa chọn trở nên DỄ HÌNH DUNG hơn. Khi mọi thứ rõ ràng, não bộ tự giảm kháng cự.",
+      },
+    ],
+    takeaway:
+      "Đừng cố thắng tranh luận. Hãy đổi hình ảnh trong đầu người nghe bằng một câu chuyện ngắn — niềm tin sẽ thay đổi theo.",
+    reviewQuestions: [
+      "Vì sao nói nhiều khi tư vấn lại làm khách hàng phản đối nhiều hơn?",
+      "'Reframing' (đổi khung) là gì? Cho một ví dụ.",
+      "Công thức 3 bước của một câu chuyện thuyết phục là gì?",
+    ],
+  },
+  {
+    id: 2,
+    title: "Bắt đầu từ bước nhỏ",
+    objective:
+      "Biến mục tiêu lớn đáng sợ thành những bước nhỏ dễ làm — để bản thân và người mới dám bắt đầu.",
+    sections: [
+      {
+        heading: "2.1. Câu chuyện 'Một giờ mỗi ngày'",
+        content:
+          "Hãy hình dung công việc kinh doanh cùng Vinalink chỉ đơn giản là: dành 1 giờ mỗi ngày, từ thứ Hai đến thứ Sáu, để TRÒ CHUYỆN VỚI NGƯỜI THẬT — thay vì lướt mạng vô nghĩa.\n\n" +
+          "Cách kể này biến 'xây dựng sự nghiệp' (nghe rất lớn lao) thành 'một thói quen nhỏ mỗi ngày'. Mục tiêu bớt đáng sợ, hành động dễ bắt đầu hơn.\n\n" +
+          "Bài học: Người ta không sợ làm việc lớn. Họ sợ cảm giác QUÁ TẢI, MƠ HỒ, không biết bắt đầu từ đâu.",
+      },
+      {
+        heading: "2.2. Học như học đàn piano",
+        content:
+          "Lúc đầu bạn không biết nói gì với người khác — và điều đó hoàn toàn bình thường. Giống như học piano: luyện từng chút một.\n\n" +
+          "Tuần đầu: chỉ cần học nói 'Chào anh/chị'. Tuần sau: 'Em là...'. Rồi dần dần tốt lên.\n\n" +
+          "Sự thật sâu sắc: SỰ TỰ TIN KHÔNG ĐẾN TRƯỚC HÀNH ĐỘNG. Nó đến SAU khi bạn hành động lặp lại đủ nhiều. Đừng chờ tự tin rồi mới làm — hãy làm để trở nên tự tin.",
+      },
+      {
+        heading: "2.3. Câu chuyện 'Đeo chuông cho mèo'",
+        content:
+          "Một đàn chuột sống vui vẻ, rồi con mèo xuất hiện. Chúng họp bàn và một con đề xuất: 'Đeo chuông vào cổ mèo, nghe chuông là chạy!'. Ai cũng khen tuyệt vời. Nhưng rồi một con hỏi: 'Vậy... ai sẽ đi đeo chuông cho mèo?'\n\n" +
+          "Ý nghĩa: Ai cũng BIẾT cần làm gì. Nhưng NỖI SỢ HÀNH ĐỘNG mới là vấn đề thật.\n\n" +
+          "Vai trò của người dẫn dắt: 'Em biết anh/chị muốn bắt đầu. Để em giúp anh/chị đeo cái chuông đó lên cổ con mèo — anh/chị không phải làm một mình.' Người mới không cần tự biết mọi thứ; họ cần một người dẫn đường và cảm giác AN TOÀN.",
+      },
+      {
+        heading: "2.4. Câu chuyện 'Mở quán nhỏ từng bước'",
+        content:
+          "Có người nói: 'Tôi không biết kinh doanh, không biết nói chuyện với ai.' Đừng tranh luận. Hãy hỏi: 'Giả sử anh/chị mở một quán ăn — nhưng chỉ mở 1 buổi tối thứ Sáu, 2 tiếng thôi, có thấy ổn không?'\n\n" +
+          "Tuần đầu mời vài người bạn. Họ thích thì giới thiệu thêm. Tuần sau mỗi người mời thêm 1 khách: 4 người, 8 người, 16 người... từng chút một.\n\n" +
+          "Người nghe bắt đầu nghĩ: 'À, nếu làm từng bước thì không quá khó.' Đây là kỹ thuật CHIA NHỎ (Chunking Down): biến điều đáng sợ thành điều quen thuộc.",
+      },
+    ],
+    takeaway:
+      "Khi ai đó nói 'Tôi không làm được', thường không phải họ bất tài — mà vì việc đó đang QUÁ LỚN trong đầu họ. Hãy chia nhỏ. Công thức: Bước nhỏ → Chiến thắng nhỏ → Danh tính mới ('Mình làm được').",
+    reviewQuestions: [
+      "Vì sao biến 'xây sự nghiệp' thành 'thói quen 1 giờ/ngày' lại hiệu quả?",
+      "Sự tự tin đến trước hay sau hành động?",
+      "Kỹ thuật 'chia nhỏ' giúp gì khi người ta nói 'việc này khó quá'?",
+    ],
+  },
+  {
+    id: 3,
+    title: "Động lực quan trọng hơn kỹ năng",
+    objective:
+      "Hiểu vì sao người có lý do (WHY) mạnh luôn thắng người chỉ có kỹ năng — và cách tìm ra lý do đó.",
+    sections: [
+      {
+        heading: "3.1. Có kỹ năng nhưng không có động lực",
+        content:
+          "Bạn mời được một người rất giỏi: quan hệ rộng, nói chuyện hay, từng kinh doanh. Nhưng... người đó không làm gì cả. Không gọi ai, không theo dõi, không hành động.\n\n" +
+          "Sự thật: KỸ NĂNG không phải thứ quan trọng nhất. Rất nhiều người biết phải làm gì nhưng không làm. Biết ≠ Làm.",
+      },
+      {
+        heading: "3.2. Câu chuyện 'Đống đất'",
+        content:
+          "Sau nhà bạn có một đống đất khổng lồ cần dọn. Bạn thuê thầy dạy: lái máy ủi, dùng xe xúc, kỹ thuật xúc đất. Bạn học rất giỏi.\n\n" +
+          "Đến ngày làm thật: máy ủi hết xăng, xe xúc hỏng, trời mưa, bùn lầy, lạnh. Bạn nhìn đống đất rồi nói: 'Thôi bỏ đi', vào nhà bật tivi.\n\n" +
+          "NHƯNG hãy đổi tình huống: con gái nhỏ của bạn đang chơi trên đống đất, đất sụp xuống, bé bị vùi dần. Máy hết xăng? KỆ. Không có dụng cụ? ĐÀO BẰNG TAY. Mưa, bùn? KHÔNG QUAN TÂM.\n\n" +
+          "Vì sao? Vì bây giờ bạn có LÝ DO. Bạn có khao khát, sự cấp bách, động lực từ trái tim.",
+      },
+      {
+        heading: "3.3. Người khao khát thắng người tài giỏi mà lười",
+        content:
+          "Con người không hành động vì lý trí. Họ hành động vì: nỗi đau, khao khát, trách nhiệm, lý do đủ lớn.\n\n" +
+          "Đó là lý do nhiều người rất thông minh, đọc nhiều sách, học nhiều khóa... vẫn không thay đổi cuộc sống. Họ thiếu 'đòn bẩy cảm xúc'. Người bình thường nhưng KHAO KHÁT thường thắng người tài giỏi nhưng lười.\n\n" +
+          "Người không có lý do mạnh sẽ luôn có lý do để bỏ cuộc: hết xăng, hỏng máy, trời mưa, không có thời gian... Người có lý do mạnh sẽ tự xoay xở, thích nghi, kiên trì.",
+      },
+    ],
+    takeaway:
+      "Một khao khát đủ lớn, một tầm nhìn rõ ràng và một lý do đủ mạnh có thể quan trọng hơn cả kiến thức. Trước khi dạy kỹ năng cho người mới, hãy giúp họ tìm ra LÝ DO của chính mình.",
+    reviewQuestions: [
+      "Vì sao người giỏi kỹ năng vẫn có thể không thành công?",
+      "Câu chuyện 'đống đất' dạy điều gì về động lực?",
+      "Hãy viết ra LÝ DO (WHY) khiến bạn muốn thành công cùng Vinalink.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Chọn đúng thời điểm",
+    objective:
+      "Hiểu rằng 'Không' thường chỉ là 'Chưa phải bây giờ' — và đừng nhận sự từ chối về phía mình.",
+    sections: [
+      {
+        heading: "4.1. Hôm nay có thể chưa phải ngày của họ",
+        content:
+          "Nhiều người nghĩ khách từ chối vì sản phẩm tệ, vì mình kém. Nhưng thực tế, đôi khi chỉ là SAI THỜI ĐIỂM.\n\n" +
+          "Con người không cố định — họ thay đổi theo cảm xúc, áp lực, hoàn cảnh sống.",
+      },
+      {
+        heading: "4.2. Câu chuyện 'Một buổi sáng của vị phó giám đốc'",
+        content:
+          "Hãy tưởng tượng một vị phó giám đốc ngân hàng, bận rộn, căng thẳng.\n\n" +
+          "• 7h00: Bạn gọi rủ đi nghe cơ hội. Anh ấy chưa tỉnh ngủ, đang cáu → 'Không quan tâm.' (khách XẤU — nhưng không phải vì cơ hội tệ, chỉ vì sai thời điểm)\n" +
+          "• 7h30: Anh đọc báo: 'Ngân hàng sắp sa thải hàng loạt.' Bắt đầu lo lắng → giờ anh thành khách TỐT.\n" +
+          "• 9h00: Trên đường đi làm, trời mưa, xe bị va quẹt, stress → 'Không hứng thú.'\n" +
+          "• 9h30: Sếp gọi vào: 'Anh bị cho thôi việc.' → 10 phút trước anh từ chối bạn, giờ anh muốn gặp bạn NGAY.\n\n" +
+          "Chỉ trong vài giờ, một người đi từ khách xấu → khách tốt → khách xấu → khách tốt.",
+      },
+      {
+        heading: "4.3. 'Không' ≠ 'Không bao giờ'",
+        content:
+          "'Không' của khách thường chỉ nghĩa là 'Chưa phải bây giờ'. Có người 2 năm sau mới tham gia, sau khi mất việc, sau biến cố tài chính, khi nỗi lo đủ lớn.\n\n" +
+          "Sai lầm của người mới: bị từ chối 1 lần là nghĩ 'người ta ghét', 'mình thất bại'. Người chuyên nghiệp nghĩ: 'Thời điểm chưa tới' và vẫn GIỮ LIÊN LẠC tử tế.\n\n" +
+          "Quan trọng: ĐỪNG nhận sự từ chối về phía mình. Khách từ chối có thể vì stress, áp lực tiền bạc, chuyện gia đình, một ngày tồi tệ — không phải vì bạn.",
+      },
+    ],
+    takeaway:
+      "Con người thay đổi rất nhanh theo hoàn cảnh. 'Không' hôm nay không phải 'Không' mãi mãi. Đây chính là lý do việc GIỮ LIÊN LẠC & theo dõi tồn tại.",
+    reviewQuestions: [
+      "Vì sao cùng một người lại có thể là khách tốt rồi khách xấu chỉ trong vài giờ?",
+      "'Không' của khách thường thật sự nghĩa là gì?",
+      "Tại sao không nên nhận sự từ chối về phía bản thân?",
+    ],
+  },
+  {
+    id: 5,
+    title: "Xử lý từ chối bằng câu chuyện",
+    objective:
+      "Trả lời khéo các câu hỏi nhạy cảm (kể cả 'đây có phải đa cấp không?') bằng câu chuyện — biến nghi ngờ thành thấu hiểu.",
+    sections: [
+      {
+        heading: "5.1. 'Đây có phải đa cấp/kim tự tháp không?'",
+        content:
+          "Đây là câu hỏi nhạy cảm nhất. ĐỪNG tranh luận đúng-sai. Hãy đổi khung bằng câu chuyện người thầy giáo:\n\n" +
+          "'Anh/chị thử nghĩ xem: nếu hồi đi học, thầy cô của anh/chị được nhận một phần nhỏ thu nhập của anh/chị suốt đời — thì liệu thầy cô có dạy anh/chị tận tâm hơn không?'\n" +
+          "Người nghe thường đáp: 'Chắc chắn rồi.'\n\n" +
+          "Bạn kết: 'Mô hình của Vinalink cũng vậy — người giới thiệu (người đỡ đầu) chỉ có thu nhập khi họ thật sự GIÚP anh/chị thành công. Quyền lợi của họ gắn liền với thành công của anh/chị. Đó là mô hình ai giúp người khác giỏi hơn thì người đó được tưởng thưởng.'",
+      },
+      {
+        heading: "5.2. 'Tôi không có tiền tham gia'",
+        content:
+          "Đừng phản bác. Hãy kể chuyện hai gia đình:\n\n" +
+          "• Gia đình A: đi ăn ngoài 2 lần/tuần, tốn khoảng vài trăm nghìn mỗi tháng → nhận lại: tăng cân, mệt mỏi.\n" +
+          "• Gia đình B: dùng đúng số tiền đó đầu tư vào sức khỏe & việc kinh doanh cùng Vinalink → vài năm sau: khỏe mạnh hơn, có thêm thu nhập, thảnh thơi hơn.\n\n" +
+          "Bạn không nói 'anh/chị nên đầu tư'. Bạn để họ tự hỏi: 'Mình đang tiêu tiền vào thứ làm mình yếu đi hay mạnh lên?' Vấn đề không phải CÓ tiền hay không — mà là ƯU TIÊN điều gì.",
+      },
+      {
+        heading: "5.3. Câu chuyện 'Thẻ tích điểm siêu thị'",
+        content:
+          "Bạn vào siêu thị mua đồ, trả tiền rồi về. Người phía sau mua y hệt, nhưng họ quẹt thẻ thành viên nên được tích điểm, đổi quà, thậm chí đổi chuyến du lịch.\n\n" +
+          "Rồi siêu thị nói với họ: 'Hãy giới thiệu hàng xóm tới mua. Khi họ mua, họ được tích điểm, còn anh/chị cũng được thưởng thêm.' Càng nhiều người mua, người đó càng có lợi.\n\n" +
+          "Bạn kết: 'Vinalink cũng vậy thôi — giống chương trình khách hàng thân thiết, chỉ khác là thay vì điểm thưởng, mình nhận hoa hồng tiền mặt.' Câu chuyện biến điều 'xa lạ, đáng ngờ' thành điều 'quen thuộc đời thường'.",
+      },
+    ],
+    takeaway:
+      "Người giỏi thuyết phục không cố thắng tranh luận — họ đổi góc nhìn, đổi cảm xúc, đổi hình ảnh trong đầu người nghe. Khi hình ảnh thay đổi (từ 'đa cấp đáng ngờ' thành 'thầy cô tận tâm' hay 'thẻ tích điểm'), niềm tin thay đổi.",
+    reviewQuestions: [
+      "Trả lời câu 'đây có phải đa cấp không?' bằng câu chuyện người thầy giáo theo cách của bạn.",
+      "Khi khách nói 'không có tiền', vấn đề thật sự là gì?",
+      "Vì sao câu chuyện 'thẻ tích điểm' giúp khách bớt nghi ngờ?",
+    ],
+  },
+  {
+    id: 6,
+    title: "Phải hành động",
+    objective:
+      "Hiểu rằng kiến thức và động lực đều vô nghĩa nếu không hành động — và cơ hội thường đến dưới dạng việc cần làm.",
+    sections: [
+      {
+        heading: "6.1. Câu chuyện 'Ông Darrell và trận lũ'",
+        content:
+          "Lũ lớn dâng lên. Người ta bảo ông Darrell sơ tán, ông đáp: 'Không sao, tôi đã cầu nguyện, Trời sẽ cứu tôi.'\n\n" +
+          "Nước dâng cao, một chiếc thuyền cứu hộ tới: 'Lên thuyền đi!' — 'Không cần, Trời sẽ cứu.' Nước dâng tới mái nhà, trực thăng tới thả dây: 'Nắm lấy!' — 'Không sao, Trời sẽ cứu!' Rồi nước ngập qua đầu, ông chết.\n\n" +
+          "Lên thiên đàng, ông trách: 'Con đã cầu nguyện, sao Ngài không cứu?'. Trời đáp: 'Ta đã gửi xe cứu hộ, thuyền và trực thăng rồi còn gì?'",
+      },
+      {
+        heading: "6.2. Cầu mong cơ hội nhưng từ chối phương tiện",
+        content:
+          "Cơ hội thường đến dưới dạng những VIỆC CẦN LÀM, không phải phép màu. Rất nhiều người cầu mong cơ hội nhưng lại từ chối chính phương tiện mang cơ hội đến.\n\n" +
+          "Muốn thân hình đẹp nhưng không tập, không ăn đúng. Muốn thu nhập tốt hơn nhưng không gọi khách, không học. Muốn cuộc sống tốt hơn nhưng sống y như hôm qua.\n\n" +
+          "Ông Darrell có niềm tin, có suy nghĩ tích cực — nhưng KHÔNG hành động. Đó cũng là cái bẫy của nhiều người: đọc sách, xem video, nghe podcast, hừng hực động lực... rồi không bắt tay làm.",
+      },
+      {
+        heading: "6.3. Hành động biến mọi thứ thành kết quả",
+        content:
+          "Chỉ HÀNH ĐỘNG mới biến: kiến thức → kết quả; cơ hội → thu nhập; tiềm năng → hiện thực.\n\n" +
+          "Vũ trụ tưởng thưởng cho sự CHUYỂN ĐỘNG, không phải cho ý định, lời than, giấc mơ hay lý thuyết. Người thắng thường không phải người biết nhiều nhất hay thông minh nhất — mà là người chịu hành động đủ lâu.",
+      },
+    ],
+    takeaway:
+      "Không có gì thay đổi cho đến khi hành vi thay đổi. Hãy dùng những câu chuyện trong khóa này (hoặc tự tạo câu chuyện của riêng bạn) — nhưng quan trọng nhất: PHẢI HÀNH ĐỘNG.",
+    reviewQuestions: [
+      "Câu chuyện ông Darrell muốn nói điều gì về 'cầu mong' và 'hành động'?",
+      "Nêu một ví dụ 'muốn kết quả nhưng từ chối phương tiện' trong đời bạn.",
+      "Cam kết MỘT hành động cụ thể bạn sẽ làm trong 24h tới.",
+    ],
+  },
+];
+
+// Tất cả các khóa đào tạo (hiển thị trên trang)
+export interface TrainingCourse {
+  intro: { title: string; subtitle: string; goal: string; moduleCount: number };
+  modules: TrainingModule[];
+}
+
+export const COURSES: TrainingCourse[] = [
+  { intro: TRAINING_INTRO, modules: TRAINING_MODULES },
+  { intro: COURSE2_INTRO, modules: TRAINING_MODULES_2 },
+];
