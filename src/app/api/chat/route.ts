@@ -61,7 +61,7 @@ Khi tu van:
 - Giai thich thanh phan va cong dung
 - Neu gia va diem CV
 - Than thien, chuyen nghiep, khong qua dai dong
-- Tra loi bang tieng Viet, khong dau (de tuong thich font)`;
+- BAT BUOC tra loi bang TIENG VIET CO DAU DAY DU (vi du: "Xin chào", khong viet "Xin chao")`;
 
 async function callClaude(messages: { role: string; content: string }[], systemPrompt: string) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -79,7 +79,7 @@ async function callClaude(messages: { role: string; content: string }[], systemP
   });
 
   const textBlock = response.content.find((b) => b.type === "text");
-  return textBlock ? textBlock.text : "Xin loi, toi khong the tra loi luc nay.";
+  return textBlock ? textBlock.text : "Xin lỗi, tôi không thể trả lời lúc này.";
 }
 
 async function callGemini(messages: { role: string; content: string }[], systemPrompt: string) {
@@ -101,7 +101,7 @@ async function callGemini(messages: { role: string; content: string }[], systemP
   });
 
   const response = await (await chat).sendMessage({ message: lastMessage });
-  return response.text || "Xin loi, toi khong the tra loi luc nay.";
+  return response.text || "Xin lỗi, tôi không thể trả lời lúc này.";
 }
 
 export async function POST(req: NextRequest) {
@@ -124,7 +124,7 @@ export async function POST(req: NextRequest) {
     if (provider === "claude") {
       if (!process.env.ANTHROPIC_API_KEY) {
         return NextResponse.json(
-          { error: "ANTHROPIC_API_KEY chua duoc cau hinh" },
+          { error: "Chưa cấu hình ANTHROPIC_API_KEY" },
           { status: 500 }
         );
       }
@@ -132,7 +132,7 @@ export async function POST(req: NextRequest) {
     } else {
       if (!process.env.GEMINI_API_KEY) {
         return NextResponse.json(
-          { error: "GEMINI_API_KEY chua duoc cau hinh" },
+          { error: "Chưa cấu hình GEMINI_API_KEY" },
           { status: 500 }
         );
       }
@@ -143,9 +143,9 @@ export async function POST(req: NextRequest) {
   } catch (error: unknown) {
     console.error("Chat API error:", error);
     const message =
-      error instanceof Error ? error.message : "Loi khong xac dinh";
+      error instanceof Error ? error.message : "Lỗi không xác định";
     return NextResponse.json(
-      { error: `Loi khi goi API: ${message}` },
+      { error: `Lỗi khi gọi API: ${message}` },
       { status: 500 }
     );
   }

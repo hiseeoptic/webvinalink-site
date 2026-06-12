@@ -30,8 +30,8 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
   const isTVV = userRole === "tvv";
   const SUGGESTIONS = isTVV ? TVV_SUGGESTIONS : CUSTOMER_SUGGESTIONS;
   const welcomeMsg = isTVV
-    ? "Xin chao TVV! Minh la tro ly Vinalink. Minh co the tu van san pham, dao tao ky nang ban hang, xu ly tu choi, huong dan tuyen dung, va cac buoc bat dau kinh doanh. Ban can ho tro gi?"
-    : "Xin chao! Minh la tro ly tu van san pham Vinalink. Ban can tu van ve san pham nao hoac co cau hoi gi ve suc khoe & lam dep khong?";
+    ? "Xin chào TVV! Mình là trợ lý Vinalink. Mình có thể tư vấn sản phẩm, đào tạo kỹ năng bán hàng, xử lý từ chối, hướng dẫn tuyển dụng, và các bước bắt đầu kinh doanh. Bạn cần hỗ trợ gì?"
+    : "Xin chào! Mình là trợ lý tư vấn sản phẩm Vinalink. Bạn cần tư vấn về sản phẩm nào hoặc có câu hỏi gì về sức khỏe & làm đẹp không?";
 
   const [isOpen, setIsOpen] = useState(false);
   const [showBubble, setShowBubble] = useState(false);
@@ -102,7 +102,7 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
         ...prev,
         {
           role: "assistant",
-          content: `[Admin] Da chuyen sang ${p === "claude" ? "Claude AI" : "Gemini AI"}. Tat ca tin nhan tiep theo se dung ${p === "claude" ? "Claude" : "Gemini"}.`,
+          content: `[Admin] Đã chuyển sang ${p === "claude" ? "Claude AI" : "Gemini AI"}. Tất cả tin nhắn tiếp theo sẽ dùng ${p === "claude" ? "Claude" : "Gemini"}.`,
         },
       ]);
     },
@@ -134,7 +134,7 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
         const data = await res.json();
 
         if (!res.ok) {
-          throw new Error(data.error || "Loi ket noi");
+          throw new Error(data.error || "Lỗi kết nối");
         }
 
         setMessages((prev) => [
@@ -143,12 +143,12 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
         ]);
       } catch (err: unknown) {
         const errorMsg =
-          err instanceof Error ? err.message : "Loi khong xac dinh";
+          err instanceof Error ? err.message : "Lỗi không xác định";
         setMessages((prev) => [
           ...prev,
           {
             role: "assistant",
-            content: `Xin loi, da xay ra loi: ${errorMsg}. Vui long thu lai.`,
+            content: `Xin lỗi, đã xảy ra lỗi: ${errorMsg}. Vui lòng thử lại.`,
           },
         ]);
       } finally {
