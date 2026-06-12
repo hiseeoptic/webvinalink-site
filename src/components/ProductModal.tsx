@@ -10,7 +10,6 @@ import {
 } from "@/lib/products";
 import { getHerbsForProduct } from "@/lib/herbs";
 
-const ADMIN_PASS = "02081995";
 const CHEVRON = (
   <svg className="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -70,15 +69,25 @@ export default function ProductModal({
     }
   }, [isAdmin]);
 
-  const handlePassSubmit = useCallback(() => {
-    if (passValue === ADMIN_PASS) {
-      setIsAdmin(true);
-      setShowPassInput(false);
-      setPassValue("");
-      localStorage.setItem("vl_admin_auth", "true");
-    } else {
-      setPassValue("");
+  const handlePassSubmit = useCallback(async () => {
+    try {
+      const res = await fetch("/api/verify-admin", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: passValue }),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        setIsAdmin(true);
+        setShowPassInput(false);
+        setPassValue("");
+        localStorage.setItem("vl_admin_auth", "true");
+        return;
+      }
+    } catch {
+      // ignore, fall through to clear input
     }
+    setPassValue("");
   }, [passValue]);
 
   const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {

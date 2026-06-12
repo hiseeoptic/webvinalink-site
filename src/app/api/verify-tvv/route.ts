@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Admin/owner account - not in the sheet because they own the network
+// Admin/owner account - not in the sheet because they own the network.
+// Ma so admin doc tu bien moi truong ADMIN_CODE (KHONG hardcode trong source).
 const ADMIN_TVV = {
-  maSo: "295947",
+  maSo: process.env.ADMIN_CODE || "",
   hoTen: "NGUYỄN ĐỨC HÒA",
   capBac: "ADMIN",
   danhHieu: "Nguoi sang lap",

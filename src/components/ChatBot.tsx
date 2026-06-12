@@ -24,8 +24,6 @@ const TVV_SUGGESTIONS = [
   "Cách tuyển dụng hiệu quả",
 ];
 
-const ADMIN_PASS = "02081995";
-
 export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole }) {
   const isTVV = userRole === "tvv";
   const SUGGESTIONS = isTVV ? TVV_SUGGESTIONS : CUSTOMER_SUGGESTIONS;
@@ -82,15 +80,25 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
     }
   }, []);
 
-  const handlePassSubmit = useCallback(() => {
-    if (passInput === ADMIN_PASS) {
-      setAdminAuth(true);
-      setPassError(false);
-      setPassInput("");
-    } else {
-      setPassError(true);
-      setTimeout(() => setPassError(false), 2000);
+  const handlePassSubmit = useCallback(async () => {
+    try {
+      const res = await fetch("/api/verify-admin", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: passInput }),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        setAdminAuth(true);
+        setPassError(false);
+        setPassInput("");
+        return;
+      }
+    } catch {
+      // fall through to error state
     }
+    setPassError(true);
+    setTimeout(() => setPassError(false), 2000);
   }, [passInput]);
 
   const switchProvider = useCallback(
