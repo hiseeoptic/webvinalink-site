@@ -213,7 +213,7 @@ export default function ProductModal({
               <details className="group" open>
                 <summary className="font-semibold text-gray-800 cursor-pointer flex items-center justify-between p-3 bg-emerald-50 rounded-lg hover:bg-emerald-100 transition">
                   <span className="flex items-center gap-2">
-                    <span>🌿</span> Thảo dược trong sản phẩm
+                    <span>🌿</span> Thảo dược & hoạt chất nổi bật
                   </span>
                   {CHEVRON}
                 </summary>
@@ -232,7 +232,7 @@ export default function ProductModal({
                 )}
 
                 <p className="text-xs text-gray-500 px-1 mt-2 mb-1">
-                  Bấm vào từng vị thuốc để xem phân tích chi tiết vai trò trong sản phẩm.
+                  Bấm vào từng thành phần để xem phân tích chi tiết vai trò & cơ chế trong sản phẩm.
                 </p>
                 <div className="mt-2 space-y-2 px-1">
                   {herbs.map((herb) => (

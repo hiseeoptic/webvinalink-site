@@ -30,12 +30,6 @@ export const productMeta: Record<string, ProductMeta> = {
     distributor: VINALINK_DIST,
     registration: "Đang cập nhật. Thương hiệu chịu trách nhiệm: " + IMC_BRAND,
   },
-  "bach-xuan": {
-    origin: "Việt Nam",
-    manufacturer: IMC_FACTORY,
-    distributor: VINALINK_DIST,
-    registration: "Đang cập nhật",
-  },
   "dau-goi": {
     origin: "Việt Nam",
     manufacturer: AUCO_FACTORY,

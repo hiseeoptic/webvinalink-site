@@ -8,10 +8,11 @@
 export const PRODUCT_KNOWLEDGE = `
 === TAI LIEU SAN PHAM CHI TIET ===
 
-1. IMCDELTAIMMUNE - THANH PHAN COT LOI
-IMCDeltaImmune la thanh phan doc quyen cua IMC, duoc chiet xuat tu vach te bao vi khuan Lactobacillus rhamnosus. Day la "vu khi mien dich" co trong hau het san pham TPBVSK cua Vinalink.
-- Co che: Kich hoat te bao mien dich tu nhien (NK cells), tang cuong hang rao bao ve co the
-- Co mat trong: Genecel, Detoxmune, Cardiopro, Jointlink, Lacttocol, Mindenergy, Kidsmune, Manlink, VTopcan, VSportGel, Caphelink, VHealth
+1. IMCDELTAIMMUNE - THANH PHAN COT LOI (giai thich co che khi duoc hoi)
+IMCDeltaImmune la thanh phan sinh hoc mien dich doc quyen cua IMC, chiet xuat tu VACH TE BAO loi khuan Lactobacillus rhamnosus. Day KHONG phai loi khuan song ma la "postbiotic" (loi khuan da bat hoat) -> rat on dinh, an toan, khong can bao quan lanh.
+- Co che chi tiet: vach te bao chua cac "tin hieu nhan dien vi khuan" (peptidoglycan, acid lipoteichoic, manh ADN). Chung gan vao thu the canh gac (TLR2, NOD2...) tren te bao mien dich bam sinh -> kich hoat dai thuc bao, te bao tua va te bao diet tu nhien NK; tang thuc bao (nuot mam benh), tang cytokine, bac cau sang mien dich thu duoc. Giong nhu "dien tap" giup he mien dich luon san sang.
+- Vai tro: la "xuong song mien dich" chung, nang nen de khang de cac thao duoc chuyen biet (gan/tim/khop/nao/tre em...) phat huy tren co the co hang rao bao ve vung hon.
+- Co mat trong (theo bang thanh phan): Caphelink, VHealth (Socola & Tra xanh), Green Quantum, Genecel, Detoxmune, Cardiopro, Jointlink, Lacttocol, Mindenergy, Kidsmune, Manlink, VTopcan. Ham luong: 400mg (dong Max), 300mg (Kidsmune), 150mg (Caphelink/Manlink), 100mg (VTopcan). LUU Y: VSportGel va TOPAPRO KHONG chua DeltaImmune.
 
 2. NHOM SAN PHAM TPBVSK (Thuc pham bao ve suc khoe)
 - GENECEL MAX: Ho tro te bao goc, chong lao hoa. Taurine 300mg + Linh chi + Bach thuoc

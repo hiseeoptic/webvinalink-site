@@ -14,7 +14,6 @@ DANH MUC SAN PHAM VINALINK:
 - VHealth Tra Xanh (652.909 VND, 207 CV): Tuong tu VHealth Socola nhung vi tra xanh Matcha, chong oxy hoa tot.
 - Quantum Hydrogen (780.000 VND, 205 CV): Nuoc uong Hydrogen phan tu nho. Chong oxy hoa, thanh loc co the.
 - Green Quantum/Diep luc (192.436 VND, 54 CV): Nuoc co dac diep luc, bo sung chat xo, ho tro tieu hoa.
-- Bach Xuan (832.582 VND, 280 CV): Nhan sam, Linh Chi, Dong trung ha thao. Tang cuong suc khoe toan dien.
 - TOPAPRO (682.364 VND, 220 CV): Bot protein chat luong cao, Whey Protein Isolate, BCAA. Ho tro phat trien co bap.
 - Oricode Sam (625.455 VND, 175 CV): Nhan sam Han Quoc, mat ong, Royal Jelly. Bo sung nang luong.
 
