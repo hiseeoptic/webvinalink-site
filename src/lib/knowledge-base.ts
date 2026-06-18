@@ -5,6 +5,32 @@
 // cho admin de bo sung vao tung muc tuong ung.
 // ============================================================
 
+import { HERBS, PRODUCT_HERB_SYNERGY } from "./herbs";
+
+// Bien dich toan bo thu vien hoat chat (herbs.ts) thanh van ban
+// de chatbot co the trich dan CO CHE tung thanh phan khi tu van.
+export const HERB_KNOWLEDGE = (() => {
+  const herbLines = Object.values(HERBS)
+    .map((h) => {
+      const detail = h.detail ? " " + h.detail.replace(/\s*\n+\s*/g, " ") : "";
+      return `• ${h.name} (${h.scientificName}): ${h.benefit}${detail}`;
+    })
+    .join("\n\n");
+  const synergyLines = Object.entries(PRODUCT_HERB_SYNERGY)
+    .map(([slug, text]) => `- ${slug.toUpperCase()}: ${text}`)
+    .join("\n\n");
+  return `
+=== THU VIEN HOAT CHAT & THAO DUOC (DAN CHUNG SAU THEO THANH PHAN) ===
+Day la kho co che chi tiet tung hoat chat. KHI TU VAN BENH, HAY TRICH CU THE ten hoat chat + co che de tang suc thuyet phuc, vi du: "Dan sam chua Tanshinone & Salvianolic acid giup gian dong mach vanh, tang tuoi mau co tim", "Nattokinase phan giai fibrin lam tan cuc mau dong", "Bacosides trong Bacopa bao ve dau mut than kinh, cai thien tri nho", "Berberin trong Hoang ba/Hoang dang giam mo mau & duong huyet qua AMPK", "Fucoidan kich hoat te bao NK & chong oxy hoa". KHONG noi chung chung — luon gan cong dung voi HOAT CHAT cu the va giai thich VI SAO no giup van de cua khach.
+
+A. CO CHE TUNG HOAT CHAT / THAO DUOC:
+${herbLines}
+
+B. CO CHE PHOI HOP CAC THANH PHAN TRONG TUNG SAN PHAM (giai thich VI SAO cong thuc hieu qua khi duoc hoi sau):
+${synergyLines}
+`;
+})();
+
 export const PRODUCT_KNOWLEDGE = `
 === TAI LIEU SAN PHAM CHI TIET ===
 
@@ -506,10 +532,13 @@ NGUYEN TAC:
 - Luon ghi chu khi noi ve TPBVSK: "Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh"
 - Than thien nhung chuyen nghiep
 - Khi khach mo ta MOT BENH / TRIEU CHUNG (vd gout, tieu duong, tim mach, dau khop, mat ngu...): dua vao muc "PHAC DO GOI Y THEO TINH TRANG SUC KHOE" de goi y san pham CHU LUC truoc, roi moi noi co can ket hop khong. LUON giai thich VI SAO dung va VI SAO ket hop (theo thanh phan), va nhac "khong phai la thuoc"
+- BAT BUOC DAN CHUNG SAU: khi giai thich vi sao dung 1 san pham, hay TRICH ten HOAT CHAT cu the va co che cua no tu muc "THU VIEN HOAT CHAT & THAO DUOC" (vd Tanshinone, Nattokinase, Berberin, Bacosides, Fucoidan, Curcumin, Astragaloside...). Tranh noi chung chung kieu "tot cho tim" — hay noi "thanh phan X trong san pham co hoat chat Y, giup Z"
 
 ${PRODUCT_KNOWLEDGE}
 
 ${DISEASE_PROTOCOLS}
+
+${HERB_KNOWLEDGE}
 `;
 
   if (role === "tvv") {
