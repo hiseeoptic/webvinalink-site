@@ -43,6 +43,9 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
   const [adminAuth, setAdminAuth] = useState(false);
   const [passInput, setPassInput] = useState("");
   const [passError, setPassError] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  // Vung nhin thay thuc (tru ban phim ao che) de o nhap luon noi tren ban phim.
+  const [vp, setVp] = useState<{ top: number; height: number } | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const headerClickCount = useRef(0);
   const headerClickTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -64,7 +67,42 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  }, [messages, vp, isOpen]);
+
+  // Theo doi man hinh nho (dien thoai) de bat che do toan man hinh.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mq = window.matchMedia("(max-width: 640px)");
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
+  // Bam theo ban phim ao bang VisualViewport (chay ca iOS lan Android).
+  useEffect(() => {
+    if (!isOpen || typeof window === "undefined") return;
+    const vv = window.visualViewport;
+    if (!vv) return;
+    const update = () => setVp({ top: vv.offsetTop, height: vv.height });
+    update();
+    vv.addEventListener("resize", update);
+    vv.addEventListener("scroll", update);
+    return () => {
+      vv.removeEventListener("resize", update);
+      vv.removeEventListener("scroll", update);
+      setVp(null);
+    };
+  }, [isOpen]);
+
+  // Khoa cuon nen khi mo toan man hinh tren mobile.
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    document.body.style.overflow = isOpen && isMobile ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen, isMobile]);
 
   // Hidden admin trigger: double-click on status dot
   const handleStatusClick = useCallback(() => {
@@ -170,7 +208,10 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
     <>
       {/* Floating chat button + signal bubble */}
       {!isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+        <div
+          className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2"
+          style={{ bottom: "max(1.5rem, env(safe-area-inset-bottom))" }}
+        >
           {/* Attention bubble */}
           {showBubble && (
             <div
@@ -203,9 +244,15 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
 
       {/* Chat window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-[380px] max-h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col z-50 border border-gray-200 overflow-hidden animate-fade-in">
+        <div
+          className="fixed z-50 flex flex-col bg-white overflow-hidden animate-fade-in inset-x-0 bottom-0 top-0 sm:inset-auto sm:top-auto sm:bottom-6 sm:right-6 sm:w-[380px] sm:h-[600px] sm:max-h-[85vh] sm:rounded-2xl sm:border sm:border-gray-200 sm:shadow-2xl"
+          style={isMobile && vp ? { top: vp.top, height: vp.height, bottom: "auto" } : undefined}
+        >
           {/* Header */}
-          <div className="bg-[var(--primary)] text-white p-4 flex items-center justify-between rounded-t-2xl">
+          <div
+            className="bg-[var(--primary)] text-white p-4 flex items-center justify-between sm:rounded-t-2xl"
+            style={isMobile ? { paddingTop: "max(1rem, env(safe-area-inset-top))" } : undefined}
+          >
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -309,7 +356,7 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
           )}
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-[300px] max-h-[400px]">
+          <div className="flex-1 min-h-0 overflow-y-auto p-4 space-y-3 sm:min-h-[300px]">
             {messages.map((msg, i) => (
               <div key={i}>
                 <div
@@ -336,7 +383,10 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
           </div>
 
           {/* Suggestions + Input */}
-          <div className="px-4 py-2 border-t">
+          <div
+            className="px-4 py-2 border-t"
+            style={isMobile ? { paddingBottom: "max(0.5rem, env(safe-area-inset-bottom))" } : undefined}
+          >
             {messages.length <= 2 && (
               <div className="flex gap-1 flex-wrap mb-2">
                 {SUGGESTIONS.map((s) => (
@@ -359,7 +409,9 @@ export default function ChatBot({ userRole = "customer" }: { userRole?: UserRole
                 onKeyDown={(e) => e.key === "Enter" && handleSend()}
                 placeholder="Nhập câu hỏi..."
                 disabled={isLoading}
+                enterKeyHint="send"
                 className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-[var(--primary)] transition disabled:bg-gray-50"
+                style={{ fontSize: "16px" }}
               />
               <button
                 onClick={() => handleSend()}

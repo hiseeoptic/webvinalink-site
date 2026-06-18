@@ -1,6 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  // Cho layout co lai khi ban phim ao bat len (Chrome Android).
+  interactiveWidget: "resizes-content",
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
