@@ -11,6 +11,7 @@ import RoleGate, { UserRole, TVVInfo } from "@/components/RoleGate";
 import DeltaImmuneSection from "@/components/DeltaImmuneSection";
 import TechnologySection from "@/components/TechnologySection";
 import TrainingSection from "@/components/TrainingSection";
+import IntroSection from "@/components/IntroSection";
 import {
   Product,
   MembershipTier,
@@ -163,6 +164,9 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
           </div>
         </div>
       )}
+
+      {/* Phần mở đầu: giới thiệu IMC & Chủ tịch Nguyễn Xuân Hoàng */}
+      <IntroSection />
 
       {/* Hero Banner */}
       <section className="bg-gradient-to-r from-[var(--primary-dark)] via-[var(--primary)] to-[var(--primary-light)] text-white py-12 px-4">
