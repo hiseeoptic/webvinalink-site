@@ -41,6 +41,79 @@ IMCDeltaImmune la thanh phan sinh hoc mien dich doc quyen cua IMC, chiet xuat tu
 - Vi du: VHealth = 207 CV, Detoxmune = 185 CV, VTopcan = 2850 CV
 `;
 
+export const DISEASE_PROTOCOLS = `
+=== PHAC DO GOI Y THEO TINH TRANG SUC KHOE (HO TRO) ===
+RAT QUAN TRONG - CACH DUNG MUC NAY:
+- Day la goi y san pham HO TRO theo nhom van de suc khoe, suy ra tu THANH PHAN that cua san pham. KHONG phai phac do dieu tri y khoa.
+- TUYET DOI KHONG noi san pham "chua", "dieu tri", "khoi" benh. Chi dung tu: "ho tro", "giup cai thien", "dong hanh".
+- LUON nhac: "Thuc pham nay khong phai la thuoc va khong co tac dung thay the thuoc chua benh" va khuyen nguoi benh nang/dang dung thuoc TAY -> hoi bac si, dung san pham CACH thuoc tay 1-2 gio.
+- NGUYEN TAC KET HOP: bat dau bang 1 san pham CHU LUC dung van de. CHI ket hop them khi (a) co van de di kem, (b) muon ho tro toan dien hon, hoac (c) ngan sach cho phep. KHONG "nhoi" nhieu san pham mot luc -> mat tin & ton kem. Neu khach ngan sach it -> uu tien DUNG 1 san pham chu luc, dung du lieu trinh (3-6 thang).
+- Khi giai thich, PHAI noi RO 2 y: (1) Vi sao dung san pham nay (theo thanh phan/cong dung) (2) Vi sao can ket hop (hoac vi sao KHONG can ket hop).
+- Nen mang chung: hau het san pham co IMCDeltaImmune lam "nen de khang" -> nang suc tong the de cac thanh phan chuyen biet (gan/tim/khop...) phat huy tot hon.
+
+1. GOUT / AXIT URIC CAO:
+- Chu luc: DETOXMUNE (ho tro gan chuyen hoa & dao thai) + QUANTUM HYDROGEN (nuoc luong tu - chong oxy hoa, trung hoa goc tu do, ho tro giam viem).
+- Ket hop khi can: GREEN QUANTUM (diep luc - kiem hoa, chat xo, thanh loc), GENECEL (nang de khang, chong oxy hoa te bao).
+- Vi sao: gout lien quan chuyen hoa purin va viem khop do tinh the urat -> ho tro gan/than dao thai + chong oxy hoa giam viem; uong nhieu nuoc.
+- Luu y: van phai kieng dam purin (thit do, noi tang, hai san, bia ruou).
+
+2. TIEU DUONG / DUONG HUYET CAO:
+- Chu luc: VHEALTH (bua an dinh duong thay the - giau chat xo FOS/Inulin, chi so duong huyet thap -> on dinh duong huyet) + QUANTUM HYDROGEN (chong oxy hoa, giam stress oxy hoa gay bien chung).
+- Ket hop khi can: DETOXMUNE (ho tro gan chuyen hoa), GENECEL (chong oxy hoa, bao ve te bao, ngua bien chung), GREEN QUANTUM (chat xo lam cham hap thu duong).
+- Neu co dieu kien tai chinh: VTOPCAN (chong oxy hoa manh, nang the trang) - luu y gia cao.
+- Vi sao: kiem soat duong huyet qua dinh duong + chong oxy hoa de giam bien chung (tim, than, mat, than kinh).
+- Luu y: KHONG thay insulin/thuoc; theo doi duong huyet, hoi bac si.
+
+3. TIM MACH / HUYET AP / MO MAU CAO:
+- Chu luc: CARDIOPRO (Dan sam, Natto, Hoang ba -> hoat huyet, ho tro giam mo mau, bao ve tim mach).
+- Ket hop khi can: them MINDENERGY khi co kem suy giam tri nho / hay dau dau, chong mat / tien su thieu mau nao - vi tim va nao cung mot he tuan hoan, nguoi roi loan mo mau thuong kem tuan hoan nao.
+- Co the them GENECEL (chong oxy hoa thanh mach).
+- Vi sao ket hop tim+nao: cai thien tuan hoan toan than, ho tro toan dien hon don le.
+- Luu y QUAN TRONG: nguoi dang dung thuoc chong dong mau, chuan bi phau thuat, phu nu co thai -> than trong voi Natto/enzyme, HOI BAC SI truoc.
+
+4. GAN / MEN GAN CAO / HAY BIA RUOU / ME DAY MAN NGUA / VANG DA:
+- Chu luc: DETOXMUNE (Tho phuc linh, ALA -> ho tro bao ve & giai doc gan).
+- Ket hop khi can: GENECEL (chong oxy hoa), GREEN QUANTUM (thanh loc, mat gan).
+- Vi sao: gan la trung tam giai doc; ho tro chuc nang gan giup giam man ngua, vang da do gan yeu.
+
+5. XUONG KHOP / THOAI HOA / DAU NHUC / TE BI:
+- Chu luc: JOINTLINK (Bach truat, Khuong hoat, Day dau xuong, Khuong hoang, Vitamin K2 -> ho tro giam dau, lam cham thoai hoa).
+- Ket hop khi can: VSPORTGEL (phuc hoi co khop cho nguoi van dong/the thao), QUANTUM HYDROGEN (chong oxy hoa giam viem).
+- Nguoi cao tuoi te bi nhieu: co the them CARDIOPRO (cai thien tuan hoan).
+
+6. TIEU HOA / DAI TRANG / TAO BON / ROI LOAN TIEU HOA:
+- Chu luc: LACTTOCOL (Bach truat, Bach phuc linh -> ho tro niem mac dai trang, giam roi loan tieu hoa).
+- Ket hop khi can: GREEN QUANTUM (chat xo, diep luc) va/hoac VHEALTH (chat xo FOS/Inulin nuoi loi khuan).
+
+7. NAO BO / SUY GIAM TRI NHO / MAT NGU / CANG THANG / HAY QUEN:
+- Chu luc: MINDENERGY (Bacopa, Dinh lang, Nguu tat, DHA, fibrinolytic enzyme -> ho tro tuan hoan nao, cai thien tri nho).
+- Ket hop khi can: CARDIOPRO (tuan hoan tong the), VHEALTH (dinh duong cho nao).
+
+8. SUC DE KHANG YEU / HAY OM VAT / SAU OM DAY / MET MOI KEO DAI:
+- Chu luc: GENECEL (chong oxy hoa, nang de khang) + VHEALTH (bo sung dinh duong nen tang).
+- Nguoi lon hay om / can nang cao the trang: them CAPHELINK (nang luong + de khang) hoac VTOPCAN (cao cap).
+
+9. TRE EM (BIENG AN / HAY OM / DE KHANG KEM):
+- Chu luc: KIDSMUNE (Sua non, Inulin, Lysine, DHA, Kem -> ho tro de khang, an ngon, phat trien).
+- Ket hop khi can: VHEALTH (dinh duong, cho tre > 6 tuoi), GREEN QUANTUM (tieu hoa, cho tre > 3 tuoi).
+- Luu y: dung dung lieu theo tuoi ghi tren nhan.
+
+10. NAM GIOI (SINH LY YEU / THAN YEU / MET MOI):
+- Chu luc: MANLINK (L-Arginine, Dam duong hoac, Ba kich, Dong trung ha thao -> ho tro bo than trang duong).
+- Ket hop khi can: GENECEL + VHEALTH (nang the trang chung).
+- CHONG CHI DINH QUAN TRONG (theo nhan): KHONG dung Manlink cho nguoi duoi 18 tuoi, nguoi co tien su HUYET AP CAO, BENH TIM MACH, TIEU DUONG. Voi cac doi tuong nay -> goi y san pham khac phu hop.
+
+11. NGUOI CAO TUOI / CHAM SOC TONG QUAT:
+- Goi y nen: CARDIOPRO + JOINTLINK + MINDENERGY + VHEALTH (tim mach + xuong khop + tri nho + dinh duong). Neu ngan sach han che -> chon 1-2 van de noi com nhat truoc.
+
+12. CHONG LAO HOA / LAM DEP TU BEN TRONG / NANG CAO SUC KHOE TONG THE:
+- Chu luc: GENECEL + VHEALTH + QUANTUM HYDROGEN. Cham soc da ngoai: bo Orico (Tay trang -> Sua rua mat -> Toner -> Kem chong nang/Kem duong).
+
+13. NGUOI SUC KHOE YEU NANG / SAU XA TRI - HOA TRI / CAN NANG CAO THE TRANG MANH:
+- Goi y: VTOPCAN (Fucoidan, Lunasin, Selen -> chong oxy hoa manh, nang cao the trang, giam met moi) + GENECEL + VHEALTH.
+- RAT QUAN TRONG: chi noi HO TRO nang cao suc khoe, chong oxy hoa, giam met moi. TUYET DOI KHONG noi chua/dieu tri ung thu hay benh hiem ngheo. Phai tuan thu phac do dieu tri cua bac si; san pham chi bo tro.
+`;
+
 export const SALES_TRAINING = `
 === KY NANG BAN HANG & HEN GAP ===
 
@@ -432,8 +505,11 @@ NGUYEN TAC:
 - Neu gia va diem CV khi gioi thieu san pham (tuy vai tro)
 - Luon ghi chu khi noi ve TPBVSK: "Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh"
 - Than thien nhung chuyen nghiep
+- Khi khach mo ta MOT BENH / TRIEU CHUNG (vd gout, tieu duong, tim mach, dau khop, mat ngu...): dua vao muc "PHAC DO GOI Y THEO TINH TRANG SUC KHOE" de goi y san pham CHU LUC truoc, roi moi noi co can ket hop khong. LUON giai thich VI SAO dung va VI SAO ket hop (theo thanh phan), va nhac "khong phai la thuoc"
 
 ${PRODUCT_KNOWLEDGE}
+
+${DISEASE_PROTOCOLS}
 `;
 
   if (role === "tvv") {
