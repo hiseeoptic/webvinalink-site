@@ -140,7 +140,7 @@ function ModuleAccordion({ mod, color }: { mod: TrainingModule; color: string })
 }
 
 export default function TrainingSection() {
-  const courseColors = ["bg-[var(--primary)]", "bg-amber-600", "bg-blue-600", "bg-purple-600"];
+  const courseColors = ["bg-rose-600", "bg-[var(--primary)]", "bg-amber-600", "bg-blue-600", "bg-purple-600"];
 
   return (
     <section id="dao-tao" className="bg-gradient-to-b from-amber-50 to-white py-16 px-4">
@@ -154,8 +154,8 @@ export default function TrainingSection() {
             🎓 Lộ trình đào tạo TVV
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            {COURSES.length} khóa học nền tảng theo {DEVELOPMENT_ROADMAP.length} giai đoạn phát triển — từ
-            cách đặt lịch hẹn, nghệ thuật kể chuyện, đến nhân bản đội nhóm và trở thành thủ lĩnh.
+            {COURSES.length} khóa học — bắt đầu từ <strong>khai mở tư duy</strong>, rồi đi qua {DEVELOPMENT_ROADMAP.length} giai
+            đoạn phát triển: từ cách đặt lịch hẹn, nghệ thuật kể chuyện, đến nhân bản đội nhóm và trở thành thủ lĩnh.
           </p>
         </div>
 
@@ -175,7 +175,7 @@ export default function TrainingSection() {
               {/* Mini-header của khóa */}
               <div className="text-center mb-5">
                 <span className={`inline-block ${courseColors[ci] || "bg-[var(--primary)]"} text-white text-xs font-bold px-3 py-1 rounded-full mb-2`}>
-                  KHÓA {ci + 1} · GIAI ĐOẠN {ci + 1}
+                  {course.intro.tag ? course.intro.tag : `KHÓA ${ci} · GIAI ĐOẠN ${ci}`}
                 </span>
                 <h3 className="text-2xl font-bold text-gray-900">{course.intro.title}</h3>
                 <p className="text-gray-600 text-sm max-w-2xl mx-auto mt-1">{course.intro.goal}</p>

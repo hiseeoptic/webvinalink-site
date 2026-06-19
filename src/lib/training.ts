@@ -1170,13 +1170,254 @@ export const DEVELOPMENT_ROADMAP: RoadmapPhase[] = [
   },
 ];
 
+// ============================================================
+// KHÓA NỀN TẢNG (KHÓA 0): KHAI MỞ TƯ DUY
+// Học TRƯỚC Khóa 1. Tổng hợp & Việt hoá từ: Robert Kiyosaki (Kim tứ đồ
+// Cashflow Quadrant), Eric Worre (Go Pro), Don Failla (45 giây / Bức tranh
+// lớn), Tom "Big Al" Schreiter (đổi khung), Jim Rohn (phát triển bản thân).
+// Bám sát bối cảnh & tình trạng kinh doanh đa cấp tại Việt Nam.
+// ============================================================
+
+export const COURSE0_INTRO = {
+  title: "Khai mở tư duy",
+  subtitle: "Khóa nền tảng — học trước tiên, dành cho người mới tìm hiểu",
+  goal:
+    "Mở tư duy để bản thân và người nghe trở nên cởi mở, nhìn đúng bản chất và thấy tiềm năng của ngành — nền tảng cho mọi bước sau.",
+  moduleCount: 6,
+  tag: "KHÓA NỀN TẢNG · KHAI MỞ TƯ DUY",
+};
+
+export const TRAINING_MODULES_0: TrainingModule[] = [
+  {
+    id: 1,
+    title: "Mỗi người một xuất phát điểm, một bộ lọc tư duy",
+    objective:
+      "Hiểu vì sao cùng một cơ hội mà người làm thuê, công chức, người kinh doanh tự do, chủ doanh nghiệp hay người chuyên môn (bác sĩ, kỹ sư) lại phản ứng rất khác nhau — để biết cách tiếp cận phù hợp.",
+    sections: [
+      {
+        heading: "1.1. Cùng một cánh cửa, nhiều góc nhìn",
+        content:
+          "Khi nghe về một cơ hội kinh doanh sức khỏe, mỗi nhóm người phản ứng theo 'bộ lọc' của họ:\n\n" +
+          "• Người LÀM CÔNG (làm thuê): coi trọng sự an toàn, sợ rủi ro, sợ mất thời gian/uy tín. Dễ nghĩ 'việc làm thêm cho có'.\n" +
+          "• CÔNG CHỨC nhà nước: quen sự ổn định, ngại điều tiếng, dễ dị ứng với hai chữ 'đa cấp'.\n" +
+          "• Người KINH DOANH TỰ DO (tiểu thương, freelancer): quen xoay xở, cởi mở với cái mới hơn, nhưng thường bận và thực dụng — cần thấy lợi ích rõ.\n" +
+          "• CHỦ DOANH NGHIỆP: tư duy theo hệ thống, đòn bẩy, quan tâm mô hình nhân rộng và dòng tiền.\n" +
+          "• Người CHUYÊN MÔN (bác sĩ, dược sĩ, kỹ sư): tin vào bằng chứng, số liệu; rất dễ hoài nghi lời quảng cáo cảm tính.\n\n" +
+          "Không ai 'đúng' hay 'sai' — họ chỉ đang đứng ở những điểm xuất phát khác nhau.",
+      },
+      {
+        heading: "1.2. Bộ lọc tư duy quyết định kết luận",
+        content:
+          "Cùng một thông tin, nhưng mỗi người 'lọc' nó qua niềm tin, kinh nghiệm và nỗi sợ riêng — nên ra kết luận khác nhau.\n\n" +
+          "Người từng nghe về một vụ lừa đảo 'đa cấp' sẽ lọc mọi lời mời thành 'lừa đảo'. Người từng khao khát tự do tài chính sẽ lọc thành 'cơ hội'. Vấn đề không nằm ở thông tin, mà ở BỘ LỌC.",
+      },
+      {
+        heading: "1.3. Vì sao phải khai mở trước khi trình bày",
+        content:
+          "Nếu bạn trình bày sản phẩm/cơ hội khi tư duy người ta còn 'đóng', họ sẽ phản đối ngay — dù điều bạn nói đúng.\n\n" +
+          "Khai mở tư duy = nới rộng bộ lọc, gỡ định kiến, để họ SẴN SÀNG nhìn nhận một cách công bằng. Chỉ khi đó việc trình bày chi tiết mới có ý nghĩa. Đây là 'bước 0' của mọi cuộc tư vấn.",
+      },
+    ],
+    takeaway:
+      "Trước khi nói về sản phẩm hay cơ hội, hãy hiểu người đối diện đang đứng ở đâu và mở tư duy của họ trước. Khai mở tư duy là bước đầu tiên — quan trọng hơn mọi kịch bản bán hàng.",
+    reviewQuestions: [
+      "Năm nhóm người với 'bộ lọc tư duy' khác nhau là gì? Cho ví dụ một nhóm.",
+      "Vì sao cùng một thông tin lại dẫn tới kết luận khác nhau ở mỗi người?",
+      "Vì sao cần khai mở tư duy TRƯỚC khi trình bày cơ hội?",
+    ],
+  },
+  {
+    id: 2,
+    title: "Kim tứ đồ — 4 cách tạo ra thu nhập",
+    objective:
+      "Nắm mô hình Kim tứ đồ (E-S-B-I) của Robert Kiyosaki để thấy: kinh doanh theo mạng hợp pháp là một con đường bước từ 'đổi thời gian lấy tiền' sang 'hệ thống làm việc cho mình' với số vốn nhỏ.",
+    sections: [
+      {
+        heading: "2.1. Bốn nhóm người trong Kim tứ đồ",
+        content:
+          "Robert Kiyosaki chia mọi cách kiếm tiền thành 4 nhóm:\n\n" +
+          "• E – Employee (Làm công): nhận lương từ người khác. Ví dụ: nhân viên, công nhân, công chức.\n" +
+          "• S – Self-employed (Tự doanh / làm chủ nhỏ): tự làm tự ăn. Ví dụ: bác sĩ phòng khám riêng, thợ, freelancer, tiểu thương.\n" +
+          "• B – Business owner (Chủ hệ thống): sở hữu hệ thống/đội nhóm làm việc cho mình. Ví dụ: chủ chuỗi, nhượng quyền.\n" +
+          "• I – Investor (Nhà đầu tư): tiền đẻ ra tiền.\n\n" +
+          "Hầu hết người Việt đang ở nhóm E và S.",
+      },
+      {
+        heading: "2.2. Bên trái vs bên phải Kim tứ đồ",
+        content:
+          "• BÊN TRÁI (E, S): đổi THỜI GIAN lấy tiền. Thu nhập có 'trần', và hễ ngừng làm là ngừng tiền.\n" +
+          "• BÊN PHẢI (B, I): xây HỆ THỐNG / để tiền làm việc cho mình. Thu nhập không trần và có thể thụ động.\n\n" +
+          "Mục tiêu của tự do tài chính là dịch chuyển từ bên trái sang bên phải — điều này đòi hỏi đổi cả TƯ DUY, không chỉ đổi việc.",
+      },
+      {
+        heading: "2.3. Kinh doanh theo mạng — cửa hẹp vào nhóm B với vốn nhỏ",
+        content:
+          "Để vào nhóm B theo cách truyền thống (mở chuỗi, nhượng quyền) cần rất nhiều vốn. Kinh doanh theo mạng chân chính cho người bình thường một 'cửa hẹp': xây một HỆ THỐNG CON NGƯỜI từ số vốn nhỏ (vài sản phẩm dùng thử).\n\n" +
+          "QUAN TRỌNG — nói thật để giữ uy tín: đây KHÔNG phải 'làm giàu nhanh'. Giống mọi việc ở nhóm B, nó cần thời gian gây dựng, học kỹ năng và kiên trì. Phần thưởng là khả năng nhân bản và thu nhập không phụ thuộc số giờ làm.",
+      },
+    ],
+    takeaway:
+      "Kim tứ đồ giúp người nghe tự định vị: mình đang đổi thời gian lấy tiền (E/S) hay để hệ thống làm việc cho mình (B/I)? Kinh doanh theo mạng là một con đường vốn nhỏ để bước sang nhóm B — cần thời gian, không phải phép màu.",
+    reviewQuestions: [
+      "Bốn nhóm E-S-B-I là gì? Bạn đang ở nhóm nào?",
+      "Khác biệt cốt lõi giữa bên trái và bên phải Kim tứ đồ?",
+      "Vì sao nói kinh doanh theo mạng là 'cửa hẹp vào nhóm B với vốn nhỏ'?",
+    ],
+  },
+  {
+    id: 3,
+    title: "Tư duy làm thuê khác tư duy làm chủ",
+    objective:
+      "Phân biệt hai hệ tư duy để Tư vấn viên tự chuyển mình, và giúp người khác chuyển — kể cả người giỏi chuyên môn nhưng đang 'kẹt' ở nhóm tự doanh.",
+    sections: [
+      {
+        heading: "3.1. Hai hệ tư duy đối lập",
+        content:
+          "• Làm thuê: ưu tiên AN TOÀN · lương cố định · 'hết giờ là hết việc' · ngại rủi ro & cái mới · dễ đổ lỗi hoàn cảnh.\n" +
+          "• Làm chủ: ưu tiên CƠ HỘI · thu nhập theo giá trị tạo ra · chịu trách nhiệm tới cùng · sẵn sàng học cái mới · xem thất bại là bài học.\n\n" +
+          "Không phải để chê người làm thuê — mà để thấy: muốn kết quả của người làm chủ thì phải tập tư duy của người làm chủ.",
+      },
+      {
+        heading: "3.2. Người giỏi chuyên môn thường 'kẹt' ở nhóm S",
+        content:
+          "Bác sĩ, kỹ sư, kế toán giỏi có thu nhập cao — nhưng nhiều người vẫn ở nhóm S: vẫn ĐỔI GIỜ LẤY TIỀN. Nghỉ khám là ngừng thu nhập; giỏi đến đâu cũng giới hạn bởi số giờ và sức khỏe.\n\n" +
+          "Khai mở cho nhóm này: không phủ nhận chuyên môn của họ, mà mở thêm một hướng — gắn thu nhập với HỆ THỐNG và sự nhân bản, thay vì chỉ với số giờ làm.",
+      },
+      {
+        heading: "3.3. Đổi tư duy = học kỹ năng mới + chấp nhận giai đoạn đầu",
+        content:
+          "Chuyển từ tư duy làm thuê sang làm chủ đòi hỏi học kỹ năng mới (giao tiếp, dẫn dắt, kiên trì) và chấp nhận giai đoạn đầu CHƯA có kết quả ngay.\n\n" +
+          "Như Jim Rohn nói: 'Thu nhập hiếm khi vượt quá mức phát triển bản thân.' Muốn thu nhập lớn hơn, hãy đầu tư để trở thành phiên bản tốt hơn của chính mình trước.",
+      },
+    ],
+    takeaway:
+      "Khác biệt lớn nhất không nằm ở công việc mà ở TƯ DUY. Người giỏi chuyên môn vẫn có thể kẹt ở 'đổi giờ lấy tiền'. Muốn đổi kết quả, hãy đổi tư duy và đầu tư phát triển bản thân.",
+    reviewQuestions: [
+      "Nêu 3 khác biệt giữa tư duy làm thuê và tư duy làm chủ.",
+      "Vì sao người giỏi chuyên môn (bác sĩ, kỹ sư) vẫn có thể 'kẹt' ở nhóm S?",
+      "Câu nói của Jim Rohn về thu nhập và phát triển bản thân nghĩa là gì?",
+    ],
+  },
+  {
+    id: 4,
+    title: "Gỡ định kiến: đa cấp chân chính khác lừa đảo kim tự tháp",
+    objective:
+      "Trang bị cho Tư vấn viên cách nhìn ĐÚNG và cách giải thích minh bạch để gỡ nỗi sợ 'đa cấp' rất phổ biến của người Việt — đánh giá bằng tiêu chí, không bằng định kiến.",
+    sections: [
+      {
+        heading: "4.1. Vì sao người Việt sợ hai chữ 'đa cấp'",
+        content:
+          "Nhiều vụ việc trong quá khứ (mô hình kim tự tháp, ép ôm hàng, dụ vay tiền, hứa làm giàu nhanh) đã để lại định kiến nặng nề. Vì vậy khi nghe 'đa cấp', phản xạ đầu tiên của nhiều người là 'lừa đảo'.\n\n" +
+          "Là Tư vấn viên, đừng né tránh hay tranh cãi — hãy giúp người nghe phân biệt thật/giả bằng tiêu chí rõ ràng.",
+      },
+      {
+        heading: "4.2. Tiêu chí phân biệt thật và giả",
+        content:
+          "✅ BÁN HÀNG ĐA CẤP HỢP PHÁP:\n" +
+          "• Có giấy chứng nhận đăng ký hoạt động bán hàng đa cấp do Bộ Công Thương cấp.\n" +
+          "• Có SẢN PHẨM THẬT, chất lượng, giá hợp lý; thu nhập đến từ doanh số BÁN LẺ sản phẩm.\n" +
+          "• Cho trả lại hàng, có chính sách hoàn tiền; KHÔNG ép đặt cọc hay ôm lượng hàng lớn để 'lên cấp'.\n\n" +
+          "🚫 KIM TỰ THÁP / BIẾN TƯỚNG BẤT HỢP PHÁP:\n" +
+          "• Thu nhập chủ yếu từ việc TUYỂN NGƯỜI và tiền người sau trả cho người trước.\n" +
+          "• Ép mua lượng hàng lớn; sản phẩm chỉ là 'vỏ bọc', giá ảo.\n" +
+          "• Hứa hẹn làm giàu nhanh, thu nhập 'khủng' không cần làm.",
+      },
+      {
+        heading: "4.3. Vinalink / IMC ở đâu trong bức tranh đó",
+        content:
+          "Sản phẩm do IMC nghiên cứu và sản xuất tại nhà máy đạt chuẩn GMP; có công bố, đăng ký với cơ quan quản lý; giá trị thật nằm ở sản phẩm và sức khỏe người dùng.\n\n" +
+          "Thông điệp khai mở: 'Đừng đánh giá cả một ngành qua vài kẻ làm sai. Hãy đánh giá bằng TIÊU CHÍ: có sản phẩm thật không, có pháp lý không, thu nhập đến từ bán hàng hay từ tuyển người.' Khi người nghe có bộ tiêu chí, nỗi sợ mơ hồ sẽ tan.",
+      },
+    ],
+    takeaway:
+      "Hãy giúp người nghe đánh giá bằng tiêu chí (pháp lý · sản phẩm thật · nguồn thu nhập), không bằng định kiến. Lưu ý: luôn tuân thủ pháp luật, nói sự thật, KHÔNG hứa hẹn thu nhập hay 'làm giàu nhanh'.",
+    reviewQuestions: [
+      "Ba tiêu chí phân biệt đa cấp hợp pháp và kim tự tháp bất hợp pháp là gì?",
+      "Vì sao không nên đánh giá cả ngành qua vài vụ làm sai?",
+      "Bạn sẽ trả lời thế nào khi khách nói 'đây có phải lừa đảo đa cấp không?'",
+    ],
+  },
+  {
+    id: 5,
+    title: "Tiềm năng ngành tại Việt Nam thời gian tới",
+    objective:
+      "Nhìn thấy 'bức tranh lớn' và xu hướng để tin vào tiềm năng của ngành — nền tảng tạo động lực bền vững.",
+    sections: [
+      {
+        heading: "5.1. Xu hướng đang ủng hộ ngành sức khỏe",
+        content:
+          "• Dân số già hóa nhanh, nhu cầu chăm sóc sức khỏe tăng.\n" +
+          "• Sau đại dịch, người Việt quan tâm 'sức khỏe chủ động' và phòng bệnh hơn chữa bệnh.\n" +
+          "• Chi tiêu cho thực phẩm bảo vệ sức khỏe tăng đều.\n" +
+          "• Kinh tế chia sẻ & nhu cầu thu nhập thụ động ngày càng phổ biến.\n\n" +
+          "Đây là những 'cơn gió thuận' cho người làm trong ngành một cách tử tế.",
+      },
+      {
+        heading: "5.2. Ngành đang được chuyên nghiệp hóa",
+        content:
+          "Eric Worre (tác giả 'Go Pro') chỉ ra: ngành kinh doanh theo mạng đang chuyển từ hình ảnh tiêu cực sang chuẩn mực và chuyên nghiệp. Người làm tử tế, có kiến thức, minh bạch sẽ là người thắng cuộc — chứ không phải người 'chiêu trò'.\n\n" +
+          "Nghĩa là: cơ hội thật sự dành cho người chịu HỌC và làm đúng, đúng lúc thị trường đang 'lọc' để minh bạch hơn.",
+      },
+      {
+        heading: "5.3. 'Bức tranh lớn' của người bình thường",
+        content:
+          "Don Failla (tác giả 'Bài thuyết trình 45 giây') gọi đây là cách người BÌNH THƯỜNG tiếp cận mô hình đòn bẩy — thứ mà trước đây gần như chỉ chủ doanh nghiệp lớn mới có.\n\n" +
+          "Không cần bằng cấp đặc biệt hay vốn lớn; cái cần là sự cởi mở để học và kiên trì. Đó là vì sao 'thời gian tới' là cơ hội cho người chịu mở tư duy hôm nay.",
+      },
+    ],
+    takeaway:
+      "Xu hướng sức khỏe, kinh tế chia sẻ và sự chuyên nghiệp hóa của ngành đang tạo cơ hội thật cho người làm tử tế. Thấy được 'bức tranh lớn' giúp bạn có động lực bền vững và truyền được niềm tin đó cho người khác.",
+    reviewQuestions: [
+      "Nêu 2 xu hướng đang ủng hộ ngành sức khỏe tại Việt Nam.",
+      "Theo Eric Worre, ai sẽ là người thắng cuộc khi ngành được chuyên nghiệp hóa?",
+      "'Bức tranh lớn' của Don Failla nói gì về cơ hội cho người bình thường?",
+    ],
+  },
+  {
+    id: 6,
+    title: "Khai mở tư duy cho người khác — không nhồi nhét",
+    objective:
+      "Biết cách MỞ tư duy người khác bằng câu hỏi và câu chuyện để họ tự thấy tiềm năng — rồi dẫn tự nhiên sang Khóa 1 (đặt lịch hẹn).",
+    sections: [
+      {
+        heading: "6.1. Nguyên tắc: hỏi và kể, đừng tranh luận",
+        content:
+          "Khai mở KHÔNG phải là thuyết phục hay áp đặt. Bạn càng cố 'cãi thắng', người ta càng đóng lại.\n\n" +
+          "Quy trình: HỎI (về hiện trạng, mong muốn) → LẮNG NGHE → MỞ một góc nhìn mới (Kim tứ đồ, một câu chuyện) → ĐỂ HỌ TỰ KẾT LUẬN. Người ta tin điều họ tự nghĩ ra hơn điều bạn nói.",
+      },
+      {
+        heading: "6.2. Bộ câu hỏi khai mở",
+        content:
+          "• 'Nếu anh/chị ngừng làm 6 tháng, thu nhập có còn không?' (gợi mở khái niệm thu nhập thụ động)\n" +
+          "• 'Theo anh/chị, mình đang ở nhóm nào trong Kim tứ đồ — làm công, tự doanh, chủ hệ thống hay đầu tư?'\n" +
+          "• 'Em chỉ tò mò — nếu có một cách tạo thu nhập không phụ thuộc vào số giờ làm, anh/chị có muốn tìm hiểu thử không?'\n\n" +
+          "Những câu hỏi này không bán gì cả — chúng chỉ 'bật đèn' để người ta tự nhìn lại.",
+      },
+      {
+        heading: "6.3. Dẫn dắt sang bước tiếp theo",
+        content:
+          "Khi tư duy đã mở và người ta bắt đầu TÒ MÒ, đừng vội 'chốt'. Hãy mời họ tìm hiểu sâu hơn: một buổi gặp, một video, một cuộc hẹn ngắn.\n\n" +
+          "Đây chính là cầu nối sang KHÓA 1 — 'Cách đặt lịch hẹn không sợ bị từ chối'. Khai mở là gieo hạt nhận thức; đặt lịch hẹn là bước chăm sóc tiếp theo. Đừng cố hái quả khi hạt chưa nảy mầm.",
+      },
+    ],
+    takeaway:
+      "Khai mở tư duy là gieo hạt, không phải chốt sale. Hãy mở tư duy người khác bằng câu hỏi và câu chuyện, để họ tự thấy tiềm năng — rồi dẫn tự nhiên sang Khóa 1. (Tổng hợp từ Don Failla, Tom 'Big Al' Schreiter, Eric Worre, Robert Kiyosaki, Jim Rohn.)",
+    reviewQuestions: [
+      "Quy trình 4 bước để khai mở tư duy người khác là gì?",
+      "Viết 1 câu hỏi khai mở của riêng bạn dựa trên Kim tứ đồ.",
+      "Sau khi tư duy người nghe đã mở, bước tiếp theo nên là gì?",
+    ],
+  },
+];
+
 // Tất cả các khóa đào tạo (hiển thị trên trang)
 export interface TrainingCourse {
-  intro: { title: string; subtitle: string; goal: string; moduleCount: number };
+  intro: { title: string; subtitle: string; goal: string; moduleCount: number; tag?: string };
   modules: TrainingModule[];
 }
 
 export const COURSES: TrainingCourse[] = [
+  { intro: COURSE0_INTRO, modules: TRAINING_MODULES_0 },
   { intro: TRAINING_INTRO, modules: TRAINING_MODULES },
   { intro: COURSE2_INTRO, modules: TRAINING_MODULES_2 },
   { intro: COURSE3_INTRO, modules: TRAINING_MODULES_3 },

@@ -345,6 +345,20 @@ MUC TIEU 90 NGAY DAU:
 - Thang 3: Ban 15 don, tuyen 5 TVV, dat cap Vang
 `;
 
+export const TRAINING_CURRICULUM_0 = `
+=== KHOA NEN TANG: KHAI MO TU DUY (6 MODULE) — HOC TRUOC KHOA 1 ===
+Muc tieu: mo tu duy de nguoi nghe coi mo, nhin dung ban chat va thay tiem nang nganh. LUU Y: noi ve "da cap" MINH BACH (phan biet hop phap vs lua dao), TUYET DOI KHONG hua thu nhap / "lam giau nhanh".
+
+MODULE 1 - MOI NGUOI MOT XUAT PHAT DIEM: nguoi lam thue / cong chuc / kinh doanh tu do / chu doanh nghiep / nguoi chuyen mon (bac si, ky su) co "bo loc tu duy" khac nhau -> cung 1 co hoi ma ket luan khac nhau. Phai hieu nguoi doi dien dang o dau va MO tu duy ho TRUOC khi trinh bay.
+MODULE 2 - KIM TU DO E-S-B-I (Robert Kiyosaki): E=lam cong, S=tu doanh/lam chu nho (bac si phong kham, freelancer, tieu thuong), B=chu he thong, I=nha dau tu. Ben trai (E,S) doi GIO lay tien (co tran, nghi la mat thu nhap); ben phai (B,I) HE THONG/tien lam cho minh. Kinh doanh theo mang chan chinh = cua hep buoc tu E/S sang B voi von nho — CAN THOI GIAN xay, khong phai lam giau nhanh.
+MODULE 3 - TU DUY LAM THUE vs LAM CHU: an toan vs co hoi; luong co dinh vs thu nhap theo gia tri; "het gio het viec" vs chiu trach nhiem. Nguoi gioi chuyen mon thuong KET o nhom S (van doi gio lay tien). Khai mo: gan thu nhap voi HE THONG & nhan ban, khong voi so gio. (Jim Rohn: thu nhap hiem khi vuot qua muc phat trien ban than.)
+MODULE 4 - GO DINH KIEN "DA CAP": phan biet HOP PHAP (giay phep BH da cap Bo Cong Thuong; san pham THAT, chat luong; thu nhap tu doanh so BAN LE; duoc tra/doi hang; KHONG ep om hang) vs KIM TU THAP BAT HOP PHAP (thu nhap chu yeu tu TUYEN NGUOI, tien nguoi sau tra nguoi truoc; ep om hang; san pham la "vo boc"; hua lam giau nhanh). Vinalink/IMC: san pham THAT, nha may GMP, phap ly ro rang. Danh gia bang TIEU CHI, khong bang dinh kien.
+MODULE 5 - TIEM NANG NGANH TAI VN: dan so gia hoa; sau dich quan tam "suc khoe chu dong"; chi tieu TPBVSK tang; kinh te chia se & thu nhap thu dong. Nganh dang CHUYEN NGHIEP HOA (Eric Worre - Go Pro): nguoi lam tu te, co kien thuc se thang. "Buc tranh lon" (Don Failla): nguoi binh thuong tiep can mo hinh don bay ma truoc day chi chu DN lon co.
+MODULE 6 - KHAI MO CHO NGUOI KHAC (khong nhoi nhet): khong tranh luan/ap dat. HOI -> LANG NGHE -> MO goc nhin moi (kim tu do, cau chuyen) -> de ho TU ket luan. Cau hoi khai mo: "Neu ngung lam 6 thang, thu nhap con khong?", "Anh/chi dang o nhom nao trong kim tu do?", "Neu co cach thu nhap khong phu thuoc so gio, anh/chi co to mo khong?". Khi tu duy da mo & to mo -> dan sang KHOA 1 (dat lich hen). DUNG co chot khi tu duy chua mo.
+
+NGUON: Robert Kiyosaki (Cashflow Quadrant/Kim tu do), Eric Worre (Go Pro), Don Failla (45 giay / Buc tranh lon), Tom "Big Al" Schreiter, Jim Rohn. Day la noi dung TONG HOP & Viet hoa, KHONG phai tai lieu chinh thuc cua Vinalink.
+`;
+
 export const TRAINING_CURRICULUM = `
 === LO TRINH DAO TAO TVV: "CACH DAT LICH HEN KHONG SO BI TU CHOI" (6 MODULE) ===
 Day la giao trinh chinh thuc. Khi TVV hoi ve dao tao / lo trinh / cach lam, hay huong dan theo dung 6 module nay, goi y hoc tuan tu, va trich noi dung module phu hop.
@@ -561,6 +575,8 @@ ${GETTING_STARTED_GUIDE}
 
 ${DEVELOPMENT_ROADMAP_TEXT}
 
+${TRAINING_CURRICULUM_0}
+
 ${TRAINING_CURRICULUM}
 
 ${TRAINING_CURRICULUM_2}
@@ -568,6 +584,8 @@ ${TRAINING_CURRICULUM_2}
 ${TRAINING_CURRICULUM_3}
 
 ${TRAINING_CURRICULUM_4}
+
+Khi TVV hoi ve KHAI MO TU DUY / cach lam nguoi khac coi mo / cac kieu nguoi khac nhau (lam thue, cong chuc, kinh doanh tu do, bac si-chuyen mon) / phan biet da cap that-gia / Kim tu do E-S-B-I / tiem nang nganh -> tra loi tu KHOA NEN TANG (Khai mo tu duy), va nho nguyen tac: HOI & KE CHUYEN, khong tranh luan, khong hua thu nhap.
 
 Khi TVV hoi ve ky nang ban hang, tuyen dung, xu ly tu choi, hoac "lo trinh dao tao / cach lam" - hay tra loi chi tiet voi vi du cu the. Truoc tien dinh vi TVV vao 1 trong 4 GIAI DOAN (Tan binh 1-3 thang / Chien binh 3-6 thang / Doi truong 6 thang-1 nam / Thu linh 1-3 nam), roi dan chieu dung Khoa hoc (1-4) va Module phu hop voi giai doan do.
 
