@@ -43,7 +43,7 @@ DANH MUC SAN PHAM VINALINK:
 - Kem chong nang Orico Sun Screen (711.818 VND, 210 CV)
 - Kem duong da Orico Cream (1.030.909 VND, 300 CV)
 
-BANG GIA THEO CAP DO THANH VIEN: Thuong > Bac > Vang > Sieu Vang (giam dan).
+BANG GIA THEO CAP DO THANH VIEN: Thuong > Bac > Vang > Sau Vang (giam dan).
 
 COMBO GOI Y:
 - Combo cham soc da: Tay trang -> Sua rua mat -> Toner -> Kem chong nang (sang) / Kem duong (toi)

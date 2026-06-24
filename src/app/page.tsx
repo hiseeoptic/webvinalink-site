@@ -309,7 +309,7 @@ function HomeContent({ role, tvvInfo, onLogout }: { role: UserRole; tvvInfo: TVV
                 </svg>
               </div>
               <h3 className="font-bold text-gray-800 mb-2">Giá tốt nhất</h3>
-              <p className="text-sm text-gray-600">4 mức giá ưu đãi theo cấp độ thành viên: Thường, Bạc, Vàng và Siêu Vàng.</p>
+              <p className="text-sm text-gray-600">4 mức giá ưu đãi theo cấp độ thành viên: Thường, Bạc, Vàng và Sau Vàng.</p>
             </div>
             <div className="text-center p-6 rounded-xl bg-green-50">
               <div className="w-14 h-14 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-4">

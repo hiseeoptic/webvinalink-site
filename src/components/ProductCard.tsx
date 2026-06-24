@@ -43,7 +43,7 @@ export default function ProductCard({
               {formatPrice(product.prices.normal)} VND
             </p>
             <p className="text-xs text-gray-500 mt-1">
-              Siêu Vàng: {formatPrice(product.prices.super_gold)} VND
+              Sau Vàng: {formatPrice(product.prices.super_gold)} VND
             </p>
           </>
         ) : (

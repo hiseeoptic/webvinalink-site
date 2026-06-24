@@ -29,7 +29,7 @@ export const MEMBERSHIP_LABELS: Record<MembershipTier, string> = {
   normal: "Thường",
   silver: "Bạc",
   gold: "Vàng",
-  super_gold: "Siêu Vàng",
+  super_gold: "Sau Vàng",
 };
 
 export const CATEGORIES = [

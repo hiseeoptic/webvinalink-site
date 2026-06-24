@@ -292,7 +292,7 @@ Buoc 1: Gioi thieu Vinalink Group - tap doan suc khoe
 Buoc 2: Gioi thieu san pham - chat luong, chung nhan ATTP, Bo Y te
 Buoc 3: Mo hinh kinh doanh - he thong nhi phan, 2 nhanh Phai/Trai
 Buoc 4: Ke hoach thu nhap - hoa hong, thuong nhom, thuong toan cau
-Buoc 5: Lo trinh: TVV -> Bac -> Vang -> Sieu Vang -> Kim cuong
+Buoc 5: Lo trinh: TVV -> Bac -> Vang -> Sau Vang -> Kim cuong
 Buoc 6: Ho tro - Dao tao, mentor, he thong online, su kien
 
 "Toi khong biet ban hang"
@@ -337,7 +337,7 @@ BUOC 6: PHAT TRIEN HE THONG
 - Duy tri hoat dong moi ngay (it nhat 1-2 gio)
 - Tham gia su kien, hoi thao cua cong ty
 - Hoc hoi tu nhung nguoi thanh cong trong he thong
-- Dat muc tieu thang hang ro rang: Vang trong 3 thang, Sieu Vang trong 6 thang
+- Dat muc tieu thang hang ro rang: Vang trong 3 thang, Sau Vang trong 6 thang
 
 MUC TIEU 90 NGAY DAU:
 - Thang 1: Dung thu san pham, hoc san pham, ban 5 don, tuyen 2 TVV
@@ -436,7 +436,7 @@ Khi TVV hoi ve ky nang ke chuyen, xu ly cau "da cap", tao dong luc, "biet ma kho
 export const DEVELOPMENT_ROADMAP_TEXT = `
 === LO TRINH PHAT TRIEN TVV THEO 4 GIAI DOAN (chi mang tinh DINH HUONG DAO TAO) ===
 Khi TVV hoi "nguoi moi bat dau tu dau", "toi nen hoc gi / lam gi giai doan nay", hay dinh vi ho vao 1 trong 4 giai doan va chi ro Khoa hoc + viec can lam. LUON neu ro NGUON tai lieu cua giai doan do.
-LUU Y QUAN TRONG: Day la lo trinh DAO TAO (hoc gi, lam gi theo thoi gian), KHONG phai tieu chuan thang cap. TUYET DOI KHONG bia ra cot moc kieu "ban X don thi len cap Bac/Vang/Sieu Vang/Kim cuong". Neu TVV hoi dieu kien thang cap / hoa hong cu the -> tra loi: "Tieu chuan thang cap va thu nhap theo quy dinh CHINH THUC cua Vinalink, anh/chi vui long hoi nguoi bao tro hoac phong ho tro de co con so chinh xac."
+LUU Y QUAN TRONG: Day la lo trinh DAO TAO (hoc gi, lam gi theo thoi gian), KHONG phai tieu chuan thang cap. TUYET DOI KHONG bia ra cot moc kieu "ban X don thi len cap Bac/Vang/Sau Vang/Kim cuong". Neu TVV hoi dieu kien thang cap / hoa hong cu the -> tra loi: "Tieu chuan thang cap va thu nhap theo quy dinh CHINH THUC cua Vinalink, anh/chi vui long hoi nguoi bao tro hoac phong ho tro de co con so chinh xac."
 
 GIAI DOAN 1 - TAN BINH / KHOI DONG (1-3 thang):
 - Trong tam: Hieu & dung san pham, lap danh sach 100 nguoi, hoc cach dat lich hen, co khach & doi tac dau tien.
