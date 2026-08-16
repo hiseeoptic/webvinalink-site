@@ -44,7 +44,7 @@ export default function RoleGate({ children }: RoleGateProps) {
 
   const handleTVVSubmit = useCallback(async () => {
     if (!maSoInput.trim()) {
-      setError("Vui long nhap ma so TVV");
+      setError("Vui lòng nhập mã thành viên hoặc mã số TVV");
       return;
     }
     setIsLoading(true);
@@ -126,7 +126,7 @@ export default function RoleGate({ children }: RoleGateProps) {
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
                 </svg>
-                Tư vấn viên (TVV)
+                Thành viên / Tư vấn viên
               </button>
 
               <button
@@ -154,16 +154,16 @@ export default function RoleGate({ children }: RoleGateProps) {
             </button>
 
             <h2 className="text-xl font-bold text-gray-800 mb-1">
-              Xác minh Tư vấn viên
+              Đăng nhập thành viên
             </h2>
             <p className="text-gray-500 text-sm mb-6">
-              Nhập mã số TVV để xem bảng giá thành viên
+              Nhập mã thành viên hoặc mã số TVV để xem bảng giá thành viên
             </p>
 
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Mã số TVV
+                  Mã thành viên / TVV
                 </label>
                 <input
                   type="text"

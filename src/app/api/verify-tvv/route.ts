@@ -10,6 +10,18 @@ const ADMIN_TVV = {
   nhom: "",
 };
 
+// Mã dùng để cho người chưa có mã TVV đăng nhập xem với tư cách thành viên.
+// Chỉ cấu hình ở phía server; không dùng tiền tố NEXT_PUBLIC_ để tránh lộ ra bundle.
+const MEMBER_PREVIEW_CODE = process.env.MEMBER_PREVIEW_CODE || "";
+
+const PREVIEW_MEMBER = {
+  maSo: "THANH-VIEN",
+  hoTen: "THÀNH VIÊN VINALINK",
+  capBac: "THÀNH VIÊN",
+  danhHieu: "Tài khoản xem thành viên",
+  nhom: "",
+};
+
 interface TVVRecord {
   stt: string;
   maSo: string;
@@ -55,13 +67,24 @@ export async function POST(req: NextRequest) {
 
     if (!maSo || typeof maSo !== "string") {
       return NextResponse.json(
-        { valid: false, error: "Vui long nhap ma so TVV" },
+        { valid: false, error: "Vui lòng nhập mã thành viên hoặc mã số TVV" },
         { status: 400 }
       );
     }
 
+    const normalizedCode = maSo.trim();
+
+    // Cho phép người chưa có mã TVV dùng mã xem thử do chủ website cấp.
+    if (MEMBER_PREVIEW_CODE && normalizedCode === MEMBER_PREVIEW_CODE) {
+      return NextResponse.json({
+        valid: true,
+        isPreviewMember: true,
+        tvv: PREVIEW_MEMBER,
+      });
+    }
+
     // Check admin account first
-    if (maSo.trim() === ADMIN_TVV.maSo) {
+    if (ADMIN_TVV.maSo && normalizedCode === ADMIN_TVV.maSo) {
       return NextResponse.json({
         valid: true,
         isAdmin: true,
@@ -96,7 +119,7 @@ export async function POST(req: NextRequest) {
 
       const recordMaSo = fields[1]?.trim();
 
-      if (recordMaSo === maSo.trim()) {
+      if (recordMaSo === normalizedCode) {
         // Column mapping (Sheet has empty columns at index 5, 8, 10, 12):
         // 0:STT 1:MaSo 2:HoTen 3:Nhom 4:Tang 5:(empty)
         // 6:HTTrucHe 7:Doi(Fi) 8:(empty) 9:CapBac 10:(empty)
